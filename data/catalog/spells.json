@@ -2,9 +2,9 @@
  "meta": {
   "source": "Indice di dnd5e.wikidot.com — solo nomi e dati di base",
   "license": "Nessun testo dei manuali incluso: le descrizioni vanno inserite dall’utente dai propri manuali.",
-  "generatedAt": "2026-10-24T21:33:55.876Z",
+  "generatedAt": "2026-10-24T22:14:13.505Z",
   "dataset": "spells",
-  "count": 254
+  "count": 371
  },
  "items": [
   {
@@ -36,6 +36,39 @@
     "warlock"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "blade-ward-2024",
+   "name": "Blade Ward",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 0,
+   "school": "abjuration",
+   "school_it": "Abiurazione",
+   "castingTime": "1 action",
+   "range": "Self",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": false,
+    "material": null
+   },
+   "duration": "1 round",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "bard",
+    "sorcerer",
+    "warlock"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -193,6 +226,39 @@
     "warlock"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "friends-2024",
+   "name": "Friends",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 0,
+   "school": "enchantment",
+   "school_it": "Ammaliamento",
+   "castingTime": "1 action",
+   "range": "Self",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "bard",
+    "sorcerer",
+    "warlock"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -448,6 +514,38 @@
    "desc": ""
   },
   {
+   "id": "mind-sliver-2024",
+   "name": "Mind Sliver",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 0,
+   "school": "enchantment",
+   "school_it": "Ammaliamento",
+   "castingTime": "1 action",
+   "range": "60 feet",
+   "rangeFt": 60,
+   "components": {
+    "v": true,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "1 round",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "sorcerer",
+    "warlock"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "mold-earth",
    "name": "Mold Earth",
    "name_it": null,
@@ -661,6 +759,37 @@
    "desc": ""
   },
   {
+   "id": "thorn-whip-2024",
+   "name": "Thorn Whip",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 0,
+   "school": "transmutation",
+   "school_it": "Trasmutazione",
+   "castingTime": "1 action",
+   "range": "30 feet",
+   "rangeFt": 30,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Instantaneous",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "druid",
+    "artificer"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "thunderclap",
    "name": "Thunderclap",
    "name_it": null,
@@ -695,6 +824,41 @@
    "desc": ""
   },
   {
+   "id": "thunderclap-2024",
+   "name": "Thunderclap",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 0,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "1 action",
+   "range": "Self (5-foot radius)",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": true,
+    "m": false,
+    "material": null
+   },
+   "duration": "Instantaneous",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "druid",
+    "bard",
+    "sorcerer",
+    "warlock",
+    "artificer"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "toll-the-dead",
    "name": "Toll the Dead",
    "name_it": null,
@@ -722,6 +886,38 @@
     "warlock"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "toll-the-dead-2024",
+   "name": "Toll the Dead",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 0,
+   "school": "necromancy",
+   "school_it": "Necromanzia",
+   "castingTime": "1 action",
+   "range": "60 feet",
+   "rangeFt": 60,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": false,
+    "material": null
+   },
+   "duration": "Instantaneous",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "cleric",
+    "warlock"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -780,6 +976,36 @@
     "cleric"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "word-of-radiance-2024",
+   "name": "Word of Radiance",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 0,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "1 action",
+   "range": "5 feet",
+   "rangeFt": 5,
+   "components": {
+    "v": true,
+    "s": false,
+    "m": true,
+    "material": null
+   },
+   "duration": "Instantaneous",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "cleric"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -905,6 +1131,36 @@
    "desc": ""
   },
   {
+   "id": "armor-of-agathys-2024",
+   "name": "Armor of Agathys",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 1,
+   "school": "abjuration",
+   "school_it": "Abiurazione",
+   "castingTime": "1 action",
+   "range": "Self",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "1 hour",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "warlock"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "arms-of-hadar",
    "name": "Arms of Hadar",
    "name_it": null,
@@ -930,6 +1186,36 @@
     "warlock"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "arms-of-hadar-2024",
+   "name": "Arms of Hadar",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 1,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 action",
+   "range": "Self (10-foot radius)",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": false,
+    "material": null
+   },
+   "duration": "Instantaneous",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "warlock"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -960,6 +1246,34 @@
     "ranger"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "buzzing-bee-2024",
+   "name": "Buzzing Bee",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 1,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -1143,6 +1457,36 @@
    "desc": ""
   },
   {
+   "id": "compelled-duel-2024",
+   "name": "Compelled Duel",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 1,
+   "school": "enchantment",
+   "school_it": "Ammaliamento",
+   "castingTime": "1 bonus action",
+   "range": "30 feet",
+   "rangeFt": 30,
+   "components": {
+    "v": true,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "paladin"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "dissonant-whispers",
    "name": "Dissonant Whispers",
    "name_it": null,
@@ -1265,6 +1609,34 @@
    "desc": ""
   },
   {
+   "id": "feign-interest-2024",
+   "name": "Feign Interest",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 1,
+   "school": "illusion",
+   "school_it": "Illusione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "frost-fingers",
    "name": "Frost Fingers",
    "name_it": null,
@@ -1380,6 +1752,36 @@
     "ranger"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "hail-of-thorns-2024",
+   "name": "Hail of Thorns",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 1,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 bonus action",
+   "range": "Self",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "ranger"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -1533,6 +1935,34 @@
    "desc": ""
   },
   {
+   "id": "insidious-rhythm-2024",
+   "name": "Insidious Rhythm",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 1,
+   "school": "enchantment",
+   "school_it": "Ammaliamento",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "magnify-gravity",
    "name": "Magnify Gravity",
    "name_it": null,
@@ -1588,6 +2018,34 @@
     "bard"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "quick-clothier-2024",
+   "name": "Quick Clothier",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 1,
+   "school": "transmutation",
+   "school_it": "Trasmutazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -1775,6 +2233,34 @@
    "desc": ""
   },
   {
+   "id": "spellfire-flare-2024",
+   "name": "Spellfire Flare",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 1,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "sudden-awakening-ua",
    "name": "Sudden Awakening (UA)",
    "name_it": null,
@@ -1867,6 +2353,36 @@
    "desc": ""
   },
   {
+   "id": "thunderous-smite-2024",
+   "name": "Thunderous Smite",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 1,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "1 bonus action",
+   "range": "Self",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "paladin"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "unearthly-chorus-ua",
    "name": "Unearthly Chorus (UA)",
    "name_it": null,
@@ -1892,6 +2408,34 @@
     "bard"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "wardaway-2024",
+   "name": "Wardaway",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 1,
+   "school": "abjuration",
+   "school_it": "Abiurazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -1957,6 +2501,38 @@
    "desc": ""
   },
   {
+   "id": "witch-bolt-2024",
+   "name": "Witch Bolt",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 1,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "1 action",
+   "range": "30 feet",
+   "rangeFt": 30,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "sorcerer",
+    "warlock"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "wrathful-smite",
    "name": "Wrathful Smite",
    "name_it": null,
@@ -1982,6 +2558,36 @@
     "paladin"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "wrathful-smite-2024",
+   "name": "Wrathful Smite",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 1,
+   "school": "necromancy",
+   "school_it": "Necromanzia",
+   "castingTime": "1 bonus action",
+   "range": "Self",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "paladin"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -2108,6 +2714,62 @@
    "desc": ""
   },
   {
+   "id": "arcane-vigor-2024",
+   "name": "Arcane Vigor",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 2,
+   "school": "abjuration",
+   "school_it": "Abiurazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "battle-familiar-2024",
+   "name": "Battle Familiar",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 2,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "beast-sense",
    "name": "Beast Sense",
    "name_it": null,
@@ -2134,6 +2796,37 @@
     "ranger"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "beast-sense-2024",
+   "name": "Beast Sense",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 2,
+   "school": "divination",
+   "school_it": "Divinazione",
+   "castingTime": "1 action",
+   "range": "Touch",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": true,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 hour",
+   "concentration": true,
+   "ritual": true,
+   "classes": [
+    "druid",
+    "ranger"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -2201,6 +2894,67 @@
    "desc": ""
   },
   {
+   "id": "cloud-of-daggers-2024",
+   "name": "Cloud of Daggers",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 2,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 action",
+   "range": "60 feet",
+   "rangeFt": 60,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "bard",
+    "sorcerer",
+    "warlock"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "conjure-tools-2024",
+   "name": "Conjure Tools",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 2,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "cordon-of-arrows",
    "name": "Cordon of Arrows",
    "name_it": null,
@@ -2226,6 +2980,36 @@
     "ranger"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "cordon-of-arrows-2024",
+   "name": "Cordon of Arrows",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 2,
+   "school": "transmutation",
+   "school_it": "Trasmutazione",
+   "castingTime": "1 action",
+   "range": "5 feet",
+   "rangeFt": 5,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "8 hours",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "ranger"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -2262,6 +3046,95 @@
    "desc": ""
   },
   {
+   "id": "crown-of-madness-2024",
+   "name": "Crown of Madness",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 2,
+   "school": "enchantment",
+   "school_it": "Ammaliamento",
+   "castingTime": "1 action",
+   "range": "120 feet",
+   "rangeFt": 120,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "bard",
+    "sorcerer",
+    "warlock"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "death-armor-2024",
+   "name": "Death Armor",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 2,
+   "school": "necromancy",
+   "school_it": "Necromanzia",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "deryans-helpful-homunculi-2024",
+   "name": "Deryan's Helpful Homunculi",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 2,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "digital-phantom-ua",
    "name": "Digital Phantom (UA)",
    "name_it": null,
@@ -2292,6 +3165,34 @@
    "desc": ""
   },
   {
+   "id": "disruptive-tune-2024",
+   "name": "Disruptive Tune",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 2,
+   "school": "abjuration",
+   "school_it": "Abiurazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "dragons-breath",
    "name": "Dragon's Breath",
    "name_it": null,
@@ -2318,6 +3219,34 @@
     "sorcerer"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "dueling-ground-2024",
+   "name": "Dueling Ground",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 2,
+   "school": "abjuration",
+   "school_it": "Abiurazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -2381,6 +3310,34 @@
     "warlock"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "elminsters-elusion-2024",
+   "name": "Elminster's Elusion",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 2,
+   "school": "abjuration",
+   "school_it": "Abiurazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -2530,6 +3487,34 @@
     "ranger"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "homunculus-servant-2024",
+   "name": "Homunculus Servant",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 2,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -2868,6 +3853,34 @@
    "desc": ""
   },
   {
+   "id": "pinky-swear-2024",
+   "name": "Pinky Swear",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 2,
+   "school": "abjuration",
+   "school_it": "Abiurazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "pyrotechnics",
    "name": "Pyrotechnics",
    "name_it": null,
@@ -2926,6 +3939,34 @@
     "sorcerer"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "searing-orb-2024",
+   "name": "Searing Orb",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 2,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -3115,6 +4156,37 @@
    "desc": ""
   },
   {
+   "id": "summon-beast-2024",
+   "name": "Summon Beast",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 2,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 action",
+   "range": "90 feet",
+   "rangeFt": 90,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 hour",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "druid",
+    "ranger"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "tashas-mind-whip",
    "name": "Tasha's Mind Whip",
    "name_it": null,
@@ -3171,6 +4243,62 @@
     "sorcerer"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "tortoise-shell-2024",
+   "name": "Tortoise Shell",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 2,
+   "school": "abjuration",
+   "school_it": "Abiurazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "uncertain-footing-2024",
+   "name": "Uncertain Footing",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 2,
+   "school": "illusion",
+   "school_it": "Illusione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -3299,6 +4427,38 @@
    "desc": ""
   },
   {
+   "id": "wither-and-bloom-2024",
+   "name": "Wither and Bloom",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 2,
+   "school": "necromancy",
+   "school_it": "Necromanzia",
+   "castingTime": "1 action",
+   "range": "60 feet",
+   "rangeFt": 60,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Instantaneous",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "druid",
+    "sorcerer"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "wristpocket",
    "name": "Wristpocket",
    "name_it": null,
@@ -3422,6 +4582,34 @@
    "desc": ""
   },
   {
+   "id": "astral-flood-2024",
+   "name": "Astral Flood",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 3,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "aura-of-vitality",
    "name": "Aura of Vitality",
    "name_it": null,
@@ -3453,6 +4641,38 @@
    "desc": ""
   },
   {
+   "id": "aura-of-vitality-2024",
+   "name": "Aura of Vitality",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 3,
+   "school": "abjuration",
+   "school_it": "Abiurazione",
+   "castingTime": "1 action",
+   "range": "Self (30-foot radius)",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "druid",
+    "cleric",
+    "paladin"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "blinding-smite",
    "name": "Blinding Smite",
    "name_it": null,
@@ -3478,6 +4698,64 @@
     "paladin"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "blinding-smite-2024",
+   "name": "Blinding Smite",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 3,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "1 bonus action",
+   "range": "Self",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "paladin"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "cacophonic-shield-2024",
+   "name": "Cacophonic Shield",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 3,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -3514,6 +4792,39 @@
    "desc": ""
   },
   {
+   "id": "catnap-2024",
+   "name": "Catnap",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 3,
+   "school": "enchantment",
+   "school_it": "Ammaliamento",
+   "castingTime": "1 action",
+   "range": "30 feet",
+   "rangeFt": 30,
+   "components": {
+    "v": false,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "10 minutes",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "bard",
+    "sorcerer",
+    "artificer"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "conjure-barrage",
    "name": "Conjure Barrage",
    "name_it": null,
@@ -3539,6 +4850,64 @@
     "ranger"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "conjure-barrage-2024",
+   "name": "Conjure Barrage",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 3,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 action",
+   "range": "Self (60-foot cone)",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Instantaneous",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "ranger"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "conjure-constructs-2024",
+   "name": "Conjure Constructs",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 3,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -3602,6 +4971,36 @@
    "desc": ""
   },
   {
+   "id": "crusaders-mantle-2024",
+   "name": "Crusader's Mantle",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 3,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "1 action",
+   "range": "Self",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "paladin"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "elemental-weapon",
    "name": "Elemental Weapon",
    "name_it": null,
@@ -3630,6 +5029,39 @@
     "artificer"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "elemental-weapon-2024",
+   "name": "Elemental Weapon",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 3,
+   "school": "transmutation",
+   "school_it": "Trasmutazione",
+   "castingTime": "1 action",
+   "range": "Touch",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 hour",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "druid",
+    "paladin",
+    "ranger",
+    "artificer"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -3756,6 +5188,39 @@
     "bard"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "feign-death-2024",
+   "name": "Feign Death",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 3,
+   "school": "necromancy",
+   "school_it": "Necromanzia",
+   "castingTime": "1 action",
+   "range": "Touch",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "1 hour",
+   "concentration": false,
+   "ritual": true,
+   "classes": [
+    "wizard",
+    "druid",
+    "cleric",
+    "bard"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -3945,6 +5410,36 @@
    "desc": ""
   },
   {
+   "id": "hunger-of-hadar-2024",
+   "name": "Hunger of Hadar",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 3,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 action",
+   "range": "150 feet",
+   "rangeFt": 150,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "warlock"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "incite-greed",
    "name": "Incite Greed",
    "name_it": null,
@@ -3973,6 +5468,34 @@
     "warlock"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "inflict-doubt-2024",
+   "name": "Inflict Doubt",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 3,
+   "school": "enchantment",
+   "school_it": "Ammaliamento",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -4040,6 +5563,34 @@
    "desc": ""
   },
   {
+   "id": "laerals-silver-lance-2024",
+   "name": "Laeral's Silver Lance",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 3,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "life-transference",
    "name": "Life Transference",
    "name_it": null,
@@ -4095,6 +5646,36 @@
     "ranger"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "lightning-arrow-2024",
+   "name": "Lightning Arrow",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 3,
+   "school": "transmutation",
+   "school_it": "Trasmutazione",
+   "castingTime": "1 bonus action",
+   "range": "Self",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "ranger"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -4312,6 +5893,39 @@
    "desc": ""
   },
   {
+   "id": "summon-fey-2024",
+   "name": "Summon Fey",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 3,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 action",
+   "range": "90 feet",
+   "rangeFt": 90,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 hour",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "druid",
+    "warlock",
+    "ranger"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "summon-lesser-demons",
    "name": "Summon Lesser Demons",
    "name_it": null,
@@ -4402,6 +6016,37 @@
    "desc": ""
   },
   {
+   "id": "summon-undead-2024",
+   "name": "Summon Undead",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 3,
+   "school": "necromancy",
+   "school_it": "Necromanzia",
+   "castingTime": "1 action",
+   "range": "90 feet",
+   "rangeFt": 90,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 hour",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "warlock"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "summon-warrior-spirit-ua",
    "name": "Summon Warrior Spirit (UA)",
    "name_it": null,
@@ -4428,6 +6073,34 @@
     "sorcerer"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "sylunes-viper-2024",
+   "name": "Sylune's Viper",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 3,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -4644,6 +6317,65 @@
    "desc": ""
   },
   {
+   "id": "aura-of-purity-2024",
+   "name": "Aura of Purity",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 4,
+   "school": "abjuration",
+   "school_it": "Abiurazione",
+   "castingTime": "1 action",
+   "range": "Self (30-foot radius)",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 10 minutes",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "cleric",
+    "paladin"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "backlash-2024",
+   "name": "Backlash",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 4,
+   "school": "abjuration",
+   "school_it": "Abiurazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "charm-monster",
    "name": "Charm Monster",
    "name_it": null,
@@ -4767,6 +6499,62 @@
    "desc": ""
   },
   {
+   "id": "distorted-distance-2024",
+   "name": "Distorted Distance",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 4,
+   "school": "illusion",
+   "school_it": "Illusione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "doomtide-2024",
+   "name": "Doomtide",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 4,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "ego-whip-ua",
    "name": "Ego Whip (UA)",
    "name_it": null,
@@ -4830,6 +6618,34 @@
    "desc": ""
   },
   {
+   "id": "festering-blast-2024",
+   "name": "Festering Blast",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 4,
+   "school": "necromancy",
+   "school_it": "Necromanzia",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "find-greater-steed",
    "name": "Find Greater Steed",
    "name_it": null,
@@ -4855,6 +6671,34 @@
     "paladin"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "fount-of-moonlight-2024",
+   "name": "Fount of Moonlight",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 4,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -4945,6 +6789,37 @@
     "ranger"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "grasping-vine-2024",
+   "name": "Grasping Vine",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 4,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 bonus action",
+   "range": "30 feet",
+   "rangeFt": 30,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "druid",
+    "ranger"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -5131,6 +7006,34 @@
    "desc": ""
   },
   {
+   "id": "spellfire-storm-2024",
+   "name": "Spellfire Storm",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 4,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "spirit-of-death",
    "name": "Spirit of Death",
    "name_it": null,
@@ -5220,6 +7123,64 @@
    "desc": ""
   },
   {
+   "id": "staggering-smite-2024",
+   "name": "Staggering Smite",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 4,
+   "school": "enchantment",
+   "school_it": "Ammaliamento",
+   "castingTime": "1 bonus action",
+   "range": "Self",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "paladin"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "sticks-to-snakes-2024",
+   "name": "Sticks to Snakes",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 4,
+   "school": "transmutation",
+   "school_it": "Trasmutazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "storm-sphere",
    "name": "Storm Sphere",
    "name_it": null,
@@ -5280,6 +7241,37 @@
    "desc": ""
   },
   {
+   "id": "summon-aberration-2024",
+   "name": "Summon Aberration",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 4,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 action",
+   "range": "90 feet",
+   "rangeFt": 90,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 hour",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "warlock"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "summon-construct",
    "name": "Summon Construct",
    "name_it": null,
@@ -5306,6 +7298,37 @@
     "artificer"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "summon-construct-2024",
+   "name": "Summon Construct",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 4,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 action",
+   "range": "90 feet",
+   "rangeFt": 90,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 hour",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "artificer"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -5337,6 +7360,38 @@
     "ranger"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "summon-elemental-2024",
+   "name": "Summon Elemental",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 4,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 action",
+   "range": "90 feet",
+   "rangeFt": 90,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 hour",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "druid",
+    "ranger"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -5492,6 +7547,62 @@
    "desc": ""
   },
   {
+   "id": "zone-of-amicability-2024",
+   "name": "Zone of Amicability",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 4,
+   "school": "enchantment",
+   "school_it": "Ammaliamento",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "alustriels-mooncloak-2024",
+   "name": "Alustriel's Mooncloak",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 5,
+   "school": "abjuration",
+   "school_it": "Abiurazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "banishing-smite",
    "name": "Banishing Smite",
    "name_it": null,
@@ -5521,6 +7632,36 @@
    "desc": ""
   },
   {
+   "id": "banishing-smite-2024",
+   "name": "Banishing Smite",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 5,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 bonus action",
+   "range": "Self",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "paladin"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "circle-of-power",
    "name": "Circle of Power",
    "name_it": null,
@@ -5546,6 +7687,36 @@
     "paladin"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "circle-of-power-2024",
+   "name": "Circle of Power",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 5,
+   "school": "abjuration",
+   "school_it": "Abiurazione",
+   "castingTime": "1 action",
+   "range": "Self (30-foot radius)",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 10 minutes",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "paladin"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -5605,6 +7776,36 @@
     "ranger"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "conjure-volley-2024",
+   "name": "Conjure Volley",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 5,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 action",
+   "range": "150 feet",
+   "rangeFt": 150,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Instantaneous",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "ranger"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -5789,6 +7990,36 @@
    "desc": ""
   },
   {
+   "id": "destructive-wave-2024",
+   "name": "Destructive Wave",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 5,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "1 action",
+   "range": "Self (30-foot radius)",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "Instantaneous",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "paladin"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "enervation",
    "name": "Enervation",
    "name_it": null,
@@ -5820,6 +8051,38 @@
    "desc": ""
   },
   {
+   "id": "enervation-2024",
+   "name": "Enervation",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 5,
+   "school": "necromancy",
+   "school_it": "Necromanzia",
+   "castingTime": "1 action",
+   "range": "60 feet",
+   "rangeFt": 60,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "sorcerer",
+    "warlock"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "far-step",
    "name": "Far Step",
    "name_it": null,
@@ -5847,6 +8110,34 @@
     "warlock"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "grave-ground-2024",
+   "name": "Grave Ground",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 5,
+   "school": "necromancy",
+   "school_it": "Necromanzia",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -5941,6 +8232,34 @@
    "desc": ""
   },
   {
+   "id": "jallarzis-storm-of-radiance-2024",
+   "name": "Jallarzi's Storm of Radiance",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 5,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "maelstrom",
    "name": "Maelstrom",
    "name_it": null,
@@ -5966,6 +8285,34 @@
     "druid"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "mordenkainens-lucubration-2024",
+   "name": "Mordenkainen's Lucubration",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 5,
+   "school": "divination",
+   "school_it": "Divinazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -5996,6 +8343,37 @@
     "warlock"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "negative-energy-flood-2024",
+   "name": "Negative Energy Flood",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 5,
+   "school": "necromancy",
+   "school_it": "Necromanzia",
+   "castingTime": "1 action",
+   "range": "60 feet",
+   "rangeFt": 60,
+   "components": {
+    "v": true,
+    "s": false,
+    "m": true,
+    "material": null
+   },
+   "duration": "Instantaneous",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "warlock"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -6062,6 +8440,62 @@
    "desc": ""
   },
   {
+   "id": "songals-elemental-suffusion-2024",
+   "name": "Songal's Elemental Suffusion",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 5,
+   "school": "transmutation",
+   "school_it": "Trasmutazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "spirit-lantern-2024",
+   "name": "Spirit Lantern",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 5,
+   "school": "necromancy",
+   "school_it": "Necromanzia",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "steel-wind-strike",
    "name": "Steel Wind Strike",
    "name_it": null,
@@ -6092,6 +8526,37 @@
    "desc": ""
   },
   {
+   "id": "steel-wind-strike-2024",
+   "name": "Steel Wind Strike",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 5,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 action",
+   "range": "30 feet",
+   "rangeFt": 30,
+   "components": {
+    "v": false,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Instantaneous",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "ranger"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "summon-celestial",
    "name": "Summon Celestial",
    "name_it": null,
@@ -6118,6 +8583,37 @@
     "paladin"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "summon-celestial-2024",
+   "name": "Summon Celestial",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 5,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 action",
+   "range": "90 feet",
+   "rangeFt": 90,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 hour",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "cleric",
+    "paladin"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -6184,6 +8680,34 @@
    "desc": ""
   },
   {
+   "id": "summon-plant-2024",
+   "name": "Summon Plant",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 5,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "swift-quiver",
    "name": "Swift Quiver",
    "name_it": null,
@@ -6209,6 +8733,36 @@
     "ranger"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "swift-quiver-2024",
+   "name": "Swift Quiver",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 5,
+   "school": "transmutation",
+   "school_it": "Trasmutazione",
+   "castingTime": "1 bonus action",
+   "range": "Touch",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "ranger"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -6241,6 +8795,39 @@
     "warlock"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "synaptic-static-2024",
+   "name": "Synaptic Static",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 5,
+   "school": "enchantment",
+   "school_it": "Ammaliamento",
+   "castingTime": "1 action",
+   "range": "120 feet",
+   "rangeFt": 120,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": false,
+    "material": null
+   },
+   "duration": "Instantaneous",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "bard",
+    "sorcerer",
+    "warlock"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -6336,6 +8923,34 @@
    "desc": ""
   },
   {
+   "id": "waves-of-exhaustion-2024",
+   "name": "Waves of Exhaustion",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 5,
+   "school": "necromancy",
+   "school_it": "Necromanzia",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "wrath-of-nature",
    "name": "Wrath of Nature",
    "name_it": null,
@@ -6362,6 +8977,34 @@
     "ranger"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "yolandes-regal-presence-2024",
+   "name": "Yolande's Regal Presence",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 5,
+   "school": "enchantment",
+   "school_it": "Ammaliamento",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -6393,6 +9036,38 @@
     "warlock"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "arcane-gate-2024",
+   "name": "Arcane Gate",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 6,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 action",
+   "range": "500 feet",
+   "rangeFt": 500,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 10 minutes",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "sorcerer",
+    "warlock"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -6455,6 +9130,34 @@
    "desc": ""
   },
   {
+   "id": "dirge-2024",
+   "name": "Dirge",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 6,
+   "school": "enchantment",
+   "school_it": "Ammaliamento",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "druid-grove",
    "name": "Druid Grove",
    "name_it": null,
@@ -6480,6 +9183,34 @@
     "druid"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "elminsters-effulgent-spheres-2024",
+   "name": "Elminster's Effulgent Spheres",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 6,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -6701,6 +9432,34 @@
    "desc": ""
   },
   {
+   "id": "leomunds-lamentable-belaborment-2024",
+   "name": "Leomund's Lamentable Belaborment",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 6,
+   "school": "enchantment",
+   "school_it": "Ammaliamento",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "mental-prison",
    "name": "Mental Prison",
    "name_it": null,
@@ -6883,6 +9642,34 @@
    "desc": ""
   },
   {
+   "id": "summon-dinosaur-2024",
+   "name": "Summon Dinosaur",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 6,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "summon-fiend",
    "name": "Summon Fiend",
    "name_it": null,
@@ -6909,6 +9696,65 @@
     "warlock"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "summon-fiend-2024",
+   "name": "Summon Fiend",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 6,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 action",
+   "range": "90 feet",
+   "rangeFt": 90,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 hour",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "warlock"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "tashas-bubbling-cauldron-2024",
+   "name": "Tasha's Bubbling Cauldron",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 6,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -6969,6 +9815,34 @@
     "wizard"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "aura-of-evasion-2024",
+   "name": "Aura of Evasion",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 7,
+   "school": "abjuration",
+   "school_it": "Abiurazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -7157,6 +10031,94 @@
    "desc": ""
   },
   {
+   "id": "fractured-awareness-2024",
+   "name": "Fractured Awareness",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 7,
+   "school": "divination",
+   "school_it": "Divinazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "power-word-fortify-2024",
+   "name": "Power Word Fortify",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 7,
+   "school": "enchantment",
+   "school_it": "Ammaliamento",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "power-word-pain-2024",
+   "name": "Power Word Pain",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 7,
+   "school": "enchantment",
+   "school_it": "Ammaliamento",
+   "castingTime": "1 action",
+   "range": "60 feet",
+   "rangeFt": 60,
+   "components": {
+    "v": true,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "Instantaneous",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "sorcerer",
+    "warlock"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "power-word-pain",
    "name": "Power Word: Pain",
    "name_it": null,
@@ -7184,6 +10146,62 @@
     "warlock"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "reweave-fate-2024",
+   "name": "Reweave Fate",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 7,
+   "school": "divination",
+   "school_it": "Divinazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "simbuls-synostodweomer-2024",
+   "name": "Simbul's Synostodweomer",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 7,
+   "school": "transmutation",
+   "school_it": "Trasmutazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -7242,6 +10260,62 @@
     "wizard"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "transfix-2024",
+   "name": "Transfix",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 7,
+   "school": "enchantment",
+   "school_it": "Ammaliamento",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "void-star-2024",
+   "name": "Void Star",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 7,
+   "school": "necromancy",
+   "school_it": "Necromanzia",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -7335,6 +10409,62 @@
    "desc": ""
   },
   {
+   "id": "entrancing-mirrors-2024",
+   "name": "Entrancing Mirrors",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 8,
+   "school": "illusion",
+   "school_it": "Illusione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "holy-star-of-mystra-2024",
+   "name": "Holy Star of Mystra",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 8,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "illusory-dragon",
    "name": "Illusory Dragon",
    "name_it": null,
@@ -7360,6 +10490,92 @@
     "wizard"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "illusory-dragon-2024",
+   "name": "Illusory Dragon",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 8,
+   "school": "illusion",
+   "school_it": "Illusione",
+   "castingTime": "1 action",
+   "range": "120 feet",
+   "rangeFt": 120,
+   "components": {
+    "v": false,
+    "s": true,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "wizard"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "iron-body-2024",
+   "name": "Iron Body",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 8,
+   "school": "transmutation",
+   "school_it": "Trasmutazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "lightning-ring-2024",
+   "name": "Lightning Ring",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 8,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   },
@@ -7423,6 +10639,34 @@
    "desc": ""
   },
   {
+   "id": "moment-of-prescience-2024",
+   "name": "Moment of Prescience",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 8,
+   "school": "divination",
+   "school_it": "Divinazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "reality-break",
    "name": "Reality Break",
    "name_it": null,
@@ -7477,6 +10721,36 @@
     "wizard"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "telepathy-2024",
+   "name": "Telepathy",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 8,
+   "school": "divination",
+   "school_it": "Divinazione",
+   "castingTime": "1 action",
+   "range": "Unlimited",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "24 hours",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "wizard"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -7541,6 +10815,94 @@
    "desc": ""
   },
   {
+   "id": "blade-of-disaster-2024",
+   "name": "Blade of Disaster",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 9,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 bonus action",
+   "range": "60 feet",
+   "rangeFt": 60,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "sorcerer",
+    "warlock"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "detonate-2024",
+   "name": "Detonate",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 9,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "hindsight-2024",
+   "name": "Hindsight",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 9,
+   "school": "divination",
+   "school_it": "Divinazione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "invulnerability",
    "name": "Invulnerability",
    "name_it": null,
@@ -7566,6 +10928,36 @@
     "wizard"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "invulnerability-2024",
+   "name": "Invulnerability",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 9,
+   "school": "abjuration",
+   "school_it": "Abiurazione",
+   "castingTime": "1 action",
+   "range": "Self",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Concentration, up to 10 minutes",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "wizard"
+   ],
+   "higherLevel": "",
+   "basicsFrom2014": true,
    "stub": true,
    "desc": ""
   },
@@ -7717,6 +11109,62 @@
     "wizard"
    ],
    "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "vision-of-elapsing-eons-2024",
+   "name": "Vision of Elapsing Eons",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 9,
+   "school": "illusion",
+   "school_it": "Illusione",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "wail-of-the-banshee-2024",
+   "name": "Wail of the Banshee",
+   "name_it": null,
+   "source": "Regole 2024 (PHB 2024 e altri manuali)",
+   "sourceKey": "R24",
+   "ruleset": "2024",
+   "level": 9,
+   "school": "necromancy",
+   "school_it": "Necromanzia",
+   "castingTime": "",
+   "range": "",
+   "rangeFt": null,
+   "components": {
+    "v": false,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "",
+   "concentration": false,
+   "ritual": false,
+   "classes": [],
+   "higherLevel": "",
+   "basicsFrom2014": false,
    "stub": true,
    "desc": ""
   }
