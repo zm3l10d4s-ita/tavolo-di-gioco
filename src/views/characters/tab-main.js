@@ -80,7 +80,7 @@ function LinkedName({ label, value, items, onPick, testid, placeholder }) {
 
 function Identity({ c, mutate, data }) {
   const campaigns = useCollection('campaigns');
-  const rs = (x) => !x.ruleset || x.ruleset === c.ruleset;
+  const rs = (x) => R.matchesRuleset(x, c.ruleset);
   const lvl = R.totalLevel(c);
   const xpLvl = R.levelForXp(c.xp);
   const next = R.xpForNextLevel(lvl);
@@ -102,7 +102,10 @@ function Identity({ c, mutate, data }) {
       <label class="field"><span class="field-label">Punti esperienza</span>
         <${InlineNum} value=${c.xp} min=${0} onInput=${(v) => set('xp')(v || 0)} title=${next ? `Prossimo livello a ${next} PE` : 'Livello massimo'} />
         ${c.xp > 0 && xpLvl > lvl && html`<span class="tag good cs-small">PE per il livello ${xpLvl}!</span>`}</label>
-      <${Select} label="Regole" value=${c.ruleset} onChange=${set('ruleset')} options=${[{ value: '2014', label: '2014 (SRD 5.1)' }, { value: '2024', label: '2024 (SRD 5.2)' }]} />
+      <${Select} label="Regole" value=${c.ruleset} onChange=${set('ruleset')} options=${R.RULESET_OPTIONS} data-testid="field-ruleset" />
+      ${c.ruleset === 'mix' && R.MIX_TOPICS.map((t) => html`<${Select} label=${t.label} value=${R.topicRuleset(c, t.id)} data-testid=${'mix-' + t.id}
+        onChange=${(v) => mutate((d) => { d.mixRules = { ...(d.mixRules || {}), [t.id]: v }; })}
+        options=${[{ value: '2024', label: 'Regole 2024' }, { value: '2014', label: 'Regole 2014' }]} />`)}
       <${Select} label="Campagna" value=${c.campaignId || ''} onChange=${(v) => mutate((d) => { d.campaignId = v || null; })}
         options=${[{ value: '', label: 'Nessuna' }, ...campaigns.map((x) => ({ value: x.id, label: x.name || 'Campagna' }))]} />
     </div>
@@ -110,7 +113,7 @@ function Identity({ c, mutate, data }) {
 }
 
 function Classes({ c, mutate, data }) {
-  const rs = (x) => !x.ruleset || x.ruleset === c.ruleset;
+  const rs = (x) => R.matchesRuleset(x, c.ruleset);
   const setCls = (i, fn) => mutate((d) => { const e = { ...d.classes[i] }; fn(e); d.classes[i] = e; });
   return html`<${Panel} title="Classi e livelli" className="cs-classes"
     actions=${html`<button class="btn ghost sm" data-testid="add-class" onClick=${() => mutate((d) => { d.classes.push({ classId: '', name: 'Nuova classe', subclassId: '', subclassName: '', level: 1, hitDie: 8 }); })}>+ Classe</button>`}>

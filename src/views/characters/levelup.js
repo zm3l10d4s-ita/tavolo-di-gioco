@@ -20,7 +20,7 @@ export function LevelUpModal({ open, onClose, c, mutate, data }) {
   if (!open) return null;
 
   const isNew = sel === NEW;
-  const clsOpts = data.classes.filter((x) => x._homebrew || !x.ruleset || x.ruleset === c.ruleset);
+  const clsOpts = data.classes.filter((x) => x._homebrew || R.matchesRuleset(x, c.ruleset));
   const newD = clsOpts.find((x) => x.id === newId);
   const entry = isNew
     ? { classId: newD?.id || '', name: newD ? newD.name_it || newD.name : custom.name || 'Nuova classe', hitDie: newD?.hitDie || custom.hitDie, level: 0, subclassId: '' }
@@ -70,7 +70,7 @@ export function LevelUpModal({ open, onClose, c, mutate, data }) {
         <${Select} label="Classe" value=${sel} onChange=${(v) => { setSel(v); setSubId(''); }} data-testid="levelup-class"
           options=${[...c.classes.map((e, i) => ({ value: String(i), label: `${e.name} ${e.level} → ${Number(e.level) + 1}` })), { value: NEW, label: '+ Nuova classe (multiclasse)…' }]} />
         ${isNew && html`<${Select} label="Nuova classe" value=${newId} onChange=${setNewId}
-          options=${[{ value: '', label: 'Altro / homebrew' }, ...clsOpts.filter((x) => !c.classes.some((e) => e.classId === x.id)).map((x) => ({ value: x.id, label: `${x.name_it || x.name} (d${x.hitDie})` }))]} />`}
+          options=${[{ value: '', label: 'Altro / homebrew' }, ...clsOpts.filter((x) => !c.classes.some((e) => e.classId === x.id)).map((x) => ({ value: x.id, label: `${x.name_it || x.name}${R.versionTag(x, c.ruleset)} (d${x.hitDie})` }))]} />`}
         ${isNew && !newD && html`<label class="field"><span class="field-label">Nome / dado vita</span><span class="row" style="flex-wrap:nowrap">
           <${Inline} value=${custom.name} placeholder="Nome classe" onInput=${(v) => setCustom({ ...custom, name: v })} />
           <select class="input cs-inline" value=${String(custom.hitDie)} onChange=${(e) => setCustom({ ...custom, hitDie: Number(e.currentTarget.value) })}>${[6, 8, 10, 12].map((d) => html`<option value=${String(d)}>d${d}</option>`)}</select></span></label>`}

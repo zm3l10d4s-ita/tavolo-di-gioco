@@ -17,7 +17,16 @@ const STEPS = [
 ];
 const CUSTOM = '__custom';
 const AB = R.ABILITY_LABELS_IT;
-const forRuleset = (items, rs) => items.filter((x) => !x.ruleset || x.ruleset === rs);
+// SRD: solo le voci delle regole scelte. Manuali (catalogo) e homebrew: sempre disponibili, ordinati dopo l'SRD.
+// Con regole miste: tutte le voci SRD 2014 e 2024 (con l'anno accanto al nome) e anche i doppioni dei manuali.
+const forRuleset = (items, rs) => {
+  const srd = items.filter((x) => !x._catalog && !x._homebrew && R.matchesRuleset(x, rs));
+  const rest = items.filter((x) => x._catalog || x._homebrew)
+    .filter((x) => rs === 'mix' || !srd.some((y) => y.name === x.name && x._catalog)) // stesso nome già nell'SRD di queste regole
+    .sort((a, b) => String(a.name).localeCompare(String(b.name)));
+  return [...srd.sort((a, b) => String(a.name).localeCompare(String(b.name))), ...rest];
+};
+const optLabel = (x, rs, name, after = '') => name + R.versionTag(x, rs) + after + (x._homebrew ? ' (homebrew)' : x._catalog ? ` (${x.sourceKey || x.source || 'manuale'})` : '');
 const itName = (x) => x?.name_it || x?.name || '';
 const METHODS = [
   { value: 'standard', label: 'Serie standard (15, 14, 13, 12, 10, 8)' }, { value: 'pointbuy', label: `Acquisto a punti (${POINT_BUY_BUDGET})` },
@@ -26,13 +35,13 @@ const METHODS = [
 
 function initial(defaultCampaign) {
   return {
-    step: 0, name: '', player: '', ruleset: store.getSetting('ruleset', '2014') === '2024' ? '2024' : '2014', campaignId: defaultCampaign || '',
+    step: 0, name: '', player: '', ruleset: ['2024', 'mix'].includes(store.getSetting('ruleset', '2014')) ? store.getSetting('ruleset') : '2014', campaignId: defaultCampaign || '',
     alignment: '', gender: '',
     raceId: '', raceName: '', subraceId: '', bgId: '', bgName: '',
     classId: '', className: '', hitDie: 8, casterType: '', level: 1, subclassId: '',
     method: 'standard', pool: [...STANDARD_ARRAY], assign: { str: 0, dex: 1, con: 2, int: 3, wis: 4, cha: 5 },
     pb: { str: 8, dex: 8, con: 8, int: 8, wis: 8, cha: 8 }, manual: { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 },
-    raceChoice: [], bgMode: '2-1', bgPlus2: '', bgPlus1: '', extra: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 },
+    raceChoice: [], asiFrom: 'auto', bgMode: '2-1', bgPlus2: '', bgPlus1: '', extra: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 },
     skills: [], startingEquipment: true,
   };
 }
@@ -51,7 +60,11 @@ export function CreationWizard({ open, onClose, onCreated, defaultCampaign }) {
   const clsD = classes.find((x) => x.id === s.classId) || null;
   const bgD = backgrounds.find((x) => x.id === s.bgId) || null;
   const subLvl = clsD ? subclassLevel(clsD.id, subclasses) : 99;
-  const subOptions = subclasses.filter((x) => clsD && x.classId === clsD.id);
+  const subOptions = clsD ? [
+    ...subclasses.filter((x) => !x._catalog && x.classId === clsD.id),
+    // sottoclassi dei manuali: valgono per la classe sia con regole 2014 sia 2024
+    ...subclasses.filter((x) => x._catalog && x.classId === clsD.id.replace(/-2024$/, '')).sort((a, b) => a.name.localeCompare(b.name)),
+  ] : [];
 
   // punteggi base secondo il metodo
   const base = {};
@@ -60,13 +73,21 @@ export function CreationWizard({ open, onClose, onCreated, defaultCampaign }) {
     else if (s.method === 'manual') base[a] = s.manual[a];
     else base[a] = s.pool[s.assign[a]] ?? 10;
   }
+  // Da dove arrivano gli aumenti di caratteristica: razza (regole 2014) o background (regole 2024).
+  // Con regole miste, se entrambi ne danno, si sceglie (predefinito: background, come nel manuale 2024).
+  const raceHasAsi = !!((raceD?.abilityBonuses || []).length || (subD?.abilityBonuses || []).length || raceD?.abilityBonusChoice);
+  const bgHasAsi = !!(bgD?.abilityScores || []).length;
+  const mixed = s.ruleset === 'mix';
+  const asiFrom = s.asiFrom === 'auto' ? 'background' : s.asiFrom;
+  const useRaceAsi = s.ruleset === '2014' || (mixed && raceHasAsi && (!bgHasAsi || asiFrom !== 'background'));
+  const useBgAsi = s.ruleset === '2024' || (mixed && bgHasAsi && (!raceHasAsi || asiFrom !== 'race'));
   const chosen = { ...s.extra };
-  for (const a of s.raceChoice) chosen[a] = (chosen[a] || 0) + (raceD?.abilityBonusChoice?.from?.find((f) => f.ability === a)?.bonus || 1);
-  if (s.ruleset === '2024' && bgD?.abilityScores?.length) {
+  if (useRaceAsi) for (const a of s.raceChoice) chosen[a] = (chosen[a] || 0) + (raceD?.abilityBonusChoice?.from?.find((f) => f.ability === a)?.bonus || 1);
+  if (useBgAsi && bgD?.abilityScores?.length) {
     if (s.bgMode === '1-1-1') for (const a of bgD.abilityScores) chosen[a] = (chosen[a] || 0) + 1;
     else { if (s.bgPlus2) chosen[s.bgPlus2] = (chosen[s.bgPlus2] || 0) + 2; if (s.bgPlus1 && s.bgPlus1 !== s.bgPlus2) chosen[s.bgPlus1] = (chosen[s.bgPlus1] || 0) + 1; }
   }
-  const bonus = abilityBonuses({ race: s.ruleset === '2014' ? raceD : null, subrace: s.ruleset === '2014' ? subD : null, chosen });
+  const bonus = abilityBonuses({ race: useRaceAsi ? raceD : null, subrace: useRaceAsi ? subD : null, chosen });
   const scores = {};
   for (const a of ABILITIES) scores[a] = Math.min(30, (base[a] || 10) + (bonus[a] || 0));
 
@@ -109,7 +130,8 @@ export function CreationWizard({ open, onClose, onCreated, defaultCampaign }) {
     <${TextField} label="Nome del personaggio" value=${s.name} onInput=${(v) => set({ name: v })} placeholder="es. Fjellbjørn" data-testid="wz-name" autofocus />
     <${TextField} label="Giocatore" value=${s.player} onInput=${(v) => set({ player: v })} />
     <${Select} label="Regole" value=${s.ruleset} onChange=${(v) => set({ ruleset: v, raceId: '', subraceId: '', classId: '', subclassId: '', bgId: '', skills: [] })}
-      options=${[{ value: '2014', label: 'D&D 5e 2014 (SRD 5.1)' }, { value: '2024', label: 'D&D 5e 2024 (SRD 5.2)' }]} data-testid="wz-ruleset" />
+      options=${[{ value: '2014', label: 'D&D 5e 2014 (SRD 5.1)' }, { value: '2024', label: 'D&D 5e 2024 (SRD 5.2)' }, { value: 'mix', label: 'Misto: un po\' 2014, un po\' 2024' }]} data-testid="wz-ruleset" />
+    ${s.ruleset === 'mix' && html`<p class="cs-small faint cs-span2">Puoi scegliere razza, classe e background di entrambe le versioni: ognuno porta le sue regole (l'anno è indicato accanto al nome). Le regole generali (sfinimento, multiclasse) si scelgono poi nella scheda.</p>`}
     <${Select} label="Campagna" value=${s.campaignId || ''} onChange=${(v) => set({ campaignId: v })}
       options=${[{ value: '', label: 'Nessuna' }, ...campaigns.map((x) => ({ value: x.id, label: x.name || 'Campagna' }))]} />
     <${Select} label="Allineamento" value=${s.alignment} onChange=${(v) => set({ alignment: v })} options=${[{ value: '', label: '—' }, ...ALIGNMENTS]} />
@@ -119,20 +141,20 @@ export function CreationWizard({ open, onClose, onCreated, defaultCampaign }) {
   const raceOpts = forRuleset(races, s.ruleset);
   const subOpts = subraces.filter((x) => x.raceId === s.raceId);
   const stepRace = html`<div class="cs-wz-grid">
-    <${Select} label=${s.ruleset === '2024' ? 'Specie' : 'Razza'} value=${s.raceId} data-testid="wz-race"
+    <${Select} label=${s.ruleset === '2024' ? 'Specie' : mixed ? 'Razza / specie' : 'Razza'} value=${s.raceId} data-testid="wz-race"
       onChange=${(v) => set({ raceId: v, subraceId: '', raceChoice: [] })}
-      options=${[{ value: '', label: '— scegli —' }, ...raceOpts.map((x) => ({ value: x.id, label: itName(x) + (x._homebrew ? ' (homebrew)' : '') })), { value: CUSTOM, label: 'Altro / homebrew (nome libero)…' }]} />
+      options=${[{ value: '', label: '— scegli —' }, ...raceOpts.map((x) => ({ value: x.id, label: optLabel(x, s.ruleset, itName(x)) })), { value: CUSTOM, label: 'Altro / homebrew (nome libero)…' }]} />
     ${s.raceId === CUSTOM && html`<${TextField} label="Nome razza" value=${s.raceName} onInput=${(v) => set({ raceName: v })} placeholder="es. Lupin" data-testid="wz-race-name" />`}
-    ${subOpts.length > 0 && html`<${Select} label=${s.ruleset === '2024' ? 'Lignaggio / eredità' : 'Sottorazza'} value=${s.subraceId} onChange=${(v) => set({ subraceId: v })}
+    ${subOpts.length > 0 && html`<${Select} label=${s.ruleset === '2024' ? 'Lignaggio / eredità' : mixed ? 'Sottorazza / lignaggio' : 'Sottorazza'} value=${s.subraceId} onChange=${(v) => set({ subraceId: v })}
       options=${[{ value: '', label: '— nessuna —' }, ...subOpts.map((x) => ({ value: x.id, label: itName(x) }))]} data-testid="wz-subrace" />`}
   </div>
   ${raceD && html`<div class="cs-wz-info">
     <div class="row">
       <span class="tag">Velocità ${R.formatDistance(raceD.speed, units)}</span>
       ${raceD.size_it && html`<span class="tag">Taglia ${raceD.size_it}</span>`}
-      ${s.ruleset === '2014' && [...(raceD.abilityBonuses || []), ...(subD?.abilityBonuses || [])].map((b) => html`<span class="tag accent">${AB[b.ability]?.abbr} ${signed(b.bonus)}</span>`)}
+      ${useRaceAsi && [...(raceD.abilityBonuses || []), ...(subD?.abilityBonuses || [])].map((b) => html`<span class="tag accent">${AB[b.ability]?.abbr} ${signed(b.bonus)}</span>`)}
     </div>
-    ${raceD.abilityBonusChoice && s.ruleset === '2014' && html`<div class="cs-wz-choice">
+    ${raceD.abilityBonusChoice && useRaceAsi && html`<div class="cs-wz-choice">
       <span class="field-label">Scegli ${raceD.abilityBonusChoice.choose} caratteristiche (+${raceD.abilityBonusChoice.from?.[0]?.bonus || 1})</span>
       <div class="row">${(raceD.abilityBonusChoice.from || []).map((f) => {
         const on = s.raceChoice.includes(f.ability);
@@ -145,7 +167,7 @@ export function CreationWizard({ open, onClose, onCreated, defaultCampaign }) {
   const clsOpts = forRuleset(classes, s.ruleset);
   const stepClass = html`<div class="cs-wz-grid">
     <${Select} label="Classe" value=${s.classId} data-testid="wz-class" onChange=${(v) => set({ classId: v, subclassId: '', skills: [] })}
-      options=${[{ value: '', label: '— scegli —' }, ...clsOpts.map((x) => ({ value: x.id, label: `${itName(x)} (d${x.hitDie})` + (x._homebrew ? ' (homebrew)' : '') })), { value: CUSTOM, label: 'Altro / homebrew…' }]} />
+      options=${[{ value: '', label: '— scegli —' }, ...clsOpts.map((x) => ({ value: x.id, label: optLabel(x, s.ruleset, itName(x), ` (d${x.hitDie})`) })), { value: CUSTOM, label: 'Altro / homebrew…' }]} />
     <label class="field"><span class="field-label">Livello</span>
       <input class="input" type="number" min="1" max="20" value=${s.level} data-testid="wz-level"
         onInput=${(e) => { const v = Number(e.currentTarget.value); if (v >= 1 && v <= 20) set({ level: v }); }} /></label>
@@ -155,7 +177,7 @@ export function CreationWizard({ open, onClose, onCreated, defaultCampaign }) {
       <${Select} label="Incantatore" value=${s.casterType} onChange=${(v) => set({ casterType: v })}
         options=${[{ value: '', label: 'No' }, { value: 'full', label: 'Completo' }, { value: 'half', label: 'Mezzo' }, { value: 'third', label: 'Un terzo' }, { value: 'pact', label: 'Patto' }]} />`}
     ${clsD && s.level >= subLvl && subOptions.length > 0 && html`<${Select} label=${`Sottoclasse (dal ${subLvl}° livello)`} value=${s.subclassId} data-testid="wz-subclass"
-      onChange=${(v) => set({ subclassId: v })} options=${[{ value: '', label: '— da scegliere —' }, ...subOptions.map((x) => ({ value: x.id, label: itName(x) }))]} />`}
+      onChange=${(v) => set({ subclassId: v })} options=${[{ value: '', label: '— da scegliere —' }, ...subOptions.map((x) => ({ value: x.id, label: optLabel(x, s.ruleset, itName(x)) }))]} />`}
   </div>
   ${clsD && html`<div class="cs-wz-info">
     <div class="row">
@@ -171,7 +193,7 @@ export function CreationWizard({ open, onClose, onCreated, defaultCampaign }) {
   const bgOpts = forRuleset(backgrounds, s.ruleset);
   const stepBg = html`<div class="cs-wz-grid">
     <${Select} label="Background" value=${s.bgId} onChange=${(v) => set({ bgId: v, bgPlus2: '', bgPlus1: '' })} data-testid="wz-bg"
-      options=${[{ value: '', label: '— nessuno —' }, ...bgOpts.map((x) => ({ value: x.id, label: itName(x) })), { value: CUSTOM, label: 'Altro (nome libero)…' }]} />
+      options=${[{ value: '', label: '— nessuno —' }, ...bgOpts.map((x) => ({ value: x.id, label: optLabel(x, s.ruleset, itName(x)) })), { value: CUSTOM, label: 'Altro (nome libero)…' }]} />
     ${s.bgId === CUSTOM && html`<${TextField} label="Nome background" value=${s.bgName} onInput=${(v) => set({ bgName: v })} />`}
   </div>
   ${bgD && html`<div class="cs-wz-info">
@@ -179,7 +201,7 @@ export function CreationWizard({ open, onClose, onCreated, defaultCampaign }) {
       ${(bgD.toolProficiencies || []).map((t) => html`<span class="tag">${t}</span>`)}
       ${bgD.feat && html`<span class="tag magic">Talento: ${bgD.feat.name}${bgD.feat.note ? ` (${bgD.feat.note})` : ''}</span>`}</div>
     ${bgD.feature && html`<p class="muted cs-small"><b>${bgD.feature.name}.</b> ${String(bgD.feature.desc).slice(0, 260)}…</p>`}
-    ${s.ruleset === '2024' && bgD.abilityScores?.length > 0 && html`<p class="cs-small faint">Aumenti di caratteristica (${bgD.abilityScores.map((a) => AB[a]?.abbr).join(', ')}) nel passo «Caratteristiche».</p>`}
+    ${useBgAsi && bgD.abilityScores?.length > 0 && html`<p class="cs-small faint">Aumenti di caratteristica (${bgD.abilityScores.map((a) => AB[a]?.abbr).join(', ')}) nel passo «Caratteristiche».</p>`}
   </div>`}`;
 
   const assignSwap = (a, idx) => {
@@ -197,7 +219,11 @@ export function CreationWizard({ open, onClose, onCreated, defaultCampaign }) {
       ${s.method === 'roll' && html`<span class="muted">Valori: <b>${s.pool.join(', ')}</b></span>`}
       ${s.method === 'pointbuy' && html`<span class=${pbCost > POINT_BUY_BUDGET ? 'tag bad' : 'tag good'}>Punti spesi ${pbCost} / ${POINT_BUY_BUDGET}</span>`}
     </div>
-    ${s.ruleset === '2024' && bgD?.abilityScores?.length > 0 && html`<div class="cs-wz-choice row">
+    ${mixed && raceHasAsi && bgHasAsi && html`<div class="cs-wz-choice row">
+      <${Select} label="Aumenti di caratteristica da" value=${asiFrom} onChange=${(v) => set({ asiFrom: v })} data-testid="wz-asi-from"
+        options=${[{ value: 'background', label: 'Background (regola 2024)' }, { value: 'race', label: 'Razza (regola 2014)' }, { value: 'both', label: 'Entrambi (homebrew)' }]} />
+    </div>`}
+    ${useBgAsi && bgD?.abilityScores?.length > 0 && html`<div class="cs-wz-choice row">
       <span class="field-label">Background:</span>
       <${Select} value=${s.bgMode} onChange=${(v) => set({ bgMode: v })} options=${[{ value: '2-1', label: '+2 e +1' }, { value: '1-1-1', label: '+1 a tutte e tre' }]} />
       ${s.bgMode === '2-1' && html`

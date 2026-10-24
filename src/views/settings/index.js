@@ -160,11 +160,11 @@ function PrefsPanel() {
         options=${[{ value: 'm', label: 'Metri (1,5 m = 5 ft)' }, { value: 'ft', label: 'Piedi (ft)' }]}
         onChange=${(v) => store.setSetting('units', v)} />
       <${Select} label="Regolamento predefinito" value=${ruleset} data-testid="setting-ruleset"
-        options=${[{ value: '2014', label: '2014 (SRD 5.1)' }, { value: '2024', label: '2024 (SRD 5.2.1)' }]}
+        options=${[{ value: '2014', label: '2014 (SRD 5.1)' }, { value: '2024', label: '2024 (SRD 5.2.1)' }, { value: 'mix', label: 'Misto (2014 + 2024)' }]}
         onChange=${(v) => store.setSetting('ruleset', v)} />
     </div>
     <p class="set-note faint">Le distanze restano salvate in piedi (come nell'SRD) e vengono mostrate nell'unità scelta.
-      Il regolamento predefinito si applica ai nuovi personaggi.</p>
+      Il regolamento predefinito si applica ai nuovi personaggi. «Misto» permette di prendere razze, classi, background, talenti e incantesimi da entrambe le versioni.</p>
   <//>`;
 }
 

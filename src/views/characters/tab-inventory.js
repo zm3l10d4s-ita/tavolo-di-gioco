@@ -69,7 +69,7 @@ function AddItemModal({ c, mutate, data, units, open, onClose }) {
   const list = useMemo(() => {
     const nq = norm(q);
     const ds = src === 'magicItems' ? data.magicItems : data.equipment;
-    return ds.filter((x) => (allEd || x._homebrew || !x.ruleset || x.ruleset === c.ruleset) && (!nq || norm(x.name).includes(nq) || norm(x.name_it).includes(nq) || norm(x.subcategory_it).includes(nq)))
+    return ds.filter((x) => (allEd || x._homebrew || R.matchesRuleset(x, c.ruleset)) && (!nq || norm(x.name).includes(nq) || norm(x.name_it).includes(nq) || norm(x.subcategory_it).includes(nq)))
       .sort((a, b) => a.name.localeCompare(b.name)).slice(0, 150);
   }, [q, src, allEd, data.equipment.length, data.magicItems.length, c.ruleset]);
   if (!open) return null;
@@ -84,7 +84,7 @@ function AddItemModal({ c, mutate, data, units, open, onClose }) {
       </div>
       <div class="cs-addspell-list">
         ${list.length ? list.map((x) => html`<div class="cs-addspell-row" data-testid="srd-item" data-id=${x.id}>
-          <b>${x.name}</b>
+          <b>${x.name}${R.versionTag(x, c.ruleset)}</b>
           <span class="faint cs-small">${x.subtitle || [x.category_it, x.subcategory_it].filter(Boolean).join(' · ')}${x.weight ? ' · ' + R.formatWeight(x.weight, units) : ''}${x.costGp != null ? ` · ${x.costGp} mo` : ''}${x.attunement ? ' · armonizzazione' : ''}</span>
           <span class="spacer"></span>
           <button class="btn sm" onClick=${() => add(x)} data-testid="srd-item-add">+ Aggiungi</button>

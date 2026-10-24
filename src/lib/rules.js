@@ -199,9 +199,42 @@ export function passive(character, skillId) {
   return 10 + skillBonus(character, skillId) + num(character?.skills?.[skillId]?.passiveBonus, 0);
 }
 
+// ---------------------------------------------------------------- regole 2014 / 2024 / miste
+/** Scelte di regolamento per personaggi e impostazioni. 'mix' = si prende da entrambi. */
+export const RULESET_OPTIONS = [
+  { value: '2014', label: '2014 (SRD 5.1)' },
+  { value: '2024', label: '2024 (SRD 5.2)' },
+  { value: 'mix', label: 'Misto (2014 + 2024)' },
+];
+/** Regole generali che, con regolamento misto, si scelgono a mano (valore predefinito: 2024). */
+export const MIX_TOPICS = [
+  { id: 'exhaustion', label: 'Sfinimento' },
+  { id: 'multiclass', label: 'Slot da multiclasse (mezzi incantatori)' },
+];
+export function isMixed(character) { return character?.ruleset === 'mix'; }
+/** Una voce (razza, classe, incantesimo…) è disponibile con questo regolamento? */
+export function matchesRuleset(item, rs) { return rs === 'mix' || !item?.ruleset || item.ruleset === rs; }
+/** Regole di una voce: quelle dichiarate, oppure dedotte dall'id (…-2024). */
+export function itemRuleset(item) { return item?.ruleset === '2024' || /-2024$/.test(String(item?.id || '')) ? '2024' : '2014'; }
+/** Regole con cui funziona una classe del personaggio: col misto decide la versione della classe scelta. */
+export function classRuleset(character, classId) {
+  if (character?.ruleset === 'mix') return /-2024$/.test(String(classId || '')) ? '2024' : '2014';
+  return character?.ruleset === '2024' ? '2024' : '2014';
+}
+/** Regole generali (sfinimento, multiclasse…): col misto le sceglie il giocatore (predefinito 2024). */
+export function topicRuleset(character, topic) {
+  if (character?.ruleset === 'mix') return character?.mixRules?.[topic] === '2014' ? '2014' : '2024';
+  return character?.ruleset === '2024' ? '2024' : '2014';
+}
+/** Etichetta della versione da mostrare accanto al nome quando si mescolano le regole. */
+export function versionTag(item, rs) {
+  if (rs !== 'mix' || !item || item._homebrew || item._catalog || !item.ruleset) return '';
+  return ` (${item.ruleset})`;
+}
+
 /** Penalità ai tiri d20 per sfinimento (solo regole 2024: −2 × livello). 2014: 0 (gli effetti sono svantaggi). */
 export function exhaustionD20Penalty(character) {
-  if (character?.ruleset !== '2024') return 0;
+  if (topicRuleset(character, 'exhaustion') !== '2024') return 0;
   return -2 * Math.max(0, Math.min(6, num(character?.exhaustion, 0)));
 }
 
@@ -366,14 +399,14 @@ export function casterTypeOf(entry, classesData) {
  * - Magia del patto (Warlock) separata in `pact`.
  */
 export function spellSlotsFor(character, classesData) {
-  const ruleset = character?.ruleset === '2024' ? '2024' : '2014';
+  const ruleset = topicRuleset(character, 'multiclass');
   const entries = (character?.classes || []).map((c) => ({ c, type: casterTypeOf(c, classesData), lv: Math.max(0, Math.floor(num(c.level, 0))) }));
   const casters = entries.filter((e) => e.type && e.type !== 'pact' && e.lv > 0);
   let casterLevel = 0;
   if (casters.length === 1) {
     const { type, lv } = casters[0];
     if (type === 'full') casterLevel = lv;
-    else if (type === 'half') casterLevel = ruleset === '2014' && lv < 2 ? 0 : Math.ceil(lv / 2);
+    else if (type === 'half') casterLevel = classRuleset(character, casters[0].c.classId) === '2014' && lv < 2 ? 0 : Math.ceil(lv / 2);
     else if (type === 'half-up') casterLevel = Math.ceil(lv / 2);
     else if (type === 'third') casterLevel = lv < 3 ? 0 : Math.ceil(lv / 3);
   } else if (casters.length > 1) {

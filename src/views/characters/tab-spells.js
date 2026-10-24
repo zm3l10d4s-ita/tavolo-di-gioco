@@ -162,7 +162,7 @@ function AddSpellModal({ c, mutate, data, units, open, onClose }) {
   const owned = new Set(c.spellcasting.spells.map((s) => s.spellId).filter(Boolean));
   const list = useMemo(() => {
     const nq = norm(q);
-    return data.spells.filter((s) => (s._homebrew || !s.ruleset || s.ruleset === c.ruleset)
+    return data.spells.filter((s) => (s._homebrew || R.matchesRuleset(s, c.ruleset))
       && (scope === 'all' || !classIds.length || (s.classes || []).some((k) => classIds.includes(k)) || s._homebrew)
       && (lvl === '' || String(s.level) === lvl)
       && (!nq || norm(s.name).includes(nq) || norm(s.name_it).includes(nq)))
@@ -190,7 +190,7 @@ function AddSpellModal({ c, mutate, data, units, open, onClose }) {
       <div class="cs-addspell-list">
         ${list.length ? list.map((s) => html`<div class="cs-addspell-row" data-testid="srd-spell" data-id=${s.id}>
           <span class="tag magic">${s.level === 0 ? 'T' : s.level + '°'}</span>
-          <b>${s.name}</b>
+          <b>${s.name}${R.versionTag(s, c.ruleset)}</b>
           <span class="faint cs-small">${s.school_it} · ${s.castingTime_it || s.castingTime} · ${R.convertDistancesInText(s.range, units)}${s.concentration ? ' · C' : ''}${s.ritual ? ' · R' : ''}</span>
           <span class="spacer"></span>
           ${owned.has(s.id) ? html`<span class="tag good">sulla scheda</span>` : html`<button class="btn sm" onClick=${() => add(s)} data-testid="srd-spell-add">+ Aggiungi</button>`}

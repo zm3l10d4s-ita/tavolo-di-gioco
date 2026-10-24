@@ -23,7 +23,7 @@ const tabMemo = {}; // tab attiva per personaggio (durante la sessione dell'app)
 
 function useData() {
   const d = {};
-  for (const k of ['classes', 'subclasses', 'levels', 'equipment', 'magicItems', 'spells', 'races', 'subraces', 'backgrounds', 'feats', 'conditions', 'skills', 'rules', 'languages'])
+  for (const k of ['classes', 'subclasses', 'levels', 'equipment', 'magicItems', 'spells', 'races', 'subraces', 'backgrounds', 'feats', 'conditions', 'skills', 'rules', 'languages', 'weaponProperties'])
     d[k] = useSrd(k).items;
   return d;
 }
@@ -130,7 +130,7 @@ function Header({ c, mutate, data, units, onBack, onLevelUp, onShort, onLong }) 
       <button type="button" class="cs-tile click cs-insp ${c.inspiration ? 'on' : ''}" data-testid="inspiration" aria-pressed=${!!c.inspiration}
         onClick=${() => mutate((d) => { d.inspiration = !d.inspiration; })} title="Ispirazione">
         <span class="cs-tile-label">Ispirazione</span><span class="cs-tile-val">${c.inspiration ? '★' : '☆'}</span></button>
-      <div class="cs-tile cs-exh ${exh ? 'on' : ''}" title=${c.ruleset === '2024' ? `−${exh * 2} ai tiri d20, −${exh * 1.5} m velocità` : 'Sfinimento (regole 2014: effetti cumulativi)'} data-testid="exhaustion">
+      <div class="cs-tile cs-exh ${exh ? 'on' : ''}" title=${R.topicRuleset(c, 'exhaustion') === '2024' ? `−${exh * 2} ai tiri d20, −${exh * 1.5} m velocità` : 'Sfinimento (regole 2014: effetti cumulativi)'} data-testid="exhaustion">
         <span class="cs-tile-label">Sfinimento</span>
         <span class="cs-exh-ctl">
           <button class="btn ghost sm" disabled=${exh <= 0} onClick=${() => mutate((d) => { d.exhaustion = Math.max(0, exh - 1); })}>−</button>

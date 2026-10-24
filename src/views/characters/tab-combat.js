@@ -3,7 +3,7 @@ import { html, useState } from '../../vendor/preact-htm.js';
 import { Panel, Select, ConfirmButton, Checkbox } from '../../components/ui.js';
 import * as R from '../../lib/rules.js';
 import { uid, signed } from '../../lib/util.js';
-import { attackBonus, hitDiceState, RECOVERY, applySuggestedResources } from './logic.js';
+import { attackBonus, hitDiceState, RECOVERY, applySuggestedResources, weaponMasteryMax, masteryWeapons, attackMastery } from './logic.js';
 import {
   Pips, RollBtn, rollCheck, rollExpr, Inline, InlineNum, Stepper, OverrideField, ftToUnit, unitToFt, distUnit,
 } from './widgets.js';
@@ -12,9 +12,13 @@ import { toast } from '../../components/ui.js';
 const AB = R.ABILITY_LABELS_IT;
 const AB_OPTS = [{ value: '', label: '—' }, ...R.ABILITIES.map((a) => ({ value: a, label: AB[a].abbr }))];
 
-function AttackRow({ c, mutate, atk, i }) {
+const masteryProps = (data) => new Map((data?.weaponProperties || []).filter((p) => p.kind === 'mastery').map((p) => [p.id, p]));
+
+function AttackRow({ c, mutate, atk, i, data }) {
   const [edit, setEdit] = useState(!atk.name);
   const b = attackBonus(c, atk);
+  const mId = attackMastery(c, atk, data?.equipment);
+  const mProp = mId ? masteryProps(data).get(mId) : null;
   const set = (k) => (v) => mutate((d) => { d.attacks[i] = { ...d.attacks[i], [k]: v }; });
   return html`<div class="cs-atk ${edit ? 'editing' : ''}" data-testid="attack-row">
     <div class="cs-atk-main">
@@ -27,7 +31,7 @@ function AttackRow({ c, mutate, atk, i }) {
           rollExpr(c, `Danni ${atk.name}${e.shiftKey ? ' (critico)' : ''}`, expr);
         }}>${atk.damage || '—'}</button>
       <span class="cs-atk-type muted">${atk.damageType}</span>
-      <span class="cs-atk-notes faint">${atk.notes}</span>
+      <span class="cs-atk-notes faint">${mId && html`<span class="tag magic cs-mastery-tag" title=${mProp?.desc2024 || ''} data-testid="attack-mastery">Padronanza: ${mProp?.name_it || mId}</span>`} ${atk.notes}</span>
       <button class="btn ghost sm" onClick=${() => setEdit(!edit)} title="Modifica">${edit ? 'Fine' : '✎'}</button>
     </div>
     ${edit && html`<div class="cs-atk-edit">
@@ -53,6 +57,40 @@ function Attacks(ctx) {
     <div class="cs-atk-head faint"><span>Nome</span><span>Bonus</span><span>Danni</span><span>Tipo</span><span>Note</span></div>
     ${c.attacks.map((a, i) => html`<${AttackRow} key=${a.id || i} ...${ctx} atk=${a} i=${i} />`)}
     <p class="faint cs-small">Clic sul bonus: tiro per colpire · clic sui danni: tiro dei danni (Shift = critico).</p>
+  </${Panel}>`;
+}
+
+function WeaponMasteries({ c, mutate, data }) {
+  const [pick, setPick] = useState('');
+  const max = weaponMasteryMax(c, data.levels);
+  const list = c.weaponMasteries || [];
+  if (!max && !list.length) return null;
+  const props = masteryProps(data);
+  const weapons = masteryWeapons(data.equipment);
+  const byName = new Map(weapons.map((w) => [w.name, w]));
+  const free = weapons.filter((w) => !list.includes(w.name));
+  const over = list.length > max;
+  const add = () => { if (!pick) return; mutate((d) => { d.weaponMasteries = [...(d.weaponMasteries || []), pick]; }); setPick(''); };
+  return html`<${Panel} title="Padronanze nelle armi" className="cs-masteries"
+    actions=${html`<span class=${over ? 'tag bad' : 'tag'} data-testid="mastery-count" title="Armi scelte / massimo dalla classe">${list.length} / ${max}</span>`}>
+    ${!list.length && html`<p class="faint">Scegli ${max} tipi di arma: con quelle puoi usare la loro proprietà di padronanza. Dopo un riposo lungo puoi cambiarne una.</p>`}
+    <ul class="cs-mastery-list">${list.map((name) => {
+      const w = byName.get(name); const p = props.get(w?.mastery);
+      return html`<li data-testid="mastery-item">
+        <div class="row"><b>${w?.name_it || name}</b><span class="tag magic">${p?.name_it || w?.mastery || '?'}</span>
+          <span class="spacer"></span>
+          <button class="btn ghost sm" title="Togli" onClick=${() => mutate((d) => { d.weaponMasteries = (d.weaponMasteries || []).filter((x) => x !== name); })}>×</button></div>
+        ${p?.desc2024 && html`<p class="faint cs-small">${p.desc2024}</p>`}
+      </li>`;
+    })}</ul>
+    <div class="row cs-mastery-add">
+      <select class="input" value=${pick} onChange=${(e) => setPick(e.currentTarget.value)} data-testid="mastery-pick">
+        <option value="">Aggiungi un'arma…</option>
+        ${free.map((w) => html`<option value=${w.name}>${w.name_it || w.name} — ${props.get(w.mastery)?.name_it || w.mastery}</option>`)}
+      </select>
+      <button class="btn sm" disabled=${!pick} onClick=${add} data-testid="mastery-add">Aggiungi</button>
+    </div>
+    ${over && html`<p class="cs-small" style="color:var(--warn)">Hai scelto più armi di quante te ne dia la classe.</p>`}
   </${Panel}>`;
 }
 
@@ -151,7 +189,8 @@ function Defense({ c, mutate, data, units }) {
 }
 
 function StatusPanel({ c, mutate, data }) {
-  const rule = data.rules.find((x) => x.id === (c.ruleset === '2024' ? 'exhaustion-2024' : 'exhaustion-2014'));
+  const exRs = R.topicRuleset(c, 'exhaustion');
+  const rule = data.rules.find((x) => x.id === (exRs === '2024' ? 'exhaustion-2024' : 'exhaustion-2014'));
   const lv = rule?.data?.levels || null;
   const conds = data.conditions.filter((x) => x.id !== 'exhaustion');
   const toggle = (id) => mutate((d) => { d.conditions = d.conditions.includes(id) ? d.conditions.filter((x) => x !== id) : [...d.conditions, id]; });
@@ -159,10 +198,10 @@ function StatusPanel({ c, mutate, data }) {
     <div class="row">
       <span class="field-label">Sfinimento</span>
       <${Stepper} value=${c.exhaustion} min=${0} max=${6} onChange=${(v) => mutate((d) => { d.exhaustion = v; })} />
-      <span class="muted cs-small">${c.ruleset === '2024' ? `−${2 * c.exhaustion} ai tiri d20 · −${(1.5 * c.exhaustion).toLocaleString('it-IT')} m velocità` : exhaustionText2014(c.exhaustion)}</span>
+      <span class="muted cs-small">${exRs === '2024' ? `−${2 * c.exhaustion} ai tiri d20 · −${(1.5 * c.exhaustion).toLocaleString('it-IT')} m velocità` : exhaustionText2014(c.exhaustion)}</span>
     </div>
-    ${c.ruleset !== '2024' && Array.isArray(lv) && html`<ol class="cs-exh-list">${lv.map((x) => html`<li class=${x.level <= c.exhaustion ? 'on' : ''}>${x.effect_it || x.effect}</li>`)}</ol>`}
-    ${c.ruleset === '2024' && rule?.data?.summary_it && html`<p class="faint cs-small">${rule.data.summary_it}</p>`}
+    ${exRs !== '2024' && Array.isArray(lv) && html`<ol class="cs-exh-list">${lv.map((x) => html`<li class=${x.level <= c.exhaustion ? 'on' : ''}>${x.effect_it || x.effect}</li>`)}</ol>`}
+    ${exRs === '2024' && rule?.data?.summary_it && html`<p class="faint cs-small">${rule.data.summary_it}</p>`}
     <label class="field"><span class="field-label">Livello di follia</span><${Inline} value=${c.madness || ''} placeholder="—" onInput=${(v) => mutate((d) => { d.madness = v; })} testid="madness" /></label>
     <span class="field-label">Condizioni</span>
     <div class="cs-cond-grid">${conds.map((x) => html`<label class="check" title=${x.summary_it || ''}><input type="checkbox" checked=${c.conditions.includes(x.id)} onChange=${() => toggle(x.id)} /><span>${x.name_it || x.name}</span></label>`)}</div>
@@ -173,7 +212,7 @@ function exhaustionText2014(n) { return n ? EXH_2014[Math.min(6, n)] : 'nessun e
 
 export function CombatTab(ctx) {
   return html`<div class="cs-grid-2">
-    <div class="cs-col"><${Attacks} ...${ctx} /><${Resources} ...${ctx} /><${AmmoConsumables} ...${ctx} /></div>
+    <div class="cs-col"><${Attacks} ...${ctx} /><${WeaponMasteries} ...${ctx} /><${Resources} ...${ctx} /><${AmmoConsumables} ...${ctx} /></div>
     <div class="cs-col"><${HitPoints} ...${ctx} /><${Defense} ...${ctx} /><${StatusPanel} ...${ctx} /></div>
   </div>`;
 }

@@ -217,3 +217,26 @@
 @media (max-width: 760px) {
   .update-bar { bottom: calc(70px + env(safe-area-inset-bottom)); width: calc(100vw - 24px); font-size: 14px; }
 }
+
+/* ---------- creazione guidata del personaggio (telefono) ---------- */
+@media (max-width: 760px) {
+  .cs-wz { min-height: 0; min-width: 0; }
+  .cs-wz-step { padding: 4px 8px; font-size: 12px; }
+  .cs-wz-grid { grid-template-columns: minmax(0, 1fr); }
+  .cs-wz-choice.row { flex-wrap: wrap; }
+  .cs-wz-choice.row > * { min-width: 0; flex: 1 1 auto; }
+  .cs-wz-choice.row > .field-label { flex-basis: 100%; }
+  .cs-wz-ab { width: 100%; table-layout: fixed; font-size: 13px; }
+  .cs-wz-ab th, .cs-wz-ab td { padding: 6px 2px; }
+  .cs-wz-ab th { font-size: 10px; letter-spacing: 0; }
+  .cs-wz-ab th:first-child, .cs-wz-ab td:first-child { width: 31%; }
+  .cs-wz-ab td:first-child .faint, .cs-wz-ab td:first-child .tag { display: none; }
+  .cs-wz-ab .input.cs-inline { width: 100%; min-width: 0; padding: 6px 1px; font-size: 15px; text-align: center; }
+  .cs-wz-ab select.input.cs-inline { height: 36px; padding: 0 0 0 6px; line-height: 34px; text-align: left; }
+  .cs-wz-ab .cs-stepper { display: inline-flex; align-items: center; }
+  .cs-wz-ab .cs-stepper .btn { padding: 2px 4px; min-width: 0; }
+  .cs-wz-ab .cs-wz-val { width: 20px; font-size: 15px; }
+  .cs-wz-total { font-size: 18px; }
+  .cs-wz-skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cs-wz-foot { flex-wrap: wrap; }
+}

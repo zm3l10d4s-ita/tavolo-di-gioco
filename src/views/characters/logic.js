@@ -49,7 +49,7 @@ export function newCharacter(over = {}) {
     exhaustion: 0, conditions: [], madness: '',
     acOverride: null, acBonus: 0, acTemp: 0, initiativeBonus: 0, speed: { walk: 30 }, senses: '',
     proficiencies: { armor: [], weapons: [], tools: [], languages: [], other: '' },
-    attacks: [],
+    attacks: [], weaponMasteries: [],
     spellcasting: { ability: null, saveDcOverride: null, attackOverride: null, slotsAuto: true, slots: emptySlots(), pact: { level: 0, max: 0, used: 0 }, spells: [], concentration: '' },
     resources: [], features: [], feats: [], inventory: [],
     currency: { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 },
@@ -268,7 +268,7 @@ export function preparedMax(character, classesData, levelsData) {
     const sp = cd?.spellcasting;
     if (!sp || sp.preparation === 'known') continue;
     const lv = n(e.level, 1);
-    if (character?.ruleset === '2024') {
+    if (R.classRuleset(character, e.classId) === '2024') {
       const row = (levelsData || []).find((l) => l.id === `${e.classId}-${lv}`);
       if (row?.preparedSpells != null) { total += row.preparedSpells; any = true; }
       continue;
@@ -427,6 +427,42 @@ export function attackFromWeapon(character, weapon) {
 }
 
 // ---------------------------------------------------------------------------
+// Padronanze nelle armi (regole 2024): il personaggio sceglie N tipi di arma e ne usa la proprietà di padronanza.
+const MASTERY_FALLBACK = { barbarian: 2, fighter: 3, paladin: 2, ranger: 2, rogue: 2 };
+/** Quante armi si possono padroneggiare: dalla tabella della classe (solo classi con regole 2024). In multiclasse vale il valore più alto. */
+export function weaponMasteryMax(character, levelsData) {
+  const c = normalizeCharacter(character);
+  let max = 0;
+  for (const e of c.classes) {
+    if (!e.classId || R.classRuleset(c, e.classId) !== '2024') continue;
+    const row = (levelsData || []).find((l) => l.id === `${e.classId}-${n(e.level, 1)}`);
+    const v = row?.classSpecific?.weaponMastery;
+    max = Math.max(max, v != null ? n(v, 0) : MASTERY_FALLBACK[R.baseKey(e.classId)] || 0);
+  }
+  return max;
+}
+/** Armi SRD 2024 con proprietà di padronanza, una per tipo, in ordine alfabetico. */
+export function masteryWeapons(equipment) {
+  const seen = new Set();
+  return (equipment || []).filter((x) => x.category === 'weapon' && x.ruleset === '2024' && x.mastery && !seen.has(x.name) && seen.add(x.name))
+    .sort((a, b) => (a.name_it || a.name).localeCompare(b.name_it || b.name));
+}
+/** Proprietà di padronanza di un'arma (anche per armi 2014: si usa quella della versione 2024 con lo stesso nome). */
+export function masteryOf(weaponName, equipment) {
+  const k = norm(weaponName);
+  const w = (equipment || []).find((x) => x.category === 'weapon' && x.ruleset === '2024' && x.mastery && (norm(x.name) === k || norm(x.name_it) === k));
+  return w?.mastery || null;
+}
+/** Padronanza attiva su un attacco: solo se l'arma è tra quelle scelte dal personaggio. */
+export function attackMastery(character, atk, equipment) {
+  const list = (character?.weaponMasteries || []).map(norm);
+  if (!list.length || !atk) return null;
+  const w = atk.weaponId ? (equipment || []).find((x) => x.id === atk.weaponId) : null;
+  const name = w?.name || atk.name;
+  return list.includes(norm(name)) ? masteryOf(name, equipment) : null;
+}
+
+// ---------------------------------------------------------------------------
 // Caratteristiche (creazione)
 // ---------------------------------------------------------------------------
 
@@ -524,9 +560,12 @@ export function suggestedResources(character, levelsData) {
     const k = R.baseKey(e.classId);
     const lv = n(e.level, 1);
     const row = (levelsData || []).find((l) => l.id === `${e.classId}-${lv}`);
+    // con regole miste ogni classe usa le regole della propria versione (es. Druido 2024 → Forma selvatica 2024)
+    const rs = R.classRuleset(c, e.classId);
+    const cc = { ...c, ruleset: rs };
     for (const [key, name, rec, fn] of RES_DEFS) {
-      const max = fn(k, lv, row, c);
-      if (max > 0) out.push({ autoKey: key, name, max: max >= 9999 ? 99 : max, recovery: typeof rec === 'function' ? rec(c.ruleset, lv) : rec });
+      const max = fn(k, lv, row, cc);
+      if (max > 0) out.push({ autoKey: key, name, max: max >= 9999 ? 99 : max, recovery: typeof rec === 'function' ? rec(rs, lv) : rec });
     }
   }
   return out;
@@ -594,7 +633,7 @@ export function levelUp(character, { classIndex = 0, newClass = null, hpMethod =
  */
 export function buildCharacter(choices, data = {}) {
   const ch = choices || {};
-  const ruleset = ch.ruleset === '2024' ? '2024' : '2014';
+  const ruleset = ch.ruleset === '2024' || ch.ruleset === 'mix' ? ch.ruleset : '2014';
   const find = (arr, id) => (id ? (arr || []).find((x) => x.id === id) : null);
   const raceD = find(data.races, ch.race?.id);
   const subD = find(data.subraces, ch.subrace?.id);

@@ -41,7 +41,7 @@ export function FeaturesTab({ c, mutate, data }) {
   const raceMissing = raceFeatures(raceD, subD).filter((f) => !c.features.some((x) => norm(x.name) === norm(f.name)));
   const [featQ, setFeatQ] = useState('');
   const setF = (i, p) => mutate((d) => { d.features[i] = { ...d.features[i], ...p }; });
-  const featOptions = data.feats.filter((x) => x._homebrew || !x.ruleset || x.ruleset === c.ruleset);
+  const featOptions = data.feats.filter((x) => x._homebrew || R.matchesRuleset(x, c.ruleset));
 
   const addClass = () => { mutate((d) => { d.features.push(...missingClassFeatures(d, data.classes, data.subclasses)); }); toast(`Aggiunti ${missing.length} privilegi di classe`, 'good'); };
   const addRace = () => { mutate((d) => { d.features.push(...raceMissing); }); toast(`Aggiunti ${raceMissing.length} tratti razziali`, 'good'); };
@@ -76,7 +76,7 @@ export function FeaturesTab({ c, mutate, data }) {
         <div class="row" style="flex-wrap:nowrap">
           <input class="input" list="dl-feats" value=${featQ} placeholder="Nome talento (SRD o libero)…" data-testid="feat-input"
             onInput=${(e) => setFeatQ(e.currentTarget.value)} onKeyDown=${(e) => e.key === 'Enter' && featQ.trim() && addFeat(featQ.trim())} />
-          <datalist id="dl-feats">${featOptions.map((f) => html`<option value=${f.name}>${f.type_it || ''}</option>`)}</datalist>
+          <datalist id="dl-feats">${featOptions.map((f) => html`<option value=${f.name}>${[f.type_it, c.ruleset === 'mix' && f.ruleset].filter(Boolean).join(' · ')}</option>`)}</datalist>
           <button class="btn sm" disabled=${!featQ.trim()} onClick=${() => addFeat(featQ.trim())} data-testid="feat-add">Aggiungi</button>
         </div>
         ${c.feats.map((f, i) => html`<${FeatureCard} key=${f.id || i} testid="feat-row" f=${{ ...f, source: undefined }}
