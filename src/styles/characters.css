@@ -369,3 +369,4 @@
 .cs-mastery-list p { margin: 4px 0 0; }
 .cs-mastery-add select { flex: 1; min-width: 0; }
 .cs-mastery-tag { margin-right: 4px; }
+.cs-hc-dice { flex-wrap: wrap; gap: 6px; margin: 6px 0 10px; }

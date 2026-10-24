@@ -1,7 +1,32 @@
 // Tab "Personalità & Storia" e "Note": campi testo lunghi con salvataggio ritardato.
-import { html } from '../../vendor/preact-htm.js';
+import { html, useState } from '../../vendor/preact-htm.js';
 import { Panel } from '../../components/ui.js';
-import { Inline, LazyText } from './widgets.js';
+import { Inline, LazyText, rollExpr } from './widgets.js';
+
+// Cronaca eroica (Explorer's Guide to Wildemount e adattamenti): solo la struttura dei passi.
+// Le tabelle sono nel manuale: qui si annotano i risultati (con i dadi a portata di mano).
+const HC_STEPS = [
+  ['homeland', 'Patria'], ['background', 'Background'], ['socialStatus', 'Stato sociale'], ['settlement', 'Insediamento d\'origine'],
+  ['family', 'Famiglia'], ['familyRelations', 'Legami familiari importanti'], ['alliesRivals', 'Alleati e rivali (chi sono)'],
+  ['fatefulMoments', 'Momenti decisivi'], ['secret', 'Segreto misterioso'], ['prophecy', 'Profezia'], ['other', 'Altro (doni soprannaturali, note…)'],
+];
+const HC_DICE = ['1d4', '1d6', '1d8', '1d10', '1d12', '1d20', '1d100'];
+
+function HeroicChronicle({ c, mutate }) {
+  const hc = c.heroicChronicle || {};
+  const filled = HC_STEPS.filter(([k]) => String(hc[k] || '').trim()).length;
+  const [open, setOpen] = useState(filled > 0);
+  const setH = (k) => (v) => mutate((d) => { d.heroicChronicle = { ...(d.heroicChronicle || {}), [k]: v }; });
+  return html`<${Panel} title="Cronaca eroica" className="cs-hc"
+    actions=${html`<span class="faint cs-small">${filled}/${HC_STEPS.length}</span>
+      <button class="btn ghost sm" onClick=${() => setOpen(!open)} data-testid="hc-toggle">${open ? 'Chiudi' : 'Apri'}</button>`}>
+    ${!open ? html`<p class="faint cs-small">Il sistema di <i>Explorer's Guide to Wildemount</i> per costruire il passato del personaggio a passi (patria, famiglia, momenti decisivi, profezia…). Apri per annotare i risultati.</p>`
+      : html`<p class="faint cs-small">Le tabelle sono nel manuale: tira i dadi qui sotto e annota il risultato di ogni passo.</p>
+        <div class="row cs-hc-dice">${HC_DICE.map((e) => html`<button class="btn sm" onClick=${() => rollExpr(c, 'Cronaca eroica', e)}>${e.replace('1d', 'd')}</button>`)}</div>
+        <div class="cs-form cs-form-2">${HC_STEPS.map(([k, l]) => html`<${LazyText} label=${l} value=${hc[k] || ''} rows=${k === 'prophecy' || k === 'fatefulMoments' ? 4 : 2}
+          placeholder=${k === 'background' && c.background?.name ? c.background.name : ''} onCommit=${setH(k)} testid=${'hc-' + k} />`)}</div>`}
+  </${Panel}>`;
+}
 
 export function StoryTab({ c, mutate }) {
   const set = (k) => (v) => mutate((d) => { d[k] = v; });
@@ -18,6 +43,7 @@ export function StoryTab({ c, mutate }) {
       <${Panel} title="Storia">
         <${LazyText} label="Storia del personaggio" value=${c.backstory} rows=${10} onCommit=${set('backstory')} testid="field-backstory" />
       </${Panel}>
+      <${HeroicChronicle} c=${c} mutate=${mutate} />
     </div>
     <div class="cs-col">
       <${Panel} title="Personalità">

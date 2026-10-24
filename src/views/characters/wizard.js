@@ -26,7 +26,10 @@ const forRuleset = (items, rs) => {
     .sort((a, b) => String(a.name).localeCompare(String(b.name)));
   return [...srd.sort((a, b) => String(a.name).localeCompare(String(b.name))), ...rest];
 };
-const optLabel = (x, rs, name, after = '') => name + R.versionTag(x, rs) + after + (x._homebrew ? ' (homebrew)' : x._catalog ? ` (${x.sourceKey || x.source || 'manuale'})` : '');
+const optLabel = (x, rs, name, after = '') => {
+  const src = x._homebrew ? 'homebrew' : x._catalog ? (x.sourceKey || x.source || 'manuale') : '';
+  return name + R.versionTag(x, rs) + after + (src && !String(name).endsWith(`(${src})`) ? ` (${src})` : '');
+};
 const itName = (x) => x?.name_it || x?.name || '';
 const METHODS = [
   { value: 'standard', label: 'Serie standard (15, 14, 13, 12, 10, 8)' }, { value: 'pointbuy', label: `Acquisto a punti (${POINT_BUY_BUDGET})` },
@@ -63,7 +66,7 @@ export function CreationWizard({ open, onClose, onCreated, defaultCampaign }) {
   const subOptions = clsD ? [
     ...subclasses.filter((x) => !x._catalog && x.classId === clsD.id),
     // sottoclassi dei manuali: valgono per la classe sia con regole 2014 sia 2024
-    ...subclasses.filter((x) => x._catalog && x.classId === clsD.id.replace(/-2024$/, '')).sort((a, b) => a.name.localeCompare(b.name)),
+    ...subclasses.filter((x) => x._catalog && (x.classId === clsD.id || x.classId === clsD.id.replace(/-2024$/, ''))).sort((a, b) => a.name.localeCompare(b.name)),
   ] : [];
 
   // punteggi base secondo il metodo
