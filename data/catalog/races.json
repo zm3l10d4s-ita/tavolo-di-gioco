@@ -2,9 +2,9 @@
  "meta": {
   "source": "Indice di dnd5e.wikidot.com — solo nomi e dati di base",
   "license": "Nessun testo dei manuali incluso: le descrizioni vanno inserite dall’utente dai propri manuali.",
-  "generatedAt": "2026-10-24T16:26:43.820Z",
+  "generatedAt": "2026-10-24T21:33:55.876Z",
   "dataset": "races",
-  "count": 65
+  "count": 67
  },
  "items": [
   {
@@ -244,6 +244,24 @@
   {
    "id": "githzerai",
    "name": "Githzerai",
+   "name_it": null,
+   "source": "Monsters of the Multiverse",
+   "sourceKey": "MPMM",
+   "ruleset": "2014",
+   "speed": 30,
+   "size": "medium",
+   "size_it": "Media",
+   "creatureType": "humanoid",
+   "abilityBonuses": [],
+   "languages": [],
+   "traits": [],
+   "subraces": [],
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "goliath",
+   "name": "Goliath",
    "name_it": null,
    "source": "Monsters of the Multiverse",
    "sourceKey": "MPMM",
@@ -586,6 +604,24 @@
   {
    "id": "minotaur",
    "name": "Minotaur",
+   "name_it": null,
+   "source": "Monsters of the Multiverse",
+   "sourceKey": "MPMM",
+   "ruleset": "2014",
+   "speed": 30,
+   "size": "medium",
+   "size_it": "Media",
+   "creatureType": "humanoid",
+   "abilityBonuses": [],
+   "languages": [],
+   "traits": [],
+   "subraces": [],
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "orc",
+   "name": "Orc",
    "name_it": null,
    "source": "Monsters of the Multiverse",
    "sourceKey": "MPMM",

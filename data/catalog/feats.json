@@ -2,11 +2,24 @@
  "meta": {
   "source": "Indice di dnd5e.wikidot.com — solo nomi e dati di base",
   "license": "Nessun testo dei manuali incluso: le descrizioni vanno inserite dall’utente dai propri manuali.",
-  "generatedAt": "2026-10-24T16:26:43.820Z",
+  "generatedAt": "2026-10-24T21:33:55.876Z",
   "dataset": "feats",
-  "count": 162
+  "count": 357
  },
  "items": [
+  {
+   "id": "aberrant-anatomy-2024",
+   "name": "Aberrant Anatomy",
+   "source": "Ravenloft: The Horrors Within",
+   "sourceKey": "RHW",
+   "ruleset": "2024",
+   "type": "dark-gift",
+   "type_it": "Dono oscuro",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Ravenloft",
+   "stub": true,
+   "desc": ""
+  },
   {
    "id": "aberrant-dragonmark",
    "name": "Aberrant Dragonmark",
@@ -14,8 +27,39 @@
    "sourceKey": "ERLW",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "aberrant-dragonmark-2024",
+   "name": "Aberrant Dragonmark",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Eberron; nessun altro talento Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "abjuration-adept-2024",
+   "name": "Abjuration Adept",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -26,6 +70,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -38,8 +83,26 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "actor-2024",
+   "name": "Actor",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -50,6 +113,7 @@
    "sourceKey": "DSotDQ",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -62,6 +126,7 @@
    "sourceKey": "DSotDQ",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -74,6 +139,7 @@
    "sourceKey": "DSotDQ",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -86,6 +152,7 @@
    "sourceKey": "PAitM",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -98,6 +165,20 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "alert",
+   "name": "Alert",
+   "source": "Player's Handbook",
+   "sourceKey": "PHB",
+   "ruleset": "2014",
+   "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -110,8 +191,113 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "arcane-artist-2024",
+   "name": "Arcane Artist",
+   "source": "Arcana Unleashed",
+   "sourceKey": "AU",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "arcane-eloquence-2024",
+   "name": "Arcane Eloquence",
+   "source": "Arcana Unleashed",
+   "sourceKey": "AU",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "arcane-infiltrator-2024",
+   "name": "Arcane Infiltrator",
+   "source": "Arcana Unleashed",
+   "sourceKey": "AU",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "arcane-omens-2024",
+   "name": "Arcane Omens",
+   "source": "Arcana Unleashed",
+   "sourceKey": "AU",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "arcane-overload-2024",
+   "name": "Arcane Overload",
+   "source": "Arcana Unleashed",
+   "sourceKey": "AU",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "arcane-safeguard-2024",
+   "name": "Arcane Safeguard",
+   "source": "Arcana Unleashed",
+   "sourceKey": "AU",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "arcane-undertaker-2024",
+   "name": "Arcane Undertaker",
+   "source": "Arcana Unleashed",
+   "sourceKey": "AU",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "arcane-warrior-2024",
+   "name": "Arcane Warrior",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "fighting-style",
+   "type_it": "Stile di combattimento",
+   "prerequisites": [],
+   "prerequisiteText": "Privilegio Stile di combattimento",
    "stub": true,
    "desc": ""
   },
@@ -122,6 +308,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -134,6 +321,7 @@
    "sourceKey": "TCE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -146,8 +334,26 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "athlete-2024",
+   "name": "Athlete",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -158,6 +364,7 @@
    "sourceKey": "PAitM",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -170,6 +377,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -182,8 +390,481 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "blind-fighting-2024",
+   "name": "Blind Fighting",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "fighting-style",
+   "type_it": "Stile di combattimento",
+   "prerequisites": [],
+   "prerequisiteText": "Privilegio Stile di combattimento",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "bloodlust-2024",
+   "name": "Bloodlust",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "bomber-2024",
+   "name": "Bomber",
+   "source": "Astarion's Book of Hungers",
+   "sourceKey": "ABH",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-blazing-dawn-2024",
+   "name": "Boon of Blazing Dawn",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-bloodshed-2024",
+   "name": "Boon of Bloodshed",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-bountiful-health-2024",
+   "name": "Boon of Bountiful Health",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-communication-2024",
+   "name": "Boon of Communication",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-desperate-resilience-2024",
+   "name": "Boon of Desperate Resilience",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-energy-resistance-2024",
+   "name": "Boon of Energy Resistance",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-erupting-spellpower-2024",
+   "name": "Boon of Erupting Spellpower",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-exquisite-radiance-2024",
+   "name": "Boon of Exquisite Radiance",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-fluid-forms-2024",
+   "name": "Boon of Fluid Forms",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-fortitude-2024",
+   "name": "Boon of Fortitude",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-fortunes-favor-2024",
+   "name": "Boon of Fortune's Favor",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-looming-shadows-2024",
+   "name": "Boon of Looming Shadows",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-magic-school-mastery-2024",
+   "name": "Boon of Magic School Mastery",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-misty-escape-2024",
+   "name": "Boon of Misty Escape",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-poison-mastery-2024",
+   "name": "Boon of Poison Mastery",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-recovery-2024",
+   "name": "Boon of Recovery",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-revelry-2024",
+   "name": "Boon of Revelry",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-siberys-2024",
+   "name": "Boon of Siberys",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-skill-2024",
+   "name": "Boon of Skill",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-speed-2024",
+   "name": "Boon of Speed",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-terror-2024",
+   "name": "Boon of Terror",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-the-bright-sun-2024",
+   "name": "Boon of the Bright Sun",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-the-furious-storm-2024",
+   "name": "Boon of the Furious Storm",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-the-iron-mind-2024",
+   "name": "Boon of the Iron Mind",
+   "source": "Arcana Unleashed",
+   "sourceKey": "AU",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "boon-of-the-soul-drinker-2024",
+   "name": "Boon of the Soul Drinker",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "epic-boon",
+   "type_it": "Dono epico",
+   "prerequisites": [
+    {
+     "minLevel": 19
+    }
+   ],
+   "prerequisiteText": "Livello 19+",
    "stub": true,
    "desc": ""
   },
@@ -194,6 +875,7 @@
    "sourceKey": "XGE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -206,6 +888,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -218,6 +901,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -230,6 +914,7 @@
    "sourceKey": "BMT",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -242,8 +927,26 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "charger-2024",
+   "name": "Charger",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -254,8 +957,56 @@
    "sourceKey": "TCE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "chef-2024",
+   "name": "Chef",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "child-of-the-sun-2024",
+   "name": "Child of the Sun",
+   "source": "Lorwyn: First Light",
+   "sourceKey": "LFL",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "cloying-mists-2024",
+   "name": "Cloying Mists",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -266,6 +1017,54 @@
    "sourceKey": "PAitM",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "cold-caster-2024",
+   "name": "Cold Caster",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "conjuration-adept-2024",
+   "name": "Conjuration Adept",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "crafter-2024",
+   "name": "Crafter",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -278,6 +1077,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -290,8 +1090,26 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "crossbow-expert-2024",
+   "name": "Crossbow Expert",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -302,6 +1120,7 @@
    "sourceKey": "TCSR",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -314,6 +1133,37 @@
    "sourceKey": "TCE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "crusher-2024",
+   "name": "Crusher",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "cult-of-the-dragon-initiate-2024",
+   "name": "Cult of the Dragon Initiate",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -326,8 +1176,43 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "defensive-duelist-2024",
+   "name": "Defensive Duelist",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "delicious-pain-2024",
+   "name": "Delicious Pain",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -338,8 +1223,26 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "divination-adept-2024",
+   "name": "Divination Adept",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -350,6 +1253,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -362,6 +1266,7 @@
    "sourceKey": "DSotDQ",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -374,6 +1279,7 @@
    "sourceKey": "XGE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -386,6 +1292,7 @@
    "sourceKey": "XGE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -398,6 +1305,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -410,8 +1318,26 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "dragonscarred-2024",
+   "name": "Dragonscarred",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -422,6 +1348,7 @@
    "sourceKey": "XGE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -434,8 +1361,39 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "dual-wielder-2024",
+   "name": "Dual Wielder",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "dueling-2024",
+   "name": "Dueling",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "fighting-style",
+   "type_it": "Stile di combattimento",
+   "prerequisites": [],
+   "prerequisiteText": "Privilegio Stile di combattimento",
    "stub": true,
    "desc": ""
   },
@@ -446,6 +1404,7 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -458,8 +1417,26 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "durable-2024",
+   "name": "Durable",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -470,8 +1447,22 @@
    "sourceKey": "XGE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "echoing-soul-2024",
+   "name": "Echoing Soul",
+   "source": "Ravenloft: The Horrors Within",
+   "sourceKey": "RHW",
+   "ruleset": "2024",
+   "type": "dark-gift",
+   "type_it": "Dono oscuro",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Ravenloft",
    "stub": true,
    "desc": ""
   },
@@ -482,6 +1473,7 @@
    "sourceKey": "TCE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -494,8 +1486,43 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "elemental-adept-2024",
+   "name": "Elemental Adept",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "elemental-familiar-2024",
+   "name": "Elemental Familiar",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -506,6 +1533,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -518,6 +1546,7 @@
    "sourceKey": "XGE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -530,6 +1559,20 @@
    "sourceKey": "BPGG",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "emerald-enclave-fledgling-2024",
+   "name": "Emerald Enclave Fledgling",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -542,8 +1585,43 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "enchantment-adept-2024",
+   "name": "Enchantment Adept",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "enclave-magic-2024",
+   "name": "Enclave Magic",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -554,8 +1632,26 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "evocation-adept-2024",
+   "name": "Evocation Adept",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -566,6 +1662,37 @@
    "sourceKey": "XGE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "fairy-trickster-2024",
+   "name": "Fairy Trickster",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "familiar-friend-2024",
+   "name": "Familiar Friend",
+   "source": "Arcana Unleashed",
+   "sourceKey": "AU",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -578,8 +1705,39 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "fey-pact-2024",
+   "name": "Fey Pact",
+   "source": "D&D Beyond Drops (2026)",
+   "sourceKey": "DDB",
+   "ruleset": "2024",
+   "type": "planar-pact",
+   "type_it": "Patto planare",
+   "prerequisites": [],
+   "prerequisiteText": "Nessun altro talento Patto planare",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "fey-sentinel-2024",
+   "name": "Fey Sentinel",
+   "source": "D&D Beyond Drops (2026)",
+   "sourceKey": "DDB",
+   "ruleset": "2024",
+   "type": "planar-pact",
+   "type_it": "Patto planare",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; il corrispondente Patto planare",
    "stub": true,
    "desc": ""
   },
@@ -590,8 +1748,26 @@
    "sourceKey": "XGE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "fey-tormentor-2024",
+   "name": "Fey Tormentor",
+   "source": "D&D Beyond Drops (2026)",
+   "sourceKey": "DDB",
+   "ruleset": "2024",
+   "type": "planar-pact",
+   "type_it": "Patto planare",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; il corrispondente Patto planare",
    "stub": true,
    "desc": ""
   },
@@ -602,8 +1778,26 @@
    "sourceKey": "TCE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "fey-touched-2024",
+   "name": "Fey Touched",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -614,6 +1808,7 @@
    "sourceKey": "TCE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -626,6 +1821,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -638,6 +1834,7 @@
    "sourceKey": "XGE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -650,6 +1847,7 @@
    "sourceKey": "TCSR",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -662,8 +1860,39 @@
    "sourceKey": "BPGG",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "gathered-whispers-2024",
+   "name": "Gathered Whispers",
+   "source": "Ravenloft: The Horrors Within",
+   "sourceKey": "RHW",
+   "ruleset": "2024",
+   "type": "dark-gift",
+   "type_it": "Dono oscuro",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Ravenloft",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "genie-magic-2024",
+   "name": "Genie Magic",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -674,6 +1903,7 @@
    "sourceKey": "FTD",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -686,6 +1916,7 @@
    "sourceKey": "FTD",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -698,6 +1929,7 @@
    "sourceKey": "FTD",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -710,6 +1942,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -722,8 +1955,43 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "great-weapon-master-2024",
+   "name": "Great Weapon Master",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "greater-aberrant-mark-2024",
+   "name": "Greater Aberrant Mark",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; il corrispondente Marchio del drago",
    "stub": true,
    "desc": ""
   },
@@ -734,8 +2002,213 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "greater-mark-of-detection-2024",
+   "name": "Greater Mark of Detection",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; il corrispondente Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "greater-mark-of-finding-2024",
+   "name": "Greater Mark of Finding",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; il corrispondente Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "greater-mark-of-handling-2024",
+   "name": "Greater Mark of Handling",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; il corrispondente Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "greater-mark-of-healing-2024",
+   "name": "Greater Mark of Healing",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; il corrispondente Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "greater-mark-of-hospitality-2024",
+   "name": "Greater Mark of Hospitality",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; il corrispondente Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "greater-mark-of-making-2024",
+   "name": "Greater Mark of Making",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; il corrispondente Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "greater-mark-of-passage-2024",
+   "name": "Greater Mark of Passage",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; il corrispondente Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "greater-mark-of-scribing-2024",
+   "name": "Greater Mark of Scribing",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; il corrispondente Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "greater-mark-of-sentinel-2024",
+   "name": "Greater Mark of Sentinel",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; il corrispondente Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "greater-mark-of-shadow-2024",
+   "name": "Greater Mark of Shadow",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; il corrispondente Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "greater-mark-of-storm-2024",
+   "name": "Greater Mark of Storm",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; il corrispondente Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "greater-mark-of-warding-2024",
+   "name": "Greater Mark of Warding",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; il corrispondente Marchio del drago",
    "stub": true,
    "desc": ""
   },
@@ -746,6 +2219,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -758,6 +2232,7 @@
    "sourceKey": "BPGG",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -770,8 +2245,39 @@
    "sourceKey": "TCE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "harper-agent-2024",
+   "name": "Harper Agent",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "harper-teamwork-2024",
+   "name": "Harper Teamwork",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -782,6 +2288,20 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "healer-2024",
+   "name": "Healer",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -794,8 +2314,26 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "heavily-armored-2024",
+   "name": "Heavily Armored",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -806,8 +2344,26 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "heavy-armor-master-2024",
+   "name": "Heavy Armor Master",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -818,6 +2374,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -830,8 +2387,43 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "illusion-adept-2024",
+   "name": "Illusion Adept",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "infernal-bulwark-2024",
+   "name": "Infernal Bulwark",
+   "source": "D&D Beyond Drops (2026)",
+   "sourceKey": "DDB",
+   "ruleset": "2024",
+   "type": "planar-pact",
+   "type_it": "Patto planare",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; il corrispondente Patto planare",
    "stub": true,
    "desc": ""
   },
@@ -842,8 +2434,39 @@
    "sourceKey": "XGE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "infernal-dragoon-2024",
+   "name": "Infernal Dragoon",
+   "source": "D&D Beyond Drops (2026)",
+   "sourceKey": "DDB",
+   "ruleset": "2024",
+   "type": "planar-pact",
+   "type_it": "Patto planare",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; il corrispondente Patto planare",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "infernal-pact-2024",
+   "name": "Infernal Pact",
+   "source": "D&D Beyond Drops (2026)",
+   "sourceKey": "DDB",
+   "ruleset": "2024",
+   "type": "planar-pact",
+   "type_it": "Patto planare",
+   "prerequisites": [],
+   "prerequisiteText": "Nessun altro talento Patto planare",
    "stub": true,
    "desc": ""
   },
@@ -854,6 +2477,7 @@
    "sourceKey": "DSotDQ",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -866,8 +2490,39 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "inspiring-leader-2024",
+   "name": "Inspiring Leader",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "interception-2024",
+   "name": "Interception",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "fighting-style",
+   "type_it": "Stile di combattimento",
+   "prerequisites": [],
+   "prerequisiteText": "Privilegio Stile di combattimento",
    "stub": true,
    "desc": ""
   },
@@ -878,6 +2533,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -890,8 +2546,26 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "keen-mind-2024",
+   "name": "Keen Mind",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -902,6 +2576,7 @@
    "sourceKey": "BPGG",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -914,6 +2589,7 @@
    "sourceKey": "DSotDQ",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -926,6 +2602,7 @@
    "sourceKey": "DSotDQ",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -938,8 +2615,26 @@
    "sourceKey": "DSotDQ",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "light-bringer-2024",
+   "name": "Light Bringer",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -950,8 +2645,26 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "lightly-armored-2024",
+   "name": "Lightly Armored",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -962,8 +2675,69 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "living-shadow-2024",
+   "name": "Living Shadow",
+   "source": "Ravenloft: The Horrors Within",
+   "sourceKey": "RHW",
+   "ruleset": "2024",
+   "type": "dark-gift",
+   "type_it": "Dono oscuro",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Ravenloft",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "lordly-resolve-2024",
+   "name": "Lordly Resolve",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "lords-alliance-agent-2024",
+   "name": "Lords' Alliance Agent",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "love-bites-2024",
+   "name": "Love Bites",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -974,6 +2748,20 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "lucky-2024",
+   "name": "Lucky",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -986,8 +2774,212 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "mage-slayer-2024",
+   "name": "Mage Slayer",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "magic-connoisseur-2024",
+   "name": "Magic Connoisseur",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "magic-initiate",
+   "name": "Magic Initiate",
+   "source": "Player's Handbook",
+   "sourceKey": "PHB",
+   "ruleset": "2014",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "mark-of-detection-2024",
+   "name": "Mark of Detection",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Eberron; nessun altro talento Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "mark-of-finding-2024",
+   "name": "Mark of Finding",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Eberron; nessun altro talento Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "mark-of-handling-2024",
+   "name": "Mark of Handling",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Eberron; nessun altro talento Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "mark-of-healing-2024",
+   "name": "Mark of Healing",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Eberron; nessun altro talento Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "mark-of-hospitality-2024",
+   "name": "Mark of Hospitality",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Eberron; nessun altro talento Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "mark-of-making-2024",
+   "name": "Mark of Making",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Eberron; nessun altro talento Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "mark-of-passage-2024",
+   "name": "Mark of Passage",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Eberron; nessun altro talento Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "mark-of-scribing-2024",
+   "name": "Mark of Scribing",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Eberron; nessun altro talento Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "mark-of-sentinel-2024",
+   "name": "Mark of Sentinel",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Eberron; nessun altro talento Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "mark-of-shadow-2024",
+   "name": "Mark of Shadow",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Eberron; nessun altro talento Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "mark-of-storm-2024",
+   "name": "Mark of Storm",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Eberron; nessun altro talento Marchio del drago",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "mark-of-warding-2024",
+   "name": "Mark of Warding",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Eberron; nessun altro talento Marchio del drago",
    "stub": true,
    "desc": ""
   },
@@ -998,8 +2990,26 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "martial-weapon-training-2024",
+   "name": "Martial Weapon Training",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1010,6 +3020,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1022,6 +3033,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1034,8 +3046,26 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "medium-armor-master-2024",
+   "name": "Medium Armor Master",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1046,6 +3076,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1058,6 +3089,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1070,8 +3102,22 @@
    "sourceKey": "TCE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "mist-walker-2024",
+   "name": "Mist Walker",
+   "source": "Ravenloft: The Horrors Within",
+   "sourceKey": "RHW",
+   "ruleset": "2024",
+   "type": "dark-gift",
+   "type_it": "Dono oscuro",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Ravenloft",
    "stub": true,
    "desc": ""
   },
@@ -1082,6 +3128,7 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1094,8 +3141,26 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "moderately-armored-2024",
+   "name": "Moderately Armored",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1106,6 +3171,37 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "mounted-combatant-2024",
+   "name": "Mounted Combatant",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "musician-2024",
+   "name": "Musician",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1118,8 +3214,26 @@
    "sourceKey": "TCSR",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "mythal-touched-2024",
+   "name": "Mythal Touched",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1130,8 +3244,26 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "necromancy-adept-2024",
+   "name": "Necromancy Adept",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1142,8 +3274,26 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "observant-2024",
+   "name": "Observant",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1154,6 +3304,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1166,8 +3317,43 @@
    "sourceKey": "XGE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "orders-resilience-2024",
+   "name": "Order's Resilience",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "otherworldly-familiar-2024",
+   "name": "Otherworldly Familiar",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1178,6 +3364,7 @@
    "sourceKey": "PAitM",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1190,8 +3377,22 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "pack-fighting-2024",
+   "name": "Pack Fighting",
+   "source": "D&D Beyond Drops (2026)",
+   "sourceKey": "DDB",
+   "ruleset": "2024",
+   "type": "fighting-style",
+   "type_it": "Stile di combattimento",
+   "prerequisites": [],
+   "prerequisiteText": "Privilegio Stile di combattimento",
    "stub": true,
    "desc": ""
   },
@@ -1202,6 +3403,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1214,6 +3416,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1226,8 +3429,26 @@
    "sourceKey": "TCE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "piercer-2024",
+   "name": "Piercer",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1238,6 +3459,7 @@
    "sourceKey": "PAitM",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1250,8 +3472,26 @@
    "sourceKey": "TCE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "poisoner-2024",
+   "name": "Poisoner",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1262,8 +3502,56 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "polearm-master-2024",
+   "name": "Polearm Master",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "portal-jumper-2024",
+   "name": "Portal Jumper",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "potent-dragonmark-2024",
+   "name": "Potent Dragonmark",
+   "source": "Eberron: Forge of the Artificer",
+   "sourceKey": "EFA",
+   "ruleset": "2024",
+   "type": "dragonmark",
+   "type_it": "Marchio del drago",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; il corrispondente Marchio del drago",
    "stub": true,
    "desc": ""
   },
@@ -1274,6 +3562,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1286,8 +3575,82 @@
    "sourceKey": "XGE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "prone-fighting-2024",
+   "name": "Prone Fighting",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "fighting-style",
+   "type_it": "Stile di combattimento",
+   "prerequisites": [],
+   "prerequisiteText": "Privilegio Stile di combattimento",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "protection-2024",
+   "name": "Protection",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "fighting-style",
+   "type_it": "Stile di combattimento",
+   "prerequisites": [],
+   "prerequisiteText": "Privilegio Stile di combattimento",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "purple-dragon-commandant-2024",
+   "name": "Purple Dragon Commandant",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "purple-dragon-rook-2024",
+   "name": "Purple Dragon Rook",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "putrefy-2024",
+   "name": "Putrefy",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1298,6 +3661,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1310,8 +3674,26 @@
    "sourceKey": "PSK",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "rebuke-2024",
+   "name": "Rebuke",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1322,6 +3704,7 @@
    "sourceKey": "TCSR",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1334,8 +3717,26 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "resilient-2024",
+   "name": "Resilient",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1346,6 +3747,7 @@
    "sourceKey": "EGW",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1358,6 +3760,7 @@
    "sourceKey": "PAitM",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1370,8 +3773,26 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "ritual-caster-2024",
+   "name": "Ritual Caster",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1382,6 +3803,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1394,6 +3816,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1406,6 +3829,20 @@
    "sourceKey": "BPGG",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "savage-attacker",
+   "name": "Savage Attacker",
+   "source": "Player's Handbook",
+   "sourceKey": "PHB",
+   "ruleset": "2014",
+   "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1418,6 +3855,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1430,6 +3868,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1442,6 +3881,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1454,6 +3894,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1466,6 +3907,7 @@
    "sourceKey": "PAitM",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1478,8 +3920,22 @@
    "sourceKey": "XGE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "second-skin-2024",
+   "name": "Second Skin",
+   "source": "Ravenloft: The Horrors Within",
+   "sourceKey": "RHW",
+   "ruleset": "2024",
+   "type": "dark-gift",
+   "type_it": "Dono oscuro",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Ravenloft",
    "stub": true,
    "desc": ""
   },
@@ -1490,8 +3946,26 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "sentinel-2024",
+   "name": "Sentinel",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1502,8 +3976,22 @@
    "sourceKey": "PSK",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "shadow-pact-2024",
+   "name": "Shadow Pact",
+   "source": "D&D Beyond Drops (2026)",
+   "sourceKey": "DDB",
+   "ruleset": "2024",
+   "type": "planar-pact",
+   "type_it": "Patto planare",
+   "prerequisites": [],
+   "prerequisiteText": "Nessun altro talento Patto planare",
    "stub": true,
    "desc": ""
   },
@@ -1514,6 +4002,84 @@
    "sourceKey": "TCE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "shadow-touched-2024",
+   "name": "Shadow Touched",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "shadow-trapper-2024",
+   "name": "Shadow Trapper",
+   "source": "D&D Beyond Drops (2026)",
+   "sourceKey": "DDB",
+   "ruleset": "2024",
+   "type": "planar-pact",
+   "type_it": "Patto planare",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; il corrispondente Patto planare",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "shadow-weaver-2024",
+   "name": "Shadow Weaver",
+   "source": "D&D Beyond Drops (2026)",
+   "sourceKey": "DDB",
+   "ruleset": "2024",
+   "type": "planar-pact",
+   "type_it": "Patto planare",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; il corrispondente Patto planare",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "shadowmoor-hexer-2024",
+   "name": "Shadowmoor Hexer",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "sharp-eye-2024",
+   "name": "Sharp Eye",
+   "source": "Ravenloft: The Horrors Within",
+   "sourceKey": "RHW",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1526,8 +4092,26 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "sharpshooter-2024",
+   "name": "Sharpshooter",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1538,8 +4122,26 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "shield-master-2024",
+   "name": "Shield Master",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1550,8 +4152,26 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "shifting-combatant-2024",
+   "name": "Shifting Combatant",
+   "source": "D&D Beyond Drops (2026)",
+   "sourceKey": "DDB",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+; privilegio Padronanza nelle armi",
    "stub": true,
    "desc": ""
   },
@@ -1562,6 +4182,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1574,6 +4195,37 @@
    "sourceKey": "TCE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "skill-expert-2024",
+   "name": "Skill Expert",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "skilled",
+   "name": "Skilled",
+   "source": "Player's Handbook",
+   "sourceKey": "PHB",
+   "ruleset": "2014",
+   "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1586,8 +4238,26 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "skulker-2024",
+   "name": "Skulker",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1598,8 +4268,43 @@
    "sourceKey": "TCE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "slasher-2024",
+   "name": "Slasher",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "soothing-familiar-2024",
+   "name": "Soothing Familiar",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1610,6 +4315,7 @@
    "sourceKey": "BPGG",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1622,8 +4328,43 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "speedy-2024",
+   "name": "Speedy",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "spell-resistant-2024",
+   "name": "Spell Resistant",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1634,8 +4375,43 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "spell-sniper-2024",
+   "name": "Spell Sniper",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "spell-subterfuge-2024",
+   "name": "Spell Subterfuge",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1646,6 +4422,37 @@
    "sourceKey": "TCSR",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "spellfire-adept-2024",
+   "name": "Spellfire Adept",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "spellfire-spark-2024",
+   "name": "Spellfire Spark",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1658,6 +4465,7 @@
    "sourceKey": "XGE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1670,6 +4478,7 @@
    "sourceKey": "DSotDQ",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1682,8 +4491,26 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "street-justice-2024",
+   "name": "Street Justice",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1694,6 +4521,7 @@
    "sourceKey": "BPGG",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1706,6 +4534,7 @@
    "sourceKey": "SCC",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1718,6 +4547,7 @@
    "sourceKey": "SCC",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1730,6 +4560,20 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "survivor-2024",
+   "name": "Survivor",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1742,8 +4586,39 @@
    "sourceKey": "XGE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "symbiotic-being-2024",
+   "name": "Symbiotic Being",
+   "source": "Ravenloft: The Horrors Within",
+   "sourceKey": "RHW",
+   "ruleset": "2024",
+   "type": "dark-gift",
+   "type_it": "Dono oscuro",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Ravenloft",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "tactical-combatant-2024",
+   "name": "Tactical Combatant",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1754,6 +4629,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1766,6 +4642,20 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "tavern-brawler-2024",
+   "name": "Tavern Brawler",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1778,8 +4668,26 @@
    "sourceKey": "TCE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "telekinetic-2024",
+   "name": "Telekinetic",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1790,8 +4698,26 @@
    "sourceKey": "TCE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "telepathic-2024",
+   "name": "Telepathic",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1802,6 +4728,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1814,8 +4741,48 @@
    "sourceKey": "TCSR",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "thrown-weapon-fighting-2024",
+   "name": "Thrown Weapon Fighting",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "fighting-style",
+   "type_it": "Stile di combattimento",
+   "prerequisites": [],
+   "prerequisiteText": "Privilegio Stile di combattimento",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "tireless-reveler-2024",
+   "name": "Tireless Reveler",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "touch-of-death-2024",
+   "name": "Touch of Death",
+   "source": "Ravenloft: The Horrors Within",
+   "sourceKey": "RHW",
+   "ruleset": "2024",
+   "type": "dark-gift",
+   "type_it": "Dono oscuro",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Ravenloft",
    "stub": true,
    "desc": ""
   },
@@ -1826,6 +4793,20 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "tough-2024",
+   "name": "Tough",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1838,6 +4819,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1850,6 +4832,123 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "transmutation-adept-2024",
+   "name": "Transmutation Adept",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "transmuted-anatomy-2024",
+   "name": "Transmuted Anatomy",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "treacherous-allure-2024",
+   "name": "Treacherous Allure",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "tyro-of-the-gauntlet-2024",
+   "name": "Tyro of the Gauntlet",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "unarmed-fighting-2024",
+   "name": "Unarmed Fighting",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "fighting-style",
+   "type_it": "Stile di combattimento",
+   "prerequisites": [],
+   "prerequisiteText": "Privilegio Stile di combattimento",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "vampire-hunter-2024",
+   "name": "Vampire Hunter",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "vampire-touched-2024",
+   "name": "Vampire Touched",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "vampires-plaything-2024",
+   "name": "Vampire's Plaything",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1862,6 +4961,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1874,6 +4974,7 @@
    "sourceKey": "BPGG",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1886,6 +4987,7 @@
    "sourceKey": "TCSR",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1898,8 +5000,56 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "war-caster-2024",
+   "name": "War Caster",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "warlike-familiar-2024",
+   "name": "Warlike Familiar",
+   "source": "Fonte da verificare",
+   "sourceKey": "NA",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "watchers-2024",
+   "name": "Watchers",
+   "source": "Ravenloft: The Horrors Within",
+   "sourceKey": "RHW",
+   "ruleset": "2024",
+   "type": "dark-gift",
+   "type_it": "Dono oscuro",
+   "prerequisites": [],
+   "prerequisiteText": "Campagna di Ravenloft",
    "stub": true,
    "desc": ""
   },
@@ -1910,8 +5060,26 @@
    "sourceKey": "PHB",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "weapon-master-2024",
+   "name": "Weapon Master",
+   "source": "Player's Handbook (2024)",
+   "sourceKey": "PHB24",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   },
@@ -1922,6 +5090,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1934,6 +5103,7 @@
    "sourceKey": "UA",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
    "stub": true,
@@ -1946,8 +5116,39 @@
    "sourceKey": "XGE",
    "ruleset": "2014",
    "type": "general",
+   "type_it": "Generale",
    "prerequisites": [],
    "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "zhentarim-ruffian-2024",
+   "name": "Zhentarim Ruffian",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "origin",
+   "type_it": "Origine",
+   "prerequisites": [],
+   "prerequisiteText": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "zhentarim-tactics-2024",
+   "name": "Zhentarim Tactics",
+   "source": "Forgotten Realms: Heroes of Faerûn",
+   "sourceKey": "FRHoF",
+   "ruleset": "2024",
+   "type": "general",
+   "type_it": "Generale",
+   "prerequisites": [
+    {
+     "minLevel": 4
+    }
+   ],
+   "prerequisiteText": "Livello 4+",
    "stub": true,
    "desc": ""
   }

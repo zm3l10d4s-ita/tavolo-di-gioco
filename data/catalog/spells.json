@@ -2,9 +2,9 @@
  "meta": {
   "source": "Indice di dnd5e.wikidot.com — solo nomi e dati di base",
   "license": "Nessun testo dei manuali incluso: le descrizioni vanno inserite dall’utente dai propri manuali.",
-  "generatedAt": "2026-10-24T16:26:43.820Z",
+  "generatedAt": "2026-10-24T21:33:55.876Z",
   "dataset": "spells",
-  "count": 239
+  "count": 254
  },
  "items": [
   {
@@ -1084,6 +1084,36 @@
    "desc": ""
   },
   {
+   "id": "chromatic-orb",
+   "name": "Chromatic Orb",
+   "name_it": null,
+   "source": "Player's Handbook",
+   "sourceKey": "PHB",
+   "ruleset": "2014",
+   "level": 1,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "1 action",
+   "range": "90 feet",
+   "rangeFt": 90,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Instantaneous",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "sorcerer"
+   ],
+   "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "compelled-duel",
    "name": "Compelled Duel",
    "name_it": null,
@@ -1107,6 +1137,35 @@
    "ritual": false,
    "classes": [
     "paladin"
+   ],
+   "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "dissonant-whispers",
+   "name": "Dissonant Whispers",
+   "name_it": null,
+   "source": "Player's Handbook",
+   "sourceKey": "PHB",
+   "ruleset": "2014",
+   "level": 1,
+   "school": "enchantment",
+   "school_it": "Ammaliamento",
+   "castingTime": "1 action",
+   "range": "60 feet",
+   "rangeFt": 60,
+   "components": {
+    "v": true,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "Instantaneous",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "bard"
    ],
    "higherLevel": "",
    "stub": true,
@@ -1171,6 +1230,35 @@
     "druid",
     "bard",
     "sorcerer"
+   ],
+   "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "ensnaring-strike",
+   "name": "Ensnaring Strike",
+   "name_it": null,
+   "source": "Player's Handbook",
+   "sourceKey": "PHB",
+   "ruleset": "2014",
+   "level": 1,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 bonus action",
+   "range": "Self",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "ranger"
    ],
    "higherLevel": "",
    "stub": true,
@@ -1325,6 +1413,66 @@
    "desc": ""
   },
   {
+   "id": "hex",
+   "name": "Hex",
+   "name_it": null,
+   "source": "Player's Handbook",
+   "sourceKey": "PHB",
+   "ruleset": "2014",
+   "level": 1,
+   "school": "enchantment",
+   "school_it": "Ammaliamento",
+   "castingTime": "1 bonus action",
+   "range": "90 feet",
+   "rangeFt": 90,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 hour",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "warlock"
+   ],
+   "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "ice-knife",
+   "name": "Ice Knife",
+   "name_it": null,
+   "source": "Xanathar's Guide to Everything",
+   "sourceKey": "XGE",
+   "ruleset": "2014",
+   "level": 1,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 action",
+   "range": "60 feet",
+   "rangeFt": 60,
+   "components": {
+    "v": false,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Instantaneous",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "druid",
+    "sorcerer"
+   ],
+   "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "id-insinuation-ua",
    "name": "Id Insinuation (UA)",
    "name_it": null,
@@ -1444,6 +1592,36 @@
    "desc": ""
   },
   {
+   "id": "ray-of-sickness",
+   "name": "Ray of Sickness",
+   "name_it": null,
+   "source": "Player's Handbook",
+   "sourceKey": "PHB",
+   "ruleset": "2014",
+   "level": 1,
+   "school": "necromancy",
+   "school_it": "Necromanzia",
+   "castingTime": "1 action",
+   "range": "60 feet",
+   "rangeFt": 60,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": false,
+    "material": null
+   },
+   "duration": "Instantaneous",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "sorcerer"
+   ],
+   "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "remote-access-ua",
    "name": "Remote Access (UA)",
    "name_it": null,
@@ -1468,6 +1646,36 @@
    "classes": [
     "wizard",
     "sorcerer"
+   ],
+   "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "searing-smite",
+   "name": "Searing Smite",
+   "name_it": null,
+   "source": "Player's Handbook",
+   "sourceKey": "PHB",
+   "ruleset": "2014",
+   "level": 1,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "1 bonus action",
+   "range": "Self",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "paladin",
+    "ranger"
    ],
    "higherLevel": "",
    "stub": true,
@@ -2084,6 +2292,36 @@
    "desc": ""
   },
   {
+   "id": "dragons-breath",
+   "name": "Dragon's Breath",
+   "name_it": null,
+   "source": "Xanathar's Guide to Everything",
+   "sourceKey": "XGE",
+   "ruleset": "2014",
+   "level": 2,
+   "school": "transmutation",
+   "school_it": "Trasmutazione",
+   "castingTime": "1 bonus action",
+   "range": "Touch",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "sorcerer"
+   ],
+   "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "dust-devil",
    "name": "Dust Devil",
    "name_it": null,
@@ -2476,6 +2714,37 @@
    "desc": ""
   },
   {
+   "id": "mind-spike",
+   "name": "Mind Spike",
+   "name_it": null,
+   "source": "Xanathar's Guide to Everything",
+   "sourceKey": "XGE",
+   "ruleset": "2014",
+   "level": 2,
+   "school": "divination",
+   "school_it": "Divinazione",
+   "castingTime": "1 action",
+   "range": "60 feet",
+   "rangeFt": 60,
+   "components": {
+    "v": false,
+    "s": true,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 hour",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "sorcerer",
+    "warlock"
+   ],
+   "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "mind-thrust-ua",
    "name": "Mind Thrust (UA)",
    "name_it": null,
@@ -2551,6 +2820,37 @@
    "rangeFt": 60,
    "components": {
     "v": false,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Concentration, up to 1 minute",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "bard",
+    "sorcerer"
+   ],
+   "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "phantasmal-force",
+   "name": "Phantasmal Force",
+   "name_it": null,
+   "source": "Player's Handbook",
+   "sourceKey": "PHB",
+   "ruleset": "2014",
+   "level": 2,
+   "school": "illusion",
+   "school_it": "Illusione",
+   "castingTime": "1 action",
+   "range": "60 feet",
+   "rangeFt": 60,
+   "components": {
+    "v": true,
     "s": true,
     "m": true,
     "material": null
@@ -4284,6 +4584,36 @@
    "desc": ""
   },
   {
+   "id": "aura-of-life",
+   "name": "Aura of Life",
+   "name_it": null,
+   "source": "Player's Handbook",
+   "sourceKey": "PHB",
+   "ruleset": "2014",
+   "level": 4,
+   "school": "abjuration",
+   "school_it": "Abiurazione",
+   "castingTime": "1 action",
+   "range": "Self (30-foot radius)",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": false,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 10 minutes",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "cleric",
+    "paladin"
+   ],
+   "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "aura-of-purity",
    "name": "Aura of Purity",
    "name_it": null,
@@ -4308,6 +4638,39 @@
    "classes": [
     "cleric",
     "paladin"
+   ],
+   "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "charm-monster",
+   "name": "Charm Monster",
+   "name_it": null,
+   "source": "Xanathar's Guide to Everything",
+   "sourceKey": "XGE",
+   "ruleset": "2014",
+   "level": 4,
+   "school": "enchantment",
+   "school_it": "Ammaliamento",
+   "castingTime": "1 action",
+   "range": "30 feet",
+   "rangeFt": 30,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": false,
+    "material": null
+   },
+   "duration": "1 hour",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "druid",
+    "bard",
+    "sorcerer",
+    "warlock"
    ],
    "higherLevel": "",
    "stub": true,
@@ -5058,6 +5421,36 @@
    },
    "duration": "Concentration, up to 1 hour",
    "concentration": true,
+   "ritual": false,
+   "classes": [
+    "wizard",
+    "sorcerer"
+   ],
+   "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "vitriolic-sphere",
+   "name": "Vitriolic Sphere",
+   "name_it": null,
+   "source": "Xanathar's Guide to Everything",
+   "sourceKey": "XGE",
+   "ruleset": "2014",
+   "level": 4,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "1 action",
+   "range": "150 feet",
+   "rangeFt": 150,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": true,
+    "material": null
+   },
+   "duration": "Instantaneous",
+   "concentration": false,
    "ritual": false,
    "classes": [
     "wizard",
@@ -7088,6 +7481,35 @@
    "desc": ""
   },
   {
+   "id": "tsunami",
+   "name": "Tsunami",
+   "name_it": null,
+   "source": "Player's Handbook",
+   "sourceKey": "PHB",
+   "ruleset": "2014",
+   "level": 8,
+   "school": "conjuration",
+   "school_it": "Evocazione",
+   "castingTime": "1 minute",
+   "range": "Sight",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": false,
+    "material": null
+   },
+   "duration": "Concentration, up to 6 rounds",
+   "concentration": true,
+   "ritual": false,
+   "classes": [
+    "druid"
+   ],
+   "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "blade-of-disaster",
    "name": "Blade of Disaster",
    "name_it": null,
@@ -7173,6 +7595,36 @@
     "wizard",
     "bard",
     "sorcerer"
+   ],
+   "higherLevel": "",
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "power-word-heal",
+   "name": "Power Word: Heal",
+   "name_it": null,
+   "source": "Player's Handbook",
+   "sourceKey": "PHB",
+   "ruleset": "2014",
+   "level": 9,
+   "school": "evocation",
+   "school_it": "Invocazione",
+   "castingTime": "1 action",
+   "range": "Touch",
+   "rangeFt": null,
+   "components": {
+    "v": true,
+    "s": true,
+    "m": false,
+    "material": null
+   },
+   "duration": "Instantaneous",
+   "concentration": false,
+   "ritual": false,
+   "classes": [
+    "cleric",
+    "bard"
    ],
    "higherLevel": "",
    "stub": true,

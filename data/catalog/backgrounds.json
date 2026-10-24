@@ -2,9 +2,9 @@
  "meta": {
   "source": "Indice di dnd5e.wikidot.com — solo nomi e dati di base",
   "license": "Nessun testo dei manuali incluso: le descrizioni vanno inserite dall’utente dai propri manuali.",
-  "generatedAt": "2026-10-24T16:26:43.820Z",
+  "generatedAt": "2026-10-24T21:33:55.876Z",
   "dataset": "backgrounds",
-  "count": 94
+  "count": 97
  },
  "items": [
   {
@@ -207,6 +207,19 @@
    "name": "Courtier",
    "source": "Sword Coast Adventurer's Guide",
    "sourceKey": "SCAG",
+   "ruleset": "2014",
+   "skillProficiencies": [],
+   "toolProficiencies": [],
+   "equipment": [],
+   "feature": null,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "criminal",
+   "name": "Criminal",
+   "source": "Player's Handbook",
+   "sourceKey": "PHB",
    "ruleset": "2014",
    "skillProficiencies": [],
    "toolProficiencies": [],
@@ -957,6 +970,19 @@
    "desc": ""
   },
   {
+   "id": "sage",
+   "name": "Sage",
+   "source": "Player's Handbook",
+   "sourceKey": "PHB",
+   "ruleset": "2014",
+   "skillProficiencies": [],
+   "toolProficiencies": [],
+   "equipment": [],
+   "feature": null,
+   "stub": true,
+   "desc": ""
+  },
+  {
    "id": "sailor",
    "name": "Sailor",
    "source": "Player's Handbook",
@@ -1052,6 +1078,19 @@
    "name": "Smuggler",
    "source": "Ghosts of Saltmarsh",
    "sourceKey": "GoS",
+   "ruleset": "2014",
+   "skillProficiencies": [],
+   "toolProficiencies": [],
+   "equipment": [],
+   "feature": null,
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "soldier",
+   "name": "Soldier",
+   "source": "Player's Handbook",
+   "sourceKey": "PHB",
    "ruleset": "2014",
    "skillProficiencies": [],
    "toolProficiencies": [],
