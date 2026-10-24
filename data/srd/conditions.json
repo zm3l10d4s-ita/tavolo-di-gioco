@@ -1,0 +1,238 @@
+{
+ "meta": {
+  "source": "SRD 5.1 + SRD 5.2.1 (Wizards of the Coast), via 5e-bits/5e-database",
+  "license": "CC-BY-4.0",
+  "attribution": "This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.\n\nThis work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+  "attributions": {
+   "SRD 5.1": "This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+   "SRD 5.2": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+   "SRD 5.2 (it)": "Quest'opera include materiale tratto dal System Reference Document 5.2.1 (\"SRD 5.2.1\") di Wizards of the Coast LLC, disponibile all'indirizzo https://www.dndbeyond.com/srd. Il SRD 5.2.1 è concesso in licenza ai sensi della licenza di attribuzione 4.0 Internazionale di Creative Commons, disponibile all'indirizzo https://creativecommons.org/licenses/by/4.0/legalcode."
+  },
+  "upstream": {
+   "repo": "https://github.com/5e-bits/5e-database",
+   "commit": "a6212beb4b278917c2cff41c2b04c4ef4f3e0d6f",
+   "license": "Dati SRD CC-BY-4.0 (codice del repo MIT, non usato)"
+  },
+  "dataset": "conditions",
+  "generatedAt": "2026-10-24T12:04:59.469Z",
+  "counts": {
+   "SRD 5.1": 15
+  }
+ },
+ "items": [
+  {
+   "id": "blinded",
+   "name": "Blinded",
+   "name_it": "Accecato",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "- A blinded creature can't see and automatically fails any ability check that requires sight.\n\n- Attack rolls against the creature have advantage, and the creature's attack rolls have disadvantage.",
+   "desc2024": "While you have the Blinded condition, you experience the following effects.\n\n**Can't See.** You can't see and automatically fail any ability check that requires sight.\n\n**Attacks Affected.** Attack rolls against you have Advantage, and your attack rolls have Disadvantage.",
+   "summary_it": "Non vede: fallisce le prove che richiedono la vista. Attacchi contro di lui con vantaggio, i suoi attacchi con svantaggio.",
+   "summary2024_it": "Non vede (fallisce prove basate sulla vista). Attacchi contro di lui con vantaggio, i suoi con svantaggio."
+  },
+  {
+   "id": "charmed",
+   "name": "Charmed",
+   "name_it": "Affascinato",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "- A charmed creature can't attack the charmer or target the charmer with harmful abilities or magical effects.\n\n- The charmer has advantage on any ability check to interact socially with the creature.",
+   "desc2024": "While you have the Charmed condition, you experience the following effects.\n\n**Can't Harm the Charmer.** You can't attack the charmer or target the charmer with damaging abilities or magical effects.\n\n**Social Advantage.** The charmer has Advantage on ability checks to interact socially with you.",
+   "summary_it": "Non può attaccare chi l'ha affascinato né bersagliarlo con effetti dannosi; l'affascinatore ha vantaggio nelle prove sociali contro di lui.",
+   "summary2024_it": "Non può attaccare l'affascinatore né bersagliarlo con effetti dannosi; l'affascinatore ha vantaggio nelle prove per interagire socialmente con lui."
+  },
+  {
+   "id": "deafened",
+   "name": "Deafened",
+   "name_it": "Assordato",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "- A deafened creature can't hear and automatically fails any ability check that requires hearing.",
+   "desc2024": "While you have the Deafened condition, you experience the following effect.\n\n**Can't Hear.** You can't hear and automatically fail any ability check that requires hearing.",
+   "summary_it": "Non sente: fallisce le prove che richiedono l'udito.",
+   "summary2024_it": "Non sente: fallisce le prove che richiedono l'udito."
+  },
+  {
+   "id": "frightened",
+   "name": "Frightened",
+   "name_it": "Spaventato",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "- A frightened creature has disadvantage on ability checks and attack rolls while the source of its fear is within line of sight.\n\n- The creature can't willingly move closer to the source of its fear.",
+   "desc2024": "While you have the Frightened condition, you experience the following effects.\n\n**Ability Checks and Attacks Affected.** You have Disadvantage on ability checks and attack rolls while the source of fear is within line of sight.\n\n**Can't Approach.** You can't willingly move closer to the source of your fear.",
+   "summary_it": "Svantaggio a prove e attacchi finché la fonte della paura è in vista; non può avvicinarsi volontariamente alla fonte.",
+   "summary2024_it": "Svantaggio a prove e attacchi finché la fonte della paura è in vista; non può avvicinarsi volontariamente alla fonte."
+  },
+  {
+   "id": "grappled",
+   "name": "Grappled",
+   "name_it": "Afferrato",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "- A grappled creature's speed becomes 0, and it can't benefit from any bonus to its speed.\n\n- The condition ends if the grappler is incapacitated (see the condition).\n\n- The condition also ends if an effect removes the grappled creature from the reach of the grappler or grappling effect, such as when a creature is hurled away by the thunderwave spell.",
+   "desc2024": "While you have the Grappled condition, you experience the following effects.\n\n**Speed 0.** Your Speed is 0 and can't increase.\n\n**Attacks Affected.** You have Disadvantage on attack rolls against any target other than the grappler.\n\n**Movable.** The grappler can drag or carry you when it moves, but every foot of movement costs it 1 extra foot unless you are Tiny or two or more sizes smaller.",
+   "summary_it": "Velocità 0, nessun bonus alla velocità. Termina se chi afferra è incapacitato o se viene allontanato dalla sua portata.",
+   "summary2024_it": "Velocità 0; svantaggio agli attacchi contro bersagli diversi da chi lo afferra; chi afferra può trascinarlo (movimento extra). Termina se chi afferra è incapacitato o fuori portata."
+  },
+  {
+   "id": "incapacitated",
+   "name": "Incapacitated",
+   "name_it": "Incapacitato",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "- An incapacitated creature can't take actions or reactions.",
+   "desc2024": "While you have the Incapacitated condition, you experience the following effects.\n\n**Inactive.** You can't take any action, Bonus Action, or Reaction.\n\n**No Concentration.** Your Concentration is broken.\n\n**Speechless.** You can't speak.\n\n**Surprised.** If you're Incapacitated when you roll Initiative, you have Disadvantage on the roll.",
+   "summary_it": "Non può compiere azioni né reazioni.",
+   "summary2024_it": "Nessuna azione, azione bonus o reazione; la concentrazione si interrompe; non può parlare; tira l'iniziativa con svantaggio."
+  },
+  {
+   "id": "invisible",
+   "name": "Invisible",
+   "name_it": "Invisibile",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "- An invisible creature is impossible to see without the aid of magic or a special sense. For the purpose of hiding, the creature is heavily obscured. The creature's location can be detected by any noise it makes or any tracks it leaves.\n\n- Attack rolls against the creature have disadvantage, and the creature's attack rolls have advantage.",
+   "desc2024": "While you have the Invisible condition, you experience the following effects.\n\n**Surprise.** If you're Invisible when you roll Initiative, you have Advantage on the roll.\n\n**Concealed.** You aren't affected by any effect that requires its target to be seen unless the effect's creator can somehow see you. Any equipment you are wearing or carrying is also concealed.\n\n**Attacks Affected.** Attack rolls against you have Disadvantage, and your attack rolls have Advantage. If a creature can somehow see you, you don't gain this benefit against that creature.",
+   "summary_it": "Impossibile da vedere senza magia o sensi speciali (considerato in oscurità pesante). Attacchi contro di lui con svantaggio, i suoi con vantaggio.",
+   "summary2024_it": "Vantaggio all'iniziativa; non influenzato da effetti che richiedono di vederlo; attacchi contro di lui con svantaggio, i suoi con vantaggio (se chi attacca non lo vede)."
+  },
+  {
+   "id": "paralyzed",
+   "name": "Paralyzed",
+   "name_it": "Paralizzato",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "- A paralyzed creature is incapacitated (see the condition) and can't move or speak.\n\n- The creature automatically fails Strength and Dexterity saving throws.\n\n- Attack rolls against the creature have advantage.\n\n- Any attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.",
+   "desc2024": "While you have the Paralyzed condition, you experience the following effects.\n\n**Incapacitated.** You have the Incapacitated condition.\n\n**Speed 0.** Your Speed is 0 and can't increase.\n\n**Saving Throws Affected.** You automatically fail Strength and Dexterity saving throws.\n\n**Attacks Affected.** Attack rolls against you have Advantage.\n\n**Automatic Critical Hits.** Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you.",
+   "summary_it": "Incapacitato, non si muove né parla. Fallisce i TS di FOR e DES; attacchi contro di lui con vantaggio; colpi entro 1,5 m sono critici.",
+   "summary2024_it": "Incapacitato, velocità 0. Fallisce i TS di FOR e DES; attacchi contro di lui con vantaggio; colpi entro 1,5 m sono critici."
+  },
+  {
+   "id": "petrified",
+   "name": "Petrified",
+   "name_it": "Pietrificato",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "- A petrified creature is transformed, along with any nonmagical object it is wearing or carrying, into a solid inanimate substance (usually stone). Its weight increases by a factor of ten, and it ceases aging.\n\n- The creature is incapacitated (see the condition), can't move or speak, and is unaware of its surroundings.\n\n- Attack rolls against the creature have advantage.\n\n- The creature automatically fails Strength and Dexterity saving throws.\n\n- The creature has resistance to all damage.\n\n- The creature is immune to poison and disease, although a poison or disease already in its system is suspended, not neutralized.",
+   "desc2024": "While you have the Petrified condition, you experience the following effects.\n\n**Turned to Inanimate Substance.** You are transformed, along with any nonmagical objects you are wearing and carrying, into a solid inanimate substance (usually stone). Your weight increases by a factor of ten, and you cease aging.\n\n**Incapacitated.** You have the Incapacitated condition.\n\n**Speed 0.** Your Speed is 0 and can't increase.\n\n**Attacks Affected.** Attack rolls against you have Advantage.\n\n**Saving Throws Affected.** You automatically fail Strength and Dexterity saving throws.\n\n**Resist Damage.** You have Resistance to all damage.\n\n**Poison Immunity.** You have Immunity to the Poisoned condition.\n\n**Saving Throws Affected.** You automatically fail Strength and Dexterity saving throws.\n\n**Resist Damage.** You have Resistance to all damage.\n\n**Poison Immunity.** You have Immunity to the Poisoned condition.",
+   "summary_it": "Trasformato in sostanza inanimata: incapacitato, peso ×10, non invecchia. Attacchi contro di lui con vantaggio; fallisce TS di FOR e DES; resistenza a tutti i danni; immune a veleno e malattie.",
+   "summary2024_it": "Trasformato in sostanza inanimata: incapacitato, velocità 0, peso ×10. Attacchi contro di lui con vantaggio; fallisce TS di FOR e DES; resistenza a tutti i danni; immune ad Avvelenato."
+  },
+  {
+   "id": "poisoned",
+   "name": "Poisoned",
+   "name_it": "Avvelenato",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "- A poisoned creature has disadvantage on attack rolls and ability checks.",
+   "desc2024": "While you have the Poisoned condition, you experience the following effect.\n\n**Ability Checks and Attacks Affected.** You have Disadvantage on attack rolls and ability checks.",
+   "summary_it": "Svantaggio a tiri per colpire e prove di caratteristica.",
+   "summary2024_it": "Svantaggio a tiri per colpire e prove di caratteristica."
+  },
+  {
+   "id": "prone",
+   "name": "Prone",
+   "name_it": "Prono",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "- A prone creature's only movement option is to crawl, unless it stands up and thereby ends the condition.\n\n- The creature has disadvantage on attack rolls.\n\n- An attack roll against the creature has advantage if the attacker is within 5 feet of the creature. Otherwise, the attack roll has disadvantage.",
+   "desc2024": "While you have the Prone condition, you experience the following effects.\n\n**Restricted Movement.** Your only movement options are to crawl or to spend an amount of movement equal to half your Speed (round down) to right yourself and thereby end the condition. If your Speed is 0, you can't right yourself.\n\n**Attacks Affected.** You have Disadvantage on attack rolls. An attack roll against you has Advantage if the attacker is within 5 feet of you. Otherwise, that attack roll has Disadvantage.",
+   "summary_it": "Può solo strisciare (o rialzarsi spendendo metà movimento). Svantaggio ai suoi attacchi; attacchi contro di lui con vantaggio entro 1,5 m, con svantaggio oltre.",
+   "summary2024_it": "Può strisciare o rialzarsi (metà velocità). Svantaggio ai suoi attacchi; attacchi contro di lui con vantaggio entro 1,5 m, altrimenti con svantaggio."
+  },
+  {
+   "id": "restrained",
+   "name": "Restrained",
+   "name_it": "Trattenuto",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "- A restrained creature's speed becomes 0, and it can't benefit from any bonus to its speed.\n\n- Attack rolls against the creature have advantage, and the creature's attack rolls have disadvantage.\n\n- The creature has disadvantage on Dexterity saving throws.",
+   "desc2024": "While you have the Restrained condition, you experience the following effects.\n\n**Speed 0.** Your Speed is 0 and can't increase.\n\n**Attacks Affected.** Attack rolls against you have Advantage, and your attack rolls have Disadvantage.\n\n**Saving Throws Affected.** You have Disadvantage on Dexterity saving throws.",
+   "summary_it": "Velocità 0. Attacchi contro di lui con vantaggio, i suoi con svantaggio; svantaggio ai TS di DES.",
+   "summary2024_it": "Velocità 0. Attacchi contro di lui con vantaggio, i suoi con svantaggio; svantaggio ai TS di DES."
+  },
+  {
+   "id": "stunned",
+   "name": "Stunned",
+   "name_it": "Stordito",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "- A stunned creature is incapacitated (see the condition), can't move, and can speak only falteringly.\n\n- The creature automatically fails Strength and Dexterity saving throws.\n\n- Attack rolls against the creature have advantage.",
+   "desc2024": "While you have the Stunned condition, you experience the following effects.\n\n**Incapacitated.** You have the Incapacitated condition.\n\n**Saving Throws Affected.** You automatically fail Strength and Dexterity saving throws.\n\n**Attacks Affected.** Attack rolls against you have Advantage.",
+   "summary_it": "Incapacitato, non si muove, parla a fatica. Fallisce i TS di FOR e DES; attacchi contro di lui con vantaggio.",
+   "summary2024_it": "Incapacitato. Fallisce i TS di FOR e DES; attacchi contro di lui con vantaggio."
+  },
+  {
+   "id": "unconscious",
+   "name": "Unconscious",
+   "name_it": "Privo di sensi",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "- An unconscious creature is incapacitated (see the condition), can't move or speak, and is unaware of its surroundings.\n\n- The creature drops whatever it's holding and falls prone.\n\n- The creature automatically fails Strength and Dexterity saving throws.\n\n- Attack rolls against the creature have advantage.\n\n- Any attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.",
+   "desc2024": "While you have the Unconscious condition, you experience the following effects.\n\n**Inert.** You have the Incapacitated and Prone conditions, and you drop whatever you're holding.\n\n**When this condition ends, you remain Prone.\n\n**Speed 0.** Your Speed is 0 and can't increase.\n\n**Attacks Affected.** Attack rolls against you have Advantage.\n\n**Saving Throws Affected.** You automatically fail Strength and Dexterity saving throws.\n\n**Automatic Critical Hits.** Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you.\n\n**Unaware.** You're unaware of your surroundings.",
+   "summary_it": "Incapacitato, non si muove né parla, ignaro; lascia cadere ciò che tiene e cade prono. Fallisce TS di FOR e DES; attacchi contro di lui con vantaggio; colpi entro 1,5 m sono critici.",
+   "summary2024_it": "Incapacitato e prono, velocità 0, lascia cadere ciò che tiene. Fallisce TS di FOR e DES; attacchi contro di lui con vantaggio; colpi entro 1,5 m sono critici; ignaro di ciò che lo circonda."
+  },
+  {
+   "id": "exhaustion",
+   "name": "Exhaustion",
+   "name_it": "Indebolimento",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "Some special abilities and environmental hazards, such as starvation and the long-term effects of freezing or scorching temperatures, can lead to a special condition called exhaustion. Exhaustion is measured in six levels. An effect can give a creature one or more levels of exhaustion, as specified in the effect's description.\n\n1 - Disadvantage on ability checks\n\n2 - Speed halved\n\n3 - Disadvantage on attack rolls and saving throws\n\n4 - Hit point maximum halved\n\n5 - Speed reduced to 0\n\n6 - Death\n\nIf an already exhausted creature suffers another effect that causes exhaustion, its current level of exhaustion increases by the amount specified in the effect's description.\n\nA creature suffers the effect of its current level of exhaustion as well as all lower levels. For example, a creature suffering level 2 exhaustion has its speed halved and has disadvantage on ability checks.\n\nAn effect that removes exhaustion reduces its level as specified in the effect's description, with all exhaustion effects ending if a creature's exhaustion level is reduced below 1.\n\nFinishing a long rest reduces a creature's exhaustion level by 1, provided that the creature has also ingested some food and drink.",
+   "desc2024": "While you have the Exhaustion condition, you experience the following effects.\n\n**Exhaustion Levels.** This condition is cumulative. Each time you receive it, you gain 1 Exhaustion level. You die if your Exhaustion level is 6.\n\n**D20 Tests Affected.** When you make a D20 Test, the roll is reduced by 2 times your Exhaustion level.\n\n**Speed Reduced.** Your Speed is reduced by a number of feet equal to 5 times your Exhaustion level.\n\n**Removing Exhaustion Levels.** Finishing a Long Rest removes 1 of your Exhaustion levels. When your Exhaustion level reaches 0, the condition ends.",
+   "summary_it": "6 livelli cumulativi: 1 svantaggio alle prove; 2 velocità dimezzata; 3 svantaggio ad attacchi e TS; 4 PF massimi dimezzati; 5 velocità 0; 6 morte. Un riposo lungo (con cibo e acqua) toglie 1 livello.",
+   "summary2024_it": "Livelli 1–6 (a 6 si muore). Ogni tiro d20 subisce −2 × livello; velocità −1,5 m (5 ft) × livello. Un riposo lungo toglie 1 livello.",
+   "levels": {
+    "min": 0,
+    "max": 6
+   }
+  }
+ ]
+}

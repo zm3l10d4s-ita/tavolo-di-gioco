@@ -1,0 +1,361 @@
+{
+ "meta": {
+  "source": "SRD 5.1 + SRD 5.2.1 (Wizards of the Coast), via 5e-bits/5e-database",
+  "license": "CC-BY-4.0",
+  "attribution": "This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.\n\nThis work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+  "attributions": {
+   "SRD 5.1": "This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+   "SRD 5.2": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+   "SRD 5.2 (it)": "Quest'opera include materiale tratto dal System Reference Document 5.2.1 (\"SRD 5.2.1\") di Wizards of the Coast LLC, disponibile all'indirizzo https://www.dndbeyond.com/srd. Il SRD 5.2.1 è concesso in licenza ai sensi della licenza di attribuzione 4.0 Internazionale di Creative Commons, disponibile all'indirizzo https://creativecommons.org/licenses/by/4.0/legalcode."
+  },
+  "upstream": {
+   "repo": "https://github.com/5e-bits/5e-database",
+   "commit": "a6212beb4b278917c2cff41c2b04c4ef4f3e0d6f",
+   "license": "Dati SRD CC-BY-4.0 (codice del repo MIT, non usato)"
+  },
+  "dataset": "languages",
+  "generatedAt": "2026-10-24T12:04:59.469Z",
+  "counts": {
+   "SRD 5.1": 16,
+   "SRD 5.2": 3
+  }
+ },
+ "items": [
+  {
+   "id": "common",
+   "name": "Common",
+   "name_it": "Comune",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "type": "standard",
+   "rare2024": false,
+   "typicalSpeakers": [
+    "Humans"
+   ],
+   "script": "Common",
+   "desc": "",
+   "note2024": ""
+  },
+  {
+   "id": "dwarvish",
+   "name": "Dwarvish",
+   "name_it": "Nanico",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "type": "standard",
+   "rare2024": false,
+   "typicalSpeakers": [
+    "Dwarves"
+   ],
+   "script": "Dwarvish",
+   "desc": "Dwarvish is full of hard consonants and guttural sounds.",
+   "note2024": ""
+  },
+  {
+   "id": "elvish",
+   "name": "Elvish",
+   "name_it": "Elfico",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "type": "standard",
+   "rare2024": false,
+   "typicalSpeakers": [
+    "Elves"
+   ],
+   "script": "Elvish",
+   "desc": "Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.",
+   "note2024": ""
+  },
+  {
+   "id": "giant",
+   "name": "Giant",
+   "name_it": "Gigante",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "type": "standard",
+   "rare2024": false,
+   "typicalSpeakers": [
+    "Ogres",
+    "Giants"
+   ],
+   "script": "Dwarvish",
+   "desc": "",
+   "note2024": ""
+  },
+  {
+   "id": "gnomish",
+   "name": "Gnomish",
+   "name_it": "Gnomesco",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "type": "standard",
+   "rare2024": false,
+   "typicalSpeakers": [
+    "Gnomes"
+   ],
+   "script": "Dwarvish",
+   "desc": "The Gnomish language, which uses the Dwarvish script, is renowned for its technical treatises and its catalogs of knowledge about the natural world.",
+   "note2024": ""
+  },
+  {
+   "id": "goblin",
+   "name": "Goblin",
+   "name_it": "Goblin",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "type": "standard",
+   "rare2024": false,
+   "typicalSpeakers": [
+    "Goblinoids"
+   ],
+   "script": "Dwarvish",
+   "desc": "",
+   "note2024": ""
+  },
+  {
+   "id": "halfling",
+   "name": "Halfling",
+   "name_it": "Halfling",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "type": "standard",
+   "rare2024": false,
+   "typicalSpeakers": [
+    "Halflings"
+   ],
+   "script": "Common",
+   "desc": "The Halfling language isn't secret, but halflings are loath to share it with others. They write very little, so they don't have a rich body of literature. Their oral tradition, however, is very strong.",
+   "note2024": ""
+  },
+  {
+   "id": "orc",
+   "name": "Orc",
+   "name_it": "Orchesco",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "type": "standard",
+   "rare2024": false,
+   "typicalSpeakers": [
+    "Orcs"
+   ],
+   "script": "Dwarvish",
+   "desc": "Orc is a harsh, grating language with hard consonants. It has no script of its own but is written in the Dwarvish script.",
+   "note2024": ""
+  },
+  {
+   "id": "abyssal",
+   "name": "Abyssal",
+   "name_it": "Abissale",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "type": "exotic",
+   "rare2024": true,
+   "typicalSpeakers": [
+    "Demons"
+   ],
+   "script": "Infernal",
+   "desc": "",
+   "note2024": ""
+  },
+  {
+   "id": "celestial",
+   "name": "Celestial",
+   "name_it": "Celestiale",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "type": "exotic",
+   "rare2024": true,
+   "typicalSpeakers": [
+    "Celestials"
+   ],
+   "script": "Celestial",
+   "desc": "",
+   "note2024": ""
+  },
+  {
+   "id": "draconic",
+   "name": "Draconic",
+   "name_it": "Draconico",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "type": "exotic",
+   "rare2024": false,
+   "typicalSpeakers": [
+    "Dragons",
+    "Dragonborn"
+   ],
+   "script": "Draconic",
+   "desc": "Draconic is thought to be one of the oldest languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants.",
+   "note2024": ""
+  },
+  {
+   "id": "deep-speech",
+   "name": "Deep Speech",
+   "name_it": "Linguaggio delle Profondità",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "type": "exotic",
+   "rare2024": true,
+   "typicalSpeakers": [
+    "Aboleths",
+    "Cloakers"
+   ],
+   "script": null,
+   "desc": "",
+   "note2024": ""
+  },
+  {
+   "id": "infernal",
+   "name": "Infernal",
+   "name_it": "Infernale",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "type": "exotic",
+   "rare2024": true,
+   "typicalSpeakers": [
+    "Devils"
+   ],
+   "script": "Infernal",
+   "desc": "",
+   "note2024": ""
+  },
+  {
+   "id": "primordial",
+   "name": "Primordial",
+   "name_it": "Primordiale",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "type": "exotic",
+   "rare2024": true,
+   "typicalSpeakers": [
+    "Elementals"
+   ],
+   "script": "Dwarvish",
+   "desc": "",
+   "note2024": "Primordial includes the Aquan, Auran, Ignan, and Terran dialects. Creatures that know one of these dialects can communicate with those that know a different one."
+  },
+  {
+   "id": "sylvan",
+   "name": "Sylvan",
+   "name_it": "Silvano",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "type": "exotic",
+   "rare2024": true,
+   "typicalSpeakers": [
+    "Fey creatures"
+   ],
+   "script": "Elvish",
+   "desc": "",
+   "note2024": ""
+  },
+  {
+   "id": "undercommon",
+   "name": "Undercommon",
+   "name_it": "Sottocomune",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "type": "exotic",
+   "rare2024": true,
+   "typicalSpeakers": [
+    "Underdark traders"
+   ],
+   "script": "Elvish",
+   "desc": "",
+   "note2024": ""
+  },
+  {
+   "id": "common-sign-language",
+   "name": "Common Sign Language",
+   "name_it": "Lingua dei Segni Comune",
+   "source": "SRD 5.2",
+   "sources": [
+    "SRD 5.2"
+   ],
+   "type": "standard",
+   "rare2024": false,
+   "typicalSpeakers": [],
+   "script": null,
+   "desc": "",
+   "note2024": ""
+  },
+  {
+   "id": "druidic",
+   "name": "Druidic",
+   "name_it": "Druidico",
+   "source": "SRD 5.2",
+   "sources": [
+    "SRD 5.2"
+   ],
+   "type": "standard",
+   "rare2024": false,
+   "typicalSpeakers": [],
+   "script": null,
+   "desc": "",
+   "note2024": ""
+  },
+  {
+   "id": "thieves-cant",
+   "name": "Thieves' Cant",
+   "name_it": "Gergo Ladresco",
+   "source": "SRD 5.2",
+   "sources": [
+    "SRD 5.2"
+   ],
+   "type": "rare",
+   "rare2024": true,
+   "typicalSpeakers": [],
+   "script": null,
+   "desc": "",
+   "note2024": ""
+  }
+ ]
+}

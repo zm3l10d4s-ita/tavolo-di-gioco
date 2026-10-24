@@ -1,0 +1,528 @@
+{
+ "meta": {
+  "source": "SRD 5.1 + SRD 5.2.1 (Wizards of the Coast), via 5e-bits/5e-database",
+  "license": "CC-BY-4.0",
+  "attribution": "This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.\n\nThis work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+  "attributions": {
+   "SRD 5.1": "This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+   "SRD 5.2": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+   "SRD 5.2 (it)": "Quest'opera include materiale tratto dal System Reference Document 5.2.1 (\"SRD 5.2.1\") di Wizards of the Coast LLC, disponibile all'indirizzo https://www.dndbeyond.com/srd. Il SRD 5.2.1 è concesso in licenza ai sensi della licenza di attribuzione 4.0 Internazionale di Creative Commons, disponibile all'indirizzo https://creativecommons.org/licenses/by/4.0/legalcode."
+  },
+  "upstream": {
+   "repo": "https://github.com/5e-bits/5e-database",
+   "commit": "a6212beb4b278917c2cff41c2b04c4ef4f3e0d6f",
+   "license": "Dati SRD CC-BY-4.0 (codice del repo MIT, non usato)"
+  },
+  "dataset": "backgrounds",
+  "generatedAt": "2026-10-24T12:04:59.469Z",
+  "counts": {
+   "SRD 5.1": 1,
+   "SRD 5.2": 4
+  }
+ },
+ "items": [
+  {
+   "id": "acolyte",
+   "name": "Acolyte",
+   "source": "SRD 5.1",
+   "ruleset": "2014",
+   "skillProficiencies": [
+    "insight",
+    "religion"
+   ],
+   "toolProficiencies": [],
+   "languageChoice": {
+    "choose": 2,
+    "type": "languages",
+    "fromList": "languages"
+   },
+   "abilityScores": [],
+   "feat": null,
+   "equipment": [
+    {
+     "id": "clothes-common",
+     "name": "Clothes, common",
+     "qty": 1
+    },
+    {
+     "id": "pouch",
+     "name": "Pouch",
+     "qty": 1
+    }
+   ],
+   "equipmentOptions": [
+    {
+     "choose": 1,
+     "type": "equipment",
+     "fromCategory": {
+      "id": "holy-symbols",
+      "name": "Holy Symbols"
+     }
+    }
+   ],
+   "startingGold": {
+    "qty": 15,
+    "unit": "gp"
+   },
+   "feature": {
+    "name": "Shelter of the Faithful",
+    "desc": "As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith, though you must provide any material components needed for spells. Those who share your religion will support you (but only you) at a modest lifestyle.\n\nYou might also have ties to a specific temple dedicated to your chosen deity or pantheon, and you have a residence there. This could be the temple where you used to serve, if you remain on good terms with it, or a temple where you have found a new home. While near your temple, you can call upon the priests for assistance, provided the assistance you ask for is not hazardous and you remain in good standing with your temple."
+   },
+   "personality": {
+    "traits": {
+     "choose": 2,
+     "type": "personality_traits",
+     "from": [
+      "I idolize a particular hero of my faith, and constantly refer to that person's deeds and example.",
+      "I can find common ground between the fiercest enemies, empathizing with them and always working toward peace.",
+      "I see omens in every event and action. The gods try to speak to us, we just need to listen.",
+      "Nothing can shake my optimistic attitude.",
+      "I quote (or misquote) sacred texts and proverbs in almost every situation.",
+      "I am tolerant (or intolerant) of other faiths and respect (or condemn) the worship of other gods.",
+      "I've enjoyed fine food, drink, and high society among my temple's elite. Rough living grates on me.",
+      "I've spent so long in the temple that I have little practical experience dealing with people in the outside world."
+     ]
+    },
+    "ideals": {
+     "choose": 1,
+     "type": "ideals",
+     "from": [
+      {
+       "desc": "Tradition. The ancient traditions of worship and sacrifice must be preserved and upheld.",
+       "alignments": [
+        "lawful-good",
+        "lawful-neutral",
+        "lawful-evil"
+       ]
+      },
+      {
+       "desc": "Charity. I always try to help those in need, no matter what the personal cost.",
+       "alignments": [
+        "lawful-good",
+        "neutral-good",
+        "chaotic-good"
+       ]
+      },
+      {
+       "desc": "Change. We must help bring about the changes the gods are constantly working in the world.",
+       "alignments": [
+        "chaotic-good",
+        "chaotic-neutral",
+        "chaotic-evil"
+       ]
+      },
+      {
+       "desc": "Power. I hope to one day rise to the top of my faith's religious hierarchy.",
+       "alignments": [
+        "lawful-good",
+        "lawful-neutral",
+        "lawful-evil"
+       ]
+      },
+      {
+       "desc": "Faith. I trust that my deity will guide my actions. I have faith that if I work hard, things will go well.",
+       "alignments": [
+        "lawful-good",
+        "lawful-neutral",
+        "lawful-evil"
+       ]
+      },
+      {
+       "desc": "Aspiration. I seek to prove myself worthy of my god's favor by matching my actions against his or her teachings.",
+       "alignments": [
+        "lawful-good",
+        "neutral-good",
+        "chaotic-good",
+        "lawful-neutral",
+        "neutral",
+        "chaotic-neutral",
+        "lawful-evil",
+        "neutral-evil",
+        "chaotic-evil"
+       ]
+      }
+     ]
+    },
+    "bonds": {
+     "choose": 1,
+     "type": "bonds",
+     "from": [
+      "I would die to recover an ancient relic of my faith that was lost long ago.",
+      "I will someday get revenge on the corrupt temple hierarchy who branded me a heretic.",
+      "I owe my life to the priest who took me in when my parents died.",
+      "Everything I do is for the common people.",
+      "I will do anything to protect the temple where I served.",
+      "I seek to preserve a sacred text that my enemies consider heretical and seek to destroy."
+     ]
+    },
+    "flaws": {
+     "choose": 1,
+     "type": "flaws",
+     "from": [
+      "I judge others harshly, and myself even more severely.",
+      "I put too much trust in those who wield power within my temple's hierarchy.",
+      "My piety sometimes leads me to blindly trust those that profess faith in my god.",
+      "I am inflexible in my thinking.",
+      "I am suspicious of strangers and expect the worst of them.",
+      "Once I pick a goal, I become obsessed with it to the detriment of everything else in my life."
+     ]
+    }
+   }
+  },
+  {
+   "id": "acolyte-2024",
+   "name": "Acolyte",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "skillProficiencies": [
+    "insight",
+    "religion"
+   ],
+   "toolProficiencies": [
+    "Calligrapher's Supplies"
+   ],
+   "toolChoices": [],
+   "languageChoice": null,
+   "abilityScores": [
+    "int",
+    "wis",
+    "cha"
+   ],
+   "feat": {
+    "id": "magic-initiate-2024",
+    "name": "Magic Initiate",
+    "note": "Cleric"
+   },
+   "equipment": [],
+   "equipmentOptions": [
+    {
+     "choose": 1,
+     "desc": "Choose A or B: (A) Calligrapher's Supplies, Book (prayers), Holy Symbol, Parchment (10 sheets), Robe, 8 GP; or (B) 50 GP",
+     "type": "equipment",
+     "from": [
+      {
+       "all": [
+        {
+         "id": "calligraphers-supplies-2024",
+         "name": "Calligrapher's Supplies",
+         "qty": 1
+        },
+        {
+         "id": "book-2024",
+         "name": "Book",
+         "qty": 1,
+         "note": "Prayers"
+        },
+        {
+         "name": "Holy Symbols",
+         "qty": 1,
+         "category": "holy-symbols"
+        },
+        {
+         "id": "parchment-2024",
+         "name": "Parchment",
+         "qty": 10
+        },
+        {
+         "id": "robe-2024",
+         "name": "Robe",
+         "qty": 1
+        },
+        {
+         "money": {
+          "qty": 8,
+          "unit": "gp"
+         }
+        }
+       ]
+      },
+      {
+       "money": {
+        "qty": 50,
+        "unit": "gp"
+       }
+      }
+     ]
+    }
+   ],
+   "startingGold": null,
+   "feature": null,
+   "personality": null
+  },
+  {
+   "id": "criminal-2024",
+   "name": "Criminal",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "skillProficiencies": [
+    "sleight-of-hand",
+    "stealth"
+   ],
+   "toolProficiencies": [
+    "Thieves' Tools"
+   ],
+   "toolChoices": [],
+   "languageChoice": null,
+   "abilityScores": [
+    "dex",
+    "con",
+    "int"
+   ],
+   "feat": {
+    "id": "alert-2024",
+    "name": "Alert",
+    "note": ""
+   },
+   "equipment": [],
+   "equipmentOptions": [
+    {
+     "choose": 1,
+     "desc": "Choose A or B: (A) 2 Daggers, Thieves' Tools, Crowbar, 2 Pouches, Traveler's Clothes, 16 GP; or (B) 50 GP",
+     "type": "equipment",
+     "from": [
+      {
+       "all": [
+        {
+         "id": "dagger-2024",
+         "name": "Dagger",
+         "qty": 2
+        },
+        {
+         "id": "thieves-tools-2024",
+         "name": "Thieves' Tools",
+         "qty": 1
+        },
+        {
+         "id": "crowbar-2024",
+         "name": "Crowbar",
+         "qty": 1
+        },
+        {
+         "id": "pouch-2024",
+         "name": "Pouch",
+         "qty": 2
+        },
+        {
+         "id": "clothes-travelers-2024",
+         "name": "Clothes, Traveler's",
+         "qty": 1
+        },
+        {
+         "money": {
+          "qty": 16,
+          "unit": "gp"
+         }
+        }
+       ]
+      },
+      {
+       "money": {
+        "qty": 50,
+        "unit": "gp"
+       }
+      }
+     ]
+    }
+   ],
+   "startingGold": null,
+   "feature": null,
+   "personality": null
+  },
+  {
+   "id": "sage-2024",
+   "name": "Sage",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "skillProficiencies": [
+    "arcana",
+    "history"
+   ],
+   "toolProficiencies": [
+    "Calligrapher's Supplies"
+   ],
+   "toolChoices": [],
+   "languageChoice": null,
+   "abilityScores": [
+    "con",
+    "int",
+    "wis"
+   ],
+   "feat": {
+    "id": "magic-initiate-2024",
+    "name": "Magic Initiate",
+    "note": ""
+   },
+   "equipment": [],
+   "equipmentOptions": [
+    {
+     "choose": 1,
+     "desc": "Choose A or B: (A) Quarterstaff, Calligrapher's Supplies, Book (history), Parchment (8 sheets), Robe, 8 GP; or (B) 50 GP",
+     "type": "equipment",
+     "from": [
+      {
+       "all": [
+        {
+         "id": "quarterstaff-2024",
+         "name": "Quarterstaff",
+         "qty": 1
+        },
+        {
+         "id": "calligraphers-supplies-2024",
+         "name": "Calligrapher's Supplies",
+         "qty": 1
+        },
+        {
+         "id": "book-2024",
+         "name": "Book",
+         "qty": 1,
+         "note": "History"
+        },
+        {
+         "id": "parchment-2024",
+         "name": "Parchment",
+         "qty": 8
+        },
+        {
+         "id": "robe-2024",
+         "name": "Robe",
+         "qty": 1
+        },
+        {
+         "money": {
+          "qty": 8,
+          "unit": "gp"
+         }
+        }
+       ]
+      },
+      {
+       "money": {
+        "qty": 50,
+        "unit": "gp"
+       }
+      }
+     ]
+    }
+   ],
+   "startingGold": null,
+   "feature": null,
+   "personality": null
+  },
+  {
+   "id": "soldier-2024",
+   "name": "Soldier",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "skillProficiencies": [
+    "athletics",
+    "intimidation"
+   ],
+   "toolProficiencies": [],
+   "toolChoices": [
+    {
+     "choose": 1,
+     "desc": "Choose one kind of Gaming Set (see \"Equipment\")",
+     "type": "proficiencies",
+     "from": [
+      {
+       "id": "tool-dice",
+       "name": "Tool: Dice"
+      },
+      {
+       "id": "tool-dragonchess",
+       "name": "Tool: Dragonchess"
+      },
+      {
+       "id": "tool-playing-cards",
+       "name": "Tool: Playing Cards"
+      },
+      {
+       "id": "tool-three-dragon-ante",
+       "name": "Tool: Three-Dragon Ante"
+      }
+     ]
+    }
+   ],
+   "languageChoice": null,
+   "abilityScores": [
+    "str",
+    "dex",
+    "con"
+   ],
+   "feat": {
+    "id": "savage-attacker-2024",
+    "name": "Savage Attacker",
+    "note": ""
+   },
+   "equipment": [],
+   "equipmentOptions": [
+    {
+     "choose": 1,
+     "desc": "Choose A or B: (A) Spear, Shortbow, 20 Arrows, Gaming Set (same as above), Healer's Kit, Quiver, Traveler's Clothes, 14 GP; or (B) 50 GP",
+     "type": "equipment",
+     "from": [
+      {
+       "all": [
+        {
+         "id": "spear-2024",
+         "name": "Spear",
+         "qty": 1
+        },
+        {
+         "id": "shortbow-2024",
+         "name": "Shortbow",
+         "qty": 1
+        },
+        {
+         "id": "arrows-2024",
+         "name": "Arrows",
+         "qty": 20
+        },
+        {
+         "choice": {
+          "choose": 1,
+          "type": "equipment",
+          "fromCategory": {
+           "id": "gaming-sets",
+           "name": "Gaming Sets"
+          }
+         }
+        },
+        {
+         "id": "healers-kit-2024",
+         "name": "Healer's Kit",
+         "qty": 1
+        },
+        {
+         "id": "quiver-2024",
+         "name": "Quiver",
+         "qty": 1
+        },
+        {
+         "id": "clothes-travelers-2024",
+         "name": "Clothes, Traveler's",
+         "qty": 1
+        },
+        {
+         "money": {
+          "qty": 14,
+          "unit": "gp"
+         }
+        }
+       ]
+      },
+      {
+       "money": {
+        "qty": 50,
+        "unit": "gp"
+       }
+      }
+     ]
+    }
+   ],
+   "startingGold": null,
+   "feature": null,
+   "personality": null
+  }
+ ]
+}

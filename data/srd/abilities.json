@@ -1,0 +1,137 @@
+{
+ "meta": {
+  "source": "SRD 5.1 + SRD 5.2.1 (Wizards of the Coast), via 5e-bits/5e-database",
+  "license": "CC-BY-4.0",
+  "attribution": "This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.\n\nThis work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+  "attributions": {
+   "SRD 5.1": "This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+   "SRD 5.2": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+   "SRD 5.2 (it)": "Quest'opera include materiale tratto dal System Reference Document 5.2.1 (\"SRD 5.2.1\") di Wizards of the Coast LLC, disponibile all'indirizzo https://www.dndbeyond.com/srd. Il SRD 5.2.1 è concesso in licenza ai sensi della licenza di attribuzione 4.0 Internazionale di Creative Commons, disponibile all'indirizzo https://creativecommons.org/licenses/by/4.0/legalcode."
+  },
+  "upstream": {
+   "repo": "https://github.com/5e-bits/5e-database",
+   "commit": "a6212beb4b278917c2cff41c2b04c4ef4f3e0d6f",
+   "license": "Dati SRD CC-BY-4.0 (codice del repo MIT, non usato)"
+  },
+  "dataset": "abilities",
+  "generatedAt": "2026-10-24T12:04:59.469Z",
+  "counts": {
+   "SRD 5.1": 6
+  }
+ },
+ "items": [
+  {
+   "id": "str",
+   "name": "Strength",
+   "abbr": "STR",
+   "name_it": "Forza",
+   "abbr_it": "FOR",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "skills": [
+    "athletics"
+   ],
+   "desc": "Strength measures bodily power, athletic training, and the extent to which you can exert raw physical force.\n\nA Strength check can model any attempt to lift, push, pull, or break something, to force your body through a space, or to otherwise apply brute force to a situation. The Athletics skill reflects aptitude in certain kinds of Strength checks.",
+   "desc2024": "Physical might"
+  },
+  {
+   "id": "dex",
+   "name": "Dexterity",
+   "abbr": "DEX",
+   "name_it": "Destrezza",
+   "abbr_it": "DES",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "skills": [
+    "acrobatics",
+    "sleight-of-hand",
+    "stealth"
+   ],
+   "desc": "Dexterity measures agility, reflexes, and balance.\n\nA Dexterity check can model any attempt to move nimbly, quickly, or quietly, or to keep from falling on tricky footing. The Acrobatics, Sleight of Hand, and Stealth skills reflect aptitude in certain kinds of Dexterity checks.",
+   "desc2024": "Agility, reflexes, and balance"
+  },
+  {
+   "id": "con",
+   "name": "Constitution",
+   "abbr": "CON",
+   "name_it": "Costituzione",
+   "abbr_it": "COS",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "skills": [],
+   "desc": "Constitution measures health, stamina, and vital force.\n\nConstitution checks are uncommon, and no skills apply to Constitution checks, because the endurance this ability represents is largely passive rather than involving a specific effort on the part of a character or monster.",
+   "desc2024": "Health and stamina"
+  },
+  {
+   "id": "int",
+   "name": "Intelligence",
+   "abbr": "INT",
+   "name_it": "Intelligenza",
+   "abbr_it": "INT",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "skills": [
+    "arcana",
+    "history",
+    "investigation",
+    "nature",
+    "religion"
+   ],
+   "desc": "Intelligence measures mental acuity, accuracy of recall, and the ability to reason.\n\nAn Intelligence check comes into play when you need to draw on logic, education, memory, or deductive reasoning. The Arcana, History, Investigation, Nature, and Religion skills reflect aptitude in certain kinds of Intelligence checks.",
+   "desc2024": "Reasoning and memory"
+  },
+  {
+   "id": "wis",
+   "name": "Wisdom",
+   "abbr": "WIS",
+   "name_it": "Saggezza",
+   "abbr_it": "SAG",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "skills": [
+    "animal-handling",
+    "insight",
+    "medicine",
+    "perception",
+    "survival"
+   ],
+   "desc": "Wisdom reflects how attuned you are to the world around you and represents perceptiveness and intuition.\n\nA Wisdom check might reflect an effort to read body language, understand someone's feelings, notice things about the environment, or care for an injured person. The Animal Handling, Insight, Medicine, Perception, and Survival skills reflect aptitude in certain kinds of Wisdom checks.",
+   "desc2024": "Perceptiveness and mental fortitude"
+  },
+  {
+   "id": "cha",
+   "name": "Charisma",
+   "abbr": "CHA",
+   "name_it": "Carisma",
+   "abbr_it": "CAR",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "skills": [
+    "deception",
+    "intimidation",
+    "performance",
+    "persuasion"
+   ],
+   "desc": "Charisma measures your ability to interact effectively with others. It includes such factors as confidence and eloquence, and it can represent a charming or commanding personality.\n\nA Charisma check might arise when you try to influence or entertain others, when you try to make an impression or tell a convincing lie, or when you are navigating a tricky social situation. The Deception, Intimidation, Performance, and Persuasion skills reflect aptitude in certain kinds of Charisma checks.",
+   "desc2024": "Confidence, poise, and charm"
+  }
+ ]
+}

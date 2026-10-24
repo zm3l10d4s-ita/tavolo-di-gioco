@@ -1,0 +1,76 @@
+{
+ "meta": {
+  "source": "Indice di dnd5e.wikidot.com — solo nomi e dati di base",
+  "license": "Nessun testo dei manuali incluso: le descrizioni vanno inserite dall’utente dai propri manuali.",
+  "generatedAt": "2026-10-24T16:26:43.820Z",
+  "dataset": "classes",
+  "count": 2
+ },
+ "items": [
+  {
+   "id": "artificer",
+   "name": "Artificer",
+   "name_it": "Artefice",
+   "source": "Tasha's Cauldron of Everything",
+   "sourceKey": "TCE",
+   "ruleset": "2014",
+   "key": "artificer",
+   "hitDie": 8,
+   "primaryAbility": [
+    "int"
+   ],
+   "savingThrows": [
+    "con",
+    "int"
+   ],
+   "spellcasting": {
+    "ability": "int",
+    "type": "half-up"
+   },
+   "subclassFlavor": "Artificer Specialist",
+   "subclasses": [
+    "artificer-alchemist",
+    "artificer-armorer",
+    "artificer-artillerist",
+    "artificer-battle-smith",
+    "artificer-forge-adept",
+    "artificer-mastermaker",
+    "artificer-maverick",
+    "artificer-archivist-ua",
+    "artificer-armorer-ua"
+   ],
+   "features": [],
+   "stub": true,
+   "desc": ""
+  },
+  {
+   "id": "blood-hunter",
+   "name": "Blood Hunter",
+   "name_it": "Cacciatore di Sangue",
+   "source": "Critical Role (homebrew)",
+   "sourceKey": "CR",
+   "ruleset": "2014",
+   "key": "blood-hunter",
+   "hitDie": 10,
+   "primaryAbility": [
+    "str",
+    "dex"
+   ],
+   "savingThrows": [
+    "dex",
+    "int"
+   ],
+   "spellcasting": null,
+   "subclassFlavor": "Blood Hunter Order",
+   "subclasses": [
+    "blood-hunter-ghostslayer",
+    "blood-hunter-lycan",
+    "blood-hunter-mutant",
+    "blood-hunter-profane-soul"
+   ],
+   "features": [],
+   "stub": true,
+   "desc": ""
+  }
+ ]
+}

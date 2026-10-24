@@ -1,0 +1,988 @@
+{
+ "meta": {
+  "source": "SRD 5.1 + SRD 5.2.1 (Wizards of the Coast), via 5e-bits/5e-database",
+  "license": "CC-BY-4.0",
+  "attribution": "This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.\n\nThis work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+  "attributions": {
+   "SRD 5.1": "This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+   "SRD 5.2": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+   "SRD 5.2 (it)": "Quest'opera include materiale tratto dal System Reference Document 5.2.1 (\"SRD 5.2.1\") di Wizards of the Coast LLC, disponibile all'indirizzo https://www.dndbeyond.com/srd. Il SRD 5.2.1 è concesso in licenza ai sensi della licenza di attribuzione 4.0 Internazionale di Creative Commons, disponibile all'indirizzo https://creativecommons.org/licenses/by/4.0/legalcode."
+  },
+  "upstream": {
+   "repo": "https://github.com/5e-bits/5e-database",
+   "commit": "a6212beb4b278917c2cff41c2b04c4ef4f3e0d6f",
+   "license": "Dati SRD CC-BY-4.0 (codice del repo MIT, non usato)"
+  },
+  "dataset": "subraces",
+  "generatedAt": "2026-10-24T12:04:59.469Z",
+  "counts": {
+   "SRD 5.1": 4,
+   "SRD 5.2": 24
+  }
+ },
+ "items": [
+  {
+   "id": "hill-dwarf",
+   "name": "Hill Dwarf",
+   "source": "SRD 5.1",
+   "ruleset": "2014",
+   "raceId": "dwarf",
+   "desc": "As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience.",
+   "abilityBonuses": [
+    {
+     "ability": "wis",
+     "bonus": 1
+    }
+   ],
+   "traits": [
+    {
+     "id": "dwarven-toughness",
+     "name": "Dwarven Toughness",
+     "desc": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."
+    }
+   ]
+  },
+  {
+   "id": "high-elf",
+   "name": "High Elf",
+   "source": "SRD 5.1",
+   "ruleset": "2014",
+   "raceId": "elf",
+   "desc": "As a high elf, you have a keen mind and a mastery of at least the basics of magic. In many fantasy gaming worlds, there are two kinds of high elves. One type is haughty and reclusive, believing themselves to be superior to non-elves and even other elves. The other type is more common and more friendly, and often encountered among humans and other races.",
+   "abilityBonuses": [
+    {
+     "ability": "int",
+     "bonus": 1
+    }
+   ],
+   "traits": [
+    {
+     "id": "elf-weapon-training",
+     "name": "Elf Weapon Training",
+     "desc": "You have proficiency with the longsword, shortsword, shortbow, and longbow.",
+     "proficiencies": [
+      "Longswords",
+      "Shortswords",
+      "Shortbows",
+      "Longbows"
+     ]
+    },
+    {
+     "id": "high-elf-cantrip",
+     "name": "High Elf Cantrip",
+     "desc": "You know one cantrip of your choice form the wizard spell list. Intelligence is your spellcasting ability for it.",
+     "traitSpecific": {
+      "spellOptions": {
+       "choose": 1,
+       "type": "spell",
+       "from": [
+        {
+         "id": "light",
+         "name": "Light"
+        },
+        {
+         "id": "mage-hand",
+         "name": "Mage Hand"
+        },
+        {
+         "id": "mending",
+         "name": "Mending"
+        },
+        {
+         "id": "message",
+         "name": "Message"
+        },
+        {
+         "id": "minor-illusion",
+         "name": "Minor Illusion"
+        },
+        {
+         "id": "acid-splash",
+         "name": "Acid Splash"
+        },
+        {
+         "id": "prestidigitation",
+         "name": "Prestidigitation"
+        },
+        {
+         "id": "ray-of-frost",
+         "name": "Ray of Frost"
+        },
+        {
+         "id": "shocking-grasp",
+         "name": "Shocking Grasp"
+        },
+        {
+         "id": "true-strike",
+         "name": "True Strike"
+        },
+        {
+         "id": "chill-touch",
+         "name": "Chill Touch"
+        },
+        {
+         "id": "dancing-lights",
+         "name": "Dancing Lights"
+        },
+        {
+         "id": "fire-bolt",
+         "name": "Fire Bolt"
+        },
+        {
+         "id": "poison-spray",
+         "name": "Poison Spray"
+        }
+       ]
+      }
+     }
+    },
+    {
+     "id": "extra-language",
+     "name": "Extra Language",
+     "desc": "You can speak, read, and write one extra language of your choice.",
+     "languageChoice": {
+      "choose": 1,
+      "type": "languages",
+      "from": [
+       {
+        "id": "dwarvish",
+        "name": "Dwarvish"
+       },
+       {
+        "id": "giant",
+        "name": "Giant"
+       },
+       {
+        "id": "gnomish",
+        "name": "Gnomish"
+       },
+       {
+        "id": "goblin",
+        "name": "Goblin"
+       },
+       {
+        "id": "halfling",
+        "name": "Halfling"
+       },
+       {
+        "id": "orc",
+        "name": "Orc"
+       },
+       {
+        "id": "abyssal",
+        "name": "Abyssal"
+       },
+       {
+        "id": "celestial",
+        "name": "Celestial"
+       },
+       {
+        "id": "draconic",
+        "name": "Draconic"
+       },
+       {
+        "id": "deep-speech",
+        "name": "Deep Speech"
+       },
+       {
+        "id": "infernal",
+        "name": "Infernal"
+       },
+       {
+        "id": "primordial",
+        "name": "Primordial"
+       },
+       {
+        "id": "sylvan",
+        "name": "Sylvan"
+       },
+       {
+        "id": "undercommon",
+        "name": "Undercommon"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "lightfoot-halfling",
+   "name": "Lightfoot Halfling",
+   "source": "SRD 5.1",
+   "ruleset": "2014",
+   "raceId": "halfling",
+   "desc": "As a lightfoot halfling, you can easily hide from notice, even using other people as cover. You're inclined to be affable and get along well with others. Lightfoots are more prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life.",
+   "abilityBonuses": [
+    {
+     "ability": "cha",
+     "bonus": 1
+    }
+   ],
+   "traits": [
+    {
+     "id": "naturally-stealthy",
+     "name": "Naturally Stealthy",
+     "desc": "You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."
+    }
+   ]
+  },
+  {
+   "id": "rock-gnome",
+   "name": "Rock Gnome",
+   "source": "SRD 5.1",
+   "ruleset": "2014",
+   "raceId": "gnome",
+   "desc": "As a rock gnome, you have a natural inventiveness and hardiness beyond that of other gnomes.",
+   "abilityBonuses": [
+    {
+     "ability": "con",
+     "bonus": 1
+    }
+   ],
+   "traits": [
+    {
+     "id": "artificers-lore",
+     "name": "Artificer's Lore",
+     "desc": "Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply."
+    },
+    {
+     "id": "tinker",
+     "name": "Tinker",
+     "desc": "You have proficiency with artisan's tools (tinker's tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time.\n\nWhen you create a device, choose one of the following options:\n\nClockwork Toy: This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents.\n\nFire Starter: The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action.\n\nMusic Box: When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed.",
+     "proficiencies": [
+      "Tinker's Tools"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "draconic-ancestor-black-2024",
+   "name": "Draconic Ancestor: Black",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "dragonborn-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": "acid",
+   "traits": [
+    {
+     "id": "draconic-breath-weapon-acid-2024",
+     "name": "Breath Weapon: Acid",
+     "desc": "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 acid damage. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10).\n\nYou can use this Breath Weapon a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+     "level": 1
+    },
+    {
+     "id": "draconic-damage-resistance-acid-2024",
+     "name": "Damage Resistance: Acid",
+     "desc": "You have Resistance to acid damage, as determined by your Draconic Ancestry trait.",
+     "level": 1
+    }
+   ]
+  },
+  {
+   "id": "draconic-ancestor-blue-2024",
+   "name": "Draconic Ancestor: Blue",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "dragonborn-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": "lightning",
+   "traits": [
+    {
+     "id": "draconic-breath-weapon-lightning-2024",
+     "name": "Breath Weapon: Lightning",
+     "desc": "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 lightning damage. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10).\n\nYou can use this Breath Weapon a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+     "level": 1
+    },
+    {
+     "id": "draconic-damage-resistance-lightning-2024",
+     "name": "Damage Resistance: Lightning",
+     "desc": "You have Resistance to lightning damage, as determined by your Draconic Ancestry trait.",
+     "level": 1
+    }
+   ]
+  },
+  {
+   "id": "draconic-ancestor-brass-2024",
+   "name": "Draconic Ancestor: Brass",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "dragonborn-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": "fire",
+   "traits": [
+    {
+     "id": "draconic-breath-weapon-fire-2024",
+     "name": "Breath Weapon: Fire",
+     "desc": "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 fire damage. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10).\n\nYou can use this Breath Weapon a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+     "level": 1
+    },
+    {
+     "id": "draconic-damage-resistance-fire-2024",
+     "name": "Damage Resistance: Fire",
+     "desc": "You have Resistance to fire damage, as determined by your Draconic Ancestry trait.",
+     "level": 1
+    }
+   ]
+  },
+  {
+   "id": "draconic-ancestor-bronze-2024",
+   "name": "Draconic Ancestor: Bronze",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "dragonborn-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": "lightning",
+   "traits": [
+    {
+     "id": "draconic-breath-weapon-lightning-2024",
+     "name": "Breath Weapon: Lightning",
+     "desc": "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 lightning damage. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10).\n\nYou can use this Breath Weapon a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+     "level": 1
+    },
+    {
+     "id": "draconic-damage-resistance-lightning-2024",
+     "name": "Damage Resistance: Lightning",
+     "desc": "You have Resistance to lightning damage, as determined by your Draconic Ancestry trait.",
+     "level": 1
+    }
+   ]
+  },
+  {
+   "id": "draconic-ancestor-copper-2024",
+   "name": "Draconic Ancestor: Copper",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "dragonborn-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": "acid",
+   "traits": [
+    {
+     "id": "draconic-breath-weapon-acid-2024",
+     "name": "Breath Weapon: Acid",
+     "desc": "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 acid damage. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10).\n\nYou can use this Breath Weapon a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+     "level": 1
+    },
+    {
+     "id": "draconic-damage-resistance-acid-2024",
+     "name": "Damage Resistance: Acid",
+     "desc": "You have Resistance to acid damage, as determined by your Draconic Ancestry trait.",
+     "level": 1
+    }
+   ]
+  },
+  {
+   "id": "draconic-ancestor-gold-2024",
+   "name": "Draconic Ancestor: Gold",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "dragonborn-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": "fire",
+   "traits": [
+    {
+     "id": "draconic-breath-weapon-fire-2024",
+     "name": "Breath Weapon: Fire",
+     "desc": "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 fire damage. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10).\n\nYou can use this Breath Weapon a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+     "level": 1
+    },
+    {
+     "id": "draconic-damage-resistance-fire-2024",
+     "name": "Damage Resistance: Fire",
+     "desc": "You have Resistance to fire damage, as determined by your Draconic Ancestry trait.",
+     "level": 1
+    }
+   ]
+  },
+  {
+   "id": "draconic-ancestor-green-2024",
+   "name": "Draconic Ancestor: Green",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "dragonborn-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": "poison",
+   "traits": [
+    {
+     "id": "draconic-breath-weapon-poison-2024",
+     "name": "Breath Weapon: Poison",
+     "desc": "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 poison damage. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10).\n\nYou can use this Breath Weapon a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+     "level": 1
+    },
+    {
+     "id": "draconic-damage-resistance-poison-2024",
+     "name": "Damage Resistance: Poison",
+     "desc": "You have Resistance to poison damage, as determined by your Draconic Ancestry trait.",
+     "level": 1
+    }
+   ]
+  },
+  {
+   "id": "draconic-ancestor-red-2024",
+   "name": "Draconic Ancestor: Red",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "dragonborn-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": "fire",
+   "traits": [
+    {
+     "id": "draconic-breath-weapon-fire-2024",
+     "name": "Breath Weapon: Fire",
+     "desc": "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 fire damage. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10).\n\nYou can use this Breath Weapon a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+     "level": 1
+    },
+    {
+     "id": "draconic-damage-resistance-fire-2024",
+     "name": "Damage Resistance: Fire",
+     "desc": "You have Resistance to fire damage, as determined by your Draconic Ancestry trait.",
+     "level": 1
+    }
+   ]
+  },
+  {
+   "id": "draconic-ancestor-silver-2024",
+   "name": "Draconic Ancestor: Silver",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "dragonborn-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": "cold",
+   "traits": [
+    {
+     "id": "draconic-breath-weapon-cold-2024",
+     "name": "Breath Weapon: Cold",
+     "desc": "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 cold damage. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10).\n\nYou can use this Breath Weapon a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+     "level": 1
+    },
+    {
+     "id": "draconic-damage-resistance-cold-2024",
+     "name": "Damage Resistance: Cold",
+     "desc": "You have Resistance to cold damage, as determined by your Draconic Ancestry trait.",
+     "level": 1
+    }
+   ]
+  },
+  {
+   "id": "draconic-ancestor-white-2024",
+   "name": "Draconic Ancestor: White",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "dragonborn-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": "cold",
+   "traits": [
+    {
+     "id": "draconic-breath-weapon-cold-2024",
+     "name": "Breath Weapon: Cold",
+     "desc": "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 cold damage. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10).\n\nYou can use this Breath Weapon a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+     "level": 1
+    },
+    {
+     "id": "draconic-damage-resistance-cold-2024",
+     "name": "Damage Resistance: Cold",
+     "desc": "You have Resistance to cold damage, as determined by your Draconic Ancestry trait.",
+     "level": 1
+    }
+   ]
+  },
+  {
+   "id": "elven-lineage-drow-2024",
+   "name": "Elven Lineage: Drow",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "elf-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": null,
+   "traits": [
+    {
+     "id": "darkvision-120-2024",
+     "name": "Darkvision (120 ft.)",
+     "desc": "You have Darkvision with a range of 120 feet.",
+     "level": 1
+    },
+    {
+     "id": "lineage-spell-dancing-lights-2024",
+     "name": "Dancing Lights",
+     "desc": "You know the spell Dancing Lights.",
+     "level": 1,
+     "spells": [
+      {
+       "spellId": "dancing-lights-2024",
+       "name": "Dancing Lights"
+      }
+     ]
+    },
+    {
+     "id": "lineage-spell-faerie-fire-2024",
+     "name": "Faerie Fire",
+     "desc": "You know the spell Faerie Fire.",
+     "level": 3,
+     "spells": [
+      {
+       "spellId": "faerie-fire-2024",
+       "name": "Faerie Fire"
+      }
+     ]
+    },
+    {
+     "id": "lineage-spell-darkness-2024",
+     "name": "Darkness",
+     "desc": "You know the spell Darkness.",
+     "level": 5,
+     "spells": [
+      {
+       "spellId": "darkness-2024",
+       "name": "Darkness"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "elven-lineage-high-elf-2024",
+   "name": "Elven Lineage: High Elf",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "elf-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": null,
+   "traits": [
+    {
+     "id": "high-elf-cantrip-versatility-2024",
+     "name": "High Elf: Cantrip Versatility",
+     "desc": "You know the Prestidigitation cantrip. Whenever you finish a Long Rest, you can replace that cantrip with a different cantrip from the Wizard spell list.",
+     "level": 1,
+     "spells": [
+      {
+       "spellId": "prestidigitation-2024",
+       "name": "Prestidigitation"
+      }
+     ]
+    },
+    {
+     "id": "lineage-spell-detect-magic-2024",
+     "name": "Detect Magic",
+     "desc": "You know the spell Detect Magic.",
+     "level": 3,
+     "spells": [
+      {
+       "spellId": "detect-magic-2024",
+       "name": "Detect Magic"
+      }
+     ]
+    },
+    {
+     "id": "lineage-spell-misty-step-2024",
+     "name": "Misty Step",
+     "desc": "You know the spell Misty Step.",
+     "level": 5,
+     "spells": [
+      {
+       "spellId": "misty-step-2024",
+       "name": "Misty Step"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "elven-lineage-wood-elf-2024",
+   "name": "Elven Lineage: Wood Elf",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "elf-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": null,
+   "traits": [
+    {
+     "id": "wood-elf-speed-increase-2024",
+     "name": "Wood Elf: Movement Speed Increase",
+     "desc": "Your Movement Speed increases to 35 feet.",
+     "level": 1,
+     "speed": 35
+    },
+    {
+     "id": "lineage-spell-longstrider-2024",
+     "name": "Longstrider",
+     "desc": "You learn the spell Longstrider.",
+     "level": 3,
+     "spells": [
+      {
+       "spellId": "longstrider-2024",
+       "name": "Longstrider"
+      }
+     ]
+    },
+    {
+     "id": "lineage-spell-pass-without-trace-2024",
+     "name": "Pass without Trace",
+     "desc": "You learn the spell Pass without Trace.",
+     "level": 5,
+     "spells": [
+      {
+       "spellId": "pass-without-trace-2024",
+       "name": "Pass without Trace"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gnomish-lineage-forest-gnome-2024",
+   "name": "Gnomish Lineage: Forest Gnome",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "gnome-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": null,
+   "traits": [
+    {
+     "id": "gnomish-lineage-forest-gnome-2024",
+     "name": "Gnomish Lineage: Forest Gnome",
+     "desc": "You always have the Speak with Animals spell prepared. You can cast it without a spell slot a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest. You can also use any spell slots you have to cast the spell.",
+     "level": 1,
+     "spells": [
+      {
+       "spellId": "speak-with-animals-2024",
+       "name": "Speak with Animals",
+       "uses": "Proficiency Bonus",
+       "recovery": "Long Rest"
+      }
+     ]
+    },
+    {
+     "id": "lineage-spell-minor-illusion-2024",
+     "name": "Minor Illusion",
+     "desc": "You know the spell Minor Illusion.",
+     "level": 1,
+     "spells": [
+      {
+       "spellId": "minor-illusion-2024",
+       "name": "Minor Illusion"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gnomish-lineage-rock-gnome-2024",
+   "name": "Gnomish Lineage: Rock Gnome",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "gnome-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": null,
+   "traits": [
+    {
+     "id": "gnomish-lineage-rock-gnome-2024",
+     "name": "Gnomish Lineage: Rock Gnome",
+     "desc": "You know the Prestidigitation cantrip. In addition, you can spend 10 minutes casting Prestidigitation to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box. When you create the device, you determine its function by choosing one effect from Prestidigitation; the device produces that effect whenever you or another creature takes a Bonus Action to activate it with a touch. If the chosen effect has options within it, you choose one of those options for the device when you create it. For example, if you choose the spell’s ignite-extinguish effect, you determine whether the device ignites or extinguishes fire; the device doesn’t do both. You can have three such devices in existence at a time, and each falls apart 8 hours after its creation or when you dismantle it with a touch as a Utilize action.",
+     "level": 1,
+     "spells": [
+      {
+       "spellId": "prestidigitation-2024",
+       "name": "Prestidigitation"
+      }
+     ]
+    },
+    {
+     "id": "lineage-spell-mending-2024",
+     "name": "Mending",
+     "desc": "You know the cantrip Mending.",
+     "level": 1,
+     "spells": [
+      {
+       "spellId": "mending-2024",
+       "name": "Mending"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "giant-ancestry-clouds-jaunt-2024",
+   "name": "Giant Ancestry: Cloud's Jaunt",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "goliath-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": null,
+   "traits": [
+    {
+     "id": "giant-ancestry-clouds-jaunt-2024",
+     "name": "Giant Ancestry: Cloud's Jaunt",
+     "desc": "As a Bonus Action, you magically teleport up to 30 feet to an unoccupied space you can see.",
+     "level": 1
+    }
+   ]
+  },
+  {
+   "id": "giant-ancestry-fires-burn-2024",
+   "name": "Giant Ancestry: Fire's Burn",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "goliath-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": null,
+   "traits": [
+    {
+     "id": "giant-ancestry-fires-burn-2024",
+     "name": "Giant Ancestry: Fire's Burn",
+     "desc": "When you hit a target with an attack roll and deal damage to it, you can also deal 1d10 Fire damage to that target.",
+     "level": 1
+    }
+   ]
+  },
+  {
+   "id": "giant-ancestry-frosts-chill-2024",
+   "name": "Giant Ancestry: Frost's Chill",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "goliath-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": null,
+   "traits": [
+    {
+     "id": "giant-ancestry-frosts-chill-2024",
+     "name": "Giant Ancestry: Frost's Chill",
+     "desc": "When you hit a target with an attack roll and deal damage to it, you can also deal 1d6 Cold damage to that target and reduce its Speed by 10 feet until the start of your next turn.",
+     "level": 1
+    }
+   ]
+  },
+  {
+   "id": "giant-ancestry-hills-tumble-2024",
+   "name": "Giant Ancestry: Hill's Tumble",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "goliath-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": null,
+   "traits": [
+    {
+     "id": "giant-ancestry-hills-tumble-2024",
+     "name": "Giant Ancestry: Hill's Tumble",
+     "desc": "When you hit a Large or smaller creature with an attack roll and deal damage to it, you can give that target the Prone condition.",
+     "level": 1
+    }
+   ]
+  },
+  {
+   "id": "giant-ancestry-stones-endurance-2024",
+   "name": "Giant Ancestry: Stone's Endurance",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "goliath-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": null,
+   "traits": [
+    {
+     "id": "giant-ancestry-stones-endurance-2024",
+     "name": "Giant Ancestry: Stone's Endurance",
+     "desc": "When you take damage, you can take a Reaction to roll 1d12. Add your Constitution modifier to the number rolled and reduce the damage by that total.",
+     "level": 1
+    }
+   ]
+  },
+  {
+   "id": "giant-ancestry-storms-thunder-2024",
+   "name": "Giant Ancestry: Storm's Thunder",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "goliath-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": null,
+   "traits": [
+    {
+     "id": "giant-ancestry-storms-thunder-2024",
+     "name": "Giant Ancestry: Storm's Thunder",
+     "desc": "When you take damage from a creature within 60 feet of you, you can take a Reaction to deal 1d8 Thunder damage to that creature.",
+     "level": 1
+    }
+   ]
+  },
+  {
+   "id": "fiendish-legacy-abyssal-2024",
+   "name": "Fiendish Legacy: Abyssal",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "tiefling-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": null,
+   "traits": [
+    {
+     "id": "lineage-resistance-poison-2024",
+     "name": "Damage Resistance: Poison",
+     "desc": "You have Resistance to Poison damage.",
+     "level": 1
+    },
+    {
+     "id": "lineage-spell-poison-spray-2024",
+     "name": "Poison Spray",
+     "desc": "You know the spell Poison Spray.",
+     "level": 1,
+     "spells": [
+      {
+       "spellId": "poison-spray-2024",
+       "name": "Poison Spray"
+      }
+     ]
+    },
+    {
+     "id": "lineage-spell-ray-of-sickness-2024",
+     "name": "Ray of Sickness",
+     "desc": "You know the spell Ray of Sickness.",
+     "level": 3,
+     "spells": [
+      {
+       "spellId": "ray-of-sickness-2024",
+       "name": "Ray of Sickness"
+      }
+     ]
+    },
+    {
+     "id": "lineage-spell-hold-person-2024",
+     "name": "Hold Person",
+     "desc": "You know the spell Hold Person.",
+     "level": 5,
+     "spells": [
+      {
+       "spellId": "hold-person-2024",
+       "name": "Hold Person"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fiendish-legacy-chthonic-2024",
+   "name": "Fiendish Legacy: Chthonic",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "tiefling-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": null,
+   "traits": [
+    {
+     "id": "lineage-resistance-necrotic-2024",
+     "name": "Damage Resistance: Necrotic",
+     "desc": "You have Resistance to Necrotic damage.",
+     "level": 1
+    },
+    {
+     "id": "lineage-spell-chill-touch-2024",
+     "name": "Chill Touch",
+     "desc": "You know the spell Chill Touch.",
+     "level": 1,
+     "spells": [
+      {
+       "spellId": "chill-touch-2024",
+       "name": "Chill Touch"
+      }
+     ]
+    },
+    {
+     "id": "lineage-spell-false-life-2024",
+     "name": "False Life",
+     "desc": "You know the spell False Life.",
+     "level": 3,
+     "spells": [
+      {
+       "spellId": "false-life-2024",
+       "name": "False Life"
+      }
+     ]
+    },
+    {
+     "id": "lineage-spell-ray-of-enfeeblement-2024",
+     "name": "Ray of Enfeeblement",
+     "desc": "You know the spell Ray of Enfeeblement.",
+     "level": 5,
+     "spells": [
+      {
+       "spellId": "ray-of-enfeeblement-2024",
+       "name": "Ray of Enfeeblement"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fiendish-legacy-infernal-2024",
+   "name": "Fiendish Legacy: Infernal",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "raceId": "tiefling-2024",
+   "desc": "",
+   "abilityBonuses": [],
+   "damageType": null,
+   "traits": [
+    {
+     "id": "lineage-resistance-fire-2024",
+     "name": "Damage Resistance: Fire",
+     "desc": "You have Resistance to Fire damage.",
+     "level": 1
+    },
+    {
+     "id": "lineage-spell-fire-bolt-2024",
+     "name": "Fire Bolt",
+     "desc": "You know the spell Fire Bolt.",
+     "level": 1,
+     "spells": [
+      {
+       "spellId": "fire-bolt-2024",
+       "name": "Fire Bolt"
+      }
+     ]
+    },
+    {
+     "id": "lineage-spell-hellish-rebuke-2024",
+     "name": "Hellish Rebuke",
+     "desc": "You know the spell Hellish Rebuke.",
+     "level": 3,
+     "spells": [
+      {
+       "spellId": "hellish-rebuke-2024",
+       "name": "Hellish Rebuke"
+      }
+     ]
+    },
+    {
+     "id": "lineage-spell-darkness-2024",
+     "name": "Darkness",
+     "desc": "You know the spell Darkness.",
+     "level": 5,
+     "spells": [
+      {
+       "spellId": "darkness-2024",
+       "name": "Darkness"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

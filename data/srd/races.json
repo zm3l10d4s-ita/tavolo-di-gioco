@@ -1,0 +1,1476 @@
+{
+ "meta": {
+  "source": "SRD 5.1 + SRD 5.2.1 (Wizards of the Coast), via 5e-bits/5e-database",
+  "license": "CC-BY-4.0",
+  "attribution": "This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.\n\nThis work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+  "attributions": {
+   "SRD 5.1": "This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+   "SRD 5.2": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+   "SRD 5.2 (it)": "Quest'opera include materiale tratto dal System Reference Document 5.2.1 (\"SRD 5.2.1\") di Wizards of the Coast LLC, disponibile all'indirizzo https://www.dndbeyond.com/srd. Il SRD 5.2.1 è concesso in licenza ai sensi della licenza di attribuzione 4.0 Internazionale di Creative Commons, disponibile all'indirizzo https://creativecommons.org/licenses/by/4.0/legalcode."
+  },
+  "upstream": {
+   "repo": "https://github.com/5e-bits/5e-database",
+   "commit": "a6212beb4b278917c2cff41c2b04c4ef4f3e0d6f",
+   "license": "Dati SRD CC-BY-4.0 (codice del repo MIT, non usato)"
+  },
+  "dataset": "races",
+  "generatedAt": "2026-10-24T12:04:59.469Z",
+  "counts": {
+   "SRD 5.1": 9,
+   "SRD 5.2": 9
+  },
+  "srd52Coverage": {
+   "included": [
+    "classi (12) con privilegi e tabelle per livello",
+    "sottoclassi SRD (12)",
+    "specie (9) e lignaggi/antenati (subraces)",
+    "background (4)",
+    "talenti (17)",
+    "incantesimi (339)",
+    "equipaggiamento (armi con maestria, armature, strumenti, equipaggiamento d'avventura, pacchetti)",
+    "veleni (14)",
+    "oggetti magici",
+    "condizioni, abilità, caratteristiche, tipi di danno, lingue, proprietà e maestrie delle armi"
+   ],
+   "missing": [
+    "Incantesimi 2024: niente campi strutturati dc/areaOfEffect nel repo (qui ricavati dal testo con regex, campo derived:true); damage solo al livello base",
+    "Opzioni di Suppliche occulte (Eldritch Invocations) e di Metamagia 2024 non presenti come elementi",
+    "Cavalcature e veicoli 2024 (Mounts and Vehicles), stile di vita, servizi, mercenari 2024 assenti",
+    "Glossario delle regole 2024 (Rules Glossary) e Gameplay Toolbox non presenti: le regole 2024 in rules.json sono riassunti scritti per l'app",
+    "classSpecific 2024 incompleto per alcune classi (es. Mago, Druido: solo i contatori presenti nel repo)",
+    "Specie 2024: lingue non elencate (nel 2024 dipendono dalla creazione del personaggio)",
+    "Testi 2024 con artefatti OCR (sillabazione, parole unite): sillabazione corretta automaticamente dove sicuro"
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "dwarf",
+   "name": "Dwarf",
+   "name_it": "Nano",
+   "source": "SRD 5.1",
+   "ruleset": "2014",
+   "speed": 25,
+   "size": "medium",
+   "size_it": "Media",
+   "sizeDesc": "Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.",
+   "creatureType": "humanoid",
+   "abilityBonuses": [
+    {
+     "ability": "con",
+     "bonus": 2
+    }
+   ],
+   "abilityBonusChoice": null,
+   "age": "Dwarves mature at the same rate as humans, but they're considered young until they reach the age of 50. On average, they live about 350 years.",
+   "alignment": "Most dwarves are lawful, believing firmly in the benefits of a well-ordered society. They tend toward good as well, with a strong sense of fair play and a belief that everyone deserves to share in the benefits of a just order.",
+   "languages": [
+    "common",
+    "dwarvish"
+   ],
+   "languageDesc": "You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak.",
+   "languageChoice": null,
+   "traits": [
+    {
+     "id": "darkvision",
+     "name": "Darkvision",
+     "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray."
+    },
+    {
+     "id": "dwarven-resilience",
+     "name": "Dwarven Resilience",
+     "desc": "You have advantage on saving throws against poison, and you have resistance against poison damage."
+    },
+    {
+     "id": "stonecunning",
+     "name": "Stonecunning",
+     "desc": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
+    },
+    {
+     "id": "dwarven-combat-training",
+     "name": "Dwarven Combat Training",
+     "desc": "You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.",
+     "proficiencies": [
+      "Battleaxes",
+      "Handaxes",
+      "Light hammers",
+      "Warhammers"
+     ]
+    },
+    {
+     "id": "tool-proficiency",
+     "name": "Tool Proficiency",
+     "desc": "You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools.",
+     "proficiencyChoices": [
+      {
+       "choose": 1,
+       "type": "proficiencies",
+       "from": [
+        {
+         "id": "smiths-tools",
+         "name": "Smith's Tools"
+        },
+        {
+         "id": "brewers-supplies",
+         "name": "Brewer's Supplies"
+        },
+        {
+         "id": "masons-tools",
+         "name": "Mason's Tools"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "subraces": [
+    "hill-dwarf"
+   ]
+  },
+  {
+   "id": "elf",
+   "name": "Elf",
+   "name_it": "Elfo",
+   "source": "SRD 5.1",
+   "ruleset": "2014",
+   "speed": 30,
+   "size": "medium",
+   "size_it": "Media",
+   "sizeDesc": "Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.",
+   "creatureType": "humanoid",
+   "abilityBonuses": [
+    {
+     "ability": "dex",
+     "bonus": 2
+    }
+   ],
+   "abilityBonusChoice": null,
+   "age": "Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.",
+   "alignment": "Elves love freedom, variety, and self-expression, so they lean strongly toward the gentler aspects of chaos. They value and protect others' freedom as well as their own, and they are more often good than not.",
+   "languages": [
+    "common",
+    "elvish"
+   ],
+   "languageDesc": "You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.",
+   "languageChoice": null,
+   "traits": [
+    {
+     "id": "darkvision",
+     "name": "Darkvision",
+     "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray."
+    },
+    {
+     "id": "fey-ancestry",
+     "name": "Fey Ancestry",
+     "desc": "You have advantage on saving throws against being charmed, and magic cannot put you to sleep."
+    },
+    {
+     "id": "trance",
+     "name": "Trance",
+     "desc": "Elves do not need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting this way, you gain the same benefit that a human does from 8 hours of sleep."
+    },
+    {
+     "id": "keen-senses",
+     "name": "Keen Senses",
+     "desc": "You have proficiency in the Perception skill.",
+     "proficiencies": [
+      "Perception"
+     ]
+    }
+   ],
+   "subraces": [
+    "high-elf"
+   ]
+  },
+  {
+   "id": "halfling",
+   "name": "Halfling",
+   "name_it": "Halfling",
+   "source": "SRD 5.1",
+   "ruleset": "2014",
+   "speed": 25,
+   "size": "small",
+   "size_it": "Piccola",
+   "sizeDesc": "Halflings average about 3 feet tall and weigh about 40 pounds. Your size is Small.",
+   "creatureType": "humanoid",
+   "abilityBonuses": [
+    {
+     "ability": "dex",
+     "bonus": 2
+    }
+   ],
+   "abilityBonusChoice": null,
+   "age": "A halfling reaches adulthood at the age of 20 and generally lives into the middle of his or her second century.",
+   "alignment": "Most halflings are lawful good. As a rule, they are good-hearted and kind, hate to see others in pain, and have no tolerance for oppression. They are also very orderly and traditional, leaning heavily on the support of their community and the comfort of their old ways.",
+   "languages": [
+    "common",
+    "halfling"
+   ],
+   "languageDesc": "You can speak, read, and write Common and Halfling. The Halfling language isn't secret, but halflings are loath to share it with others. They write very little, so they don't have a rich body of literature. Their oral tradition, however, is very strong. Almost all halflings speak Common to converse with the people in whose lands they dwell or through which they are traveling.",
+   "languageChoice": null,
+   "traits": [
+    {
+     "id": "brave",
+     "name": "Brave",
+     "desc": "You have advantage on saving throw against being frightened."
+    },
+    {
+     "id": "halfling-nimbleness",
+     "name": "Halfling Nimbleness",
+     "desc": "You can move through the space of any creature that is of a size larger than yours."
+    },
+    {
+     "id": "lucky",
+     "name": "Lucky",
+     "desc": "When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll."
+    }
+   ],
+   "subraces": [
+    "lightfoot-halfling"
+   ]
+  },
+  {
+   "id": "human",
+   "name": "Human",
+   "name_it": "Umano",
+   "source": "SRD 5.1",
+   "ruleset": "2014",
+   "speed": 30,
+   "size": "medium",
+   "size_it": "Media",
+   "sizeDesc": "Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.",
+   "creatureType": "humanoid",
+   "abilityBonuses": [
+    {
+     "ability": "str",
+     "bonus": 1
+    },
+    {
+     "ability": "dex",
+     "bonus": 1
+    },
+    {
+     "ability": "con",
+     "bonus": 1
+    },
+    {
+     "ability": "int",
+     "bonus": 1
+    },
+    {
+     "ability": "wis",
+     "bonus": 1
+    },
+    {
+     "ability": "cha",
+     "bonus": 1
+    }
+   ],
+   "abilityBonusChoice": null,
+   "age": "Humans reach adulthood in their late teens and live less than a century.",
+   "alignment": "Humans tend toward no particular alignment. The best and the worst are found among them.",
+   "languages": [
+    "common"
+   ],
+   "languageDesc": "You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.",
+   "languageChoice": {
+    "choose": 1,
+    "type": "languages",
+    "from": [
+     {
+      "id": "dwarvish",
+      "name": "Dwarvish"
+     },
+     {
+      "id": "elvish",
+      "name": "Elvish"
+     },
+     {
+      "id": "giant",
+      "name": "Giant"
+     },
+     {
+      "id": "gnomish",
+      "name": "Gnomish"
+     },
+     {
+      "id": "goblin",
+      "name": "Goblin"
+     },
+     {
+      "id": "halfling",
+      "name": "Halfling"
+     },
+     {
+      "id": "orc",
+      "name": "Orc"
+     },
+     {
+      "id": "abyssal",
+      "name": "Abyssal"
+     },
+     {
+      "id": "celestial",
+      "name": "Celestial"
+     },
+     {
+      "id": "draconic",
+      "name": "Draconic"
+     },
+     {
+      "id": "deep-speech",
+      "name": "Deep Speech"
+     },
+     {
+      "id": "infernal",
+      "name": "Infernal"
+     },
+     {
+      "id": "primordial",
+      "name": "Primordial"
+     },
+     {
+      "id": "sylvan",
+      "name": "Sylvan"
+     },
+     {
+      "id": "undercommon",
+      "name": "Undercommon"
+     }
+    ]
+   },
+   "traits": [],
+   "subraces": []
+  },
+  {
+   "id": "dragonborn",
+   "name": "Dragonborn",
+   "name_it": "Dragonide",
+   "source": "SRD 5.1",
+   "ruleset": "2014",
+   "speed": 30,
+   "size": "medium",
+   "size_it": "Media",
+   "sizeDesc": "Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.",
+   "creatureType": "humanoid",
+   "abilityBonuses": [
+    {
+     "ability": "str",
+     "bonus": 2
+    },
+    {
+     "ability": "cha",
+     "bonus": 1
+    }
+   ],
+   "abilityBonusChoice": null,
+   "age": "Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.",
+   "alignment": "Dragonborn tend to extremes, making a conscious choice for one side or the other in the cosmic war between good and evil. Most dragonborn are good, but those who side with evil can be terrible villains.",
+   "languages": [
+    "common",
+    "draconic"
+   ],
+   "languageDesc": "You can speak, read, and write Common and Draconic. Draconic is thought to be one of the oldest languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants.",
+   "languageChoice": null,
+   "traits": [
+    {
+     "id": "draconic-ancestry",
+     "name": "Draconic Ancestry",
+     "desc": "You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table.",
+     "options": [
+      {
+       "id": "draconic-ancestry-black",
+       "name": "Draconic Ancestry (Black)",
+       "damageType": "acid",
+       "breathWeapon": {
+        "area": {
+         "size": 30,
+         "type": "line"
+        },
+        "save": "dex",
+        "success": "half",
+        "damage": {
+         "1": "2d6",
+         "6": "3d6",
+         "11": "4d6",
+         "16": "5d6"
+        },
+        "usage": {
+         "type": "per rest",
+         "times": 1
+        }
+       }
+      },
+      {
+       "id": "draconic-ancestry-blue",
+       "name": "Draconic Ancestry (Blue)",
+       "damageType": "lightning",
+       "breathWeapon": {
+        "area": {
+         "size": 30,
+         "type": "line"
+        },
+        "save": "dex",
+        "success": "half",
+        "damage": {
+         "1": "2d6",
+         "6": "3d6",
+         "11": "4d6",
+         "16": "5d6"
+        },
+        "usage": {
+         "type": "per rest",
+         "times": 1
+        }
+       }
+      },
+      {
+       "id": "draconic-ancestry-brass",
+       "name": "Draconic Ancestry (Brass)",
+       "damageType": "fire",
+       "breathWeapon": {
+        "area": {
+         "size": 30,
+         "type": "line"
+        },
+        "save": "dex",
+        "success": "half",
+        "damage": {
+         "1": "2d6",
+         "6": "3d6",
+         "11": "4d6",
+         "16": "5d6"
+        },
+        "usage": {
+         "type": "per rest",
+         "times": 1
+        }
+       }
+      },
+      {
+       "id": "draconic-ancestry-bronze",
+       "name": "Draconic Ancestry (Bronze)",
+       "damageType": "lightning",
+       "breathWeapon": {
+        "area": {
+         "size": 30,
+         "type": "line"
+        },
+        "save": "dex",
+        "success": "half",
+        "damage": {
+         "1": "2d6",
+         "6": "3d6",
+         "11": "4d6",
+         "16": "5d6"
+        },
+        "usage": {
+         "type": "per rest",
+         "times": 1
+        }
+       }
+      },
+      {
+       "id": "draconic-ancestry-copper",
+       "name": "Draconic Ancestry (Copper)",
+       "damageType": "acid",
+       "breathWeapon": {
+        "area": {
+         "size": 30,
+         "type": "line"
+        },
+        "save": "dex",
+        "success": "half",
+        "damage": {
+         "1": "2d6",
+         "6": "3d6",
+         "11": "4d6",
+         "16": "5d6"
+        },
+        "usage": {
+         "type": "per rest",
+         "times": 1
+        }
+       }
+      },
+      {
+       "id": "draconic-ancestry-gold",
+       "name": "Draconic Ancestry (Gold)",
+       "damageType": "fire",
+       "breathWeapon": {
+        "area": {
+         "size": 15,
+         "type": "cone"
+        },
+        "save": "dex",
+        "success": "half",
+        "damage": {
+         "1": "2d6",
+         "6": "3d6",
+         "11": "4d6",
+         "16": "5d6"
+        },
+        "usage": {
+         "type": "per rest",
+         "times": 1
+        }
+       }
+      },
+      {
+       "id": "draconic-ancestry-green",
+       "name": "Draconic Ancestry (Green)",
+       "damageType": "poison",
+       "breathWeapon": {
+        "area": {
+         "size": 15,
+         "type": "cone"
+        },
+        "save": "con",
+        "success": "half",
+        "damage": {
+         "1": "2d6",
+         "6": "3d6",
+         "11": "4d6",
+         "16": "5d6"
+        },
+        "usage": {
+         "type": "per rest",
+         "times": 1
+        }
+       }
+      },
+      {
+       "id": "draconic-ancestry-red",
+       "name": "Draconic Ancestry (Red)",
+       "damageType": "fire",
+       "breathWeapon": {
+        "area": {
+         "size": 15,
+         "type": "cone"
+        },
+        "save": "dex",
+        "success": "half",
+        "damage": {
+         "1": "2d6",
+         "6": "3d6",
+         "11": "4d6",
+         "16": "5d6"
+        },
+        "usage": {
+         "type": "per rest",
+         "times": 1
+        }
+       }
+      },
+      {
+       "id": "draconic-ancestry-silver",
+       "name": "Draconic Ancestry (Silver)",
+       "damageType": "cold",
+       "breathWeapon": {
+        "area": {
+         "size": 15,
+         "type": "cone"
+        },
+        "save": "con",
+        "success": "half",
+        "damage": {
+         "1": "2d6",
+         "6": "3d6",
+         "11": "4d6",
+         "16": "5d6"
+        },
+        "usage": {
+         "type": "per rest",
+         "times": 1
+        }
+       }
+      },
+      {
+       "id": "draconic-ancestry-white",
+       "name": "Draconic Ancestry (White)",
+       "damageType": "cold",
+       "breathWeapon": {
+        "area": {
+         "size": 15,
+         "type": "cone"
+        },
+        "save": "con",
+        "success": "half",
+        "damage": {
+         "1": "2d6",
+         "6": "3d6",
+         "11": "4d6",
+         "16": "5d6"
+        },
+        "usage": {
+         "type": "per rest",
+         "times": 1
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "breath-weapon",
+     "name": "Breath Weapon",
+     "desc": "You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation.\n\nWhen you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.\n\nAfter you use your breath weapon, you cannot use it again until you complete a short or long rest."
+    },
+    {
+     "id": "damage-resistance",
+     "name": "Damage Resistance",
+     "desc": "You have resistance to the damage type associated with your draconic ancestry."
+    }
+   ],
+   "subraces": []
+  },
+  {
+   "id": "gnome",
+   "name": "Gnome",
+   "name_it": "Gnomo",
+   "source": "SRD 5.1",
+   "ruleset": "2014",
+   "speed": 25,
+   "size": "small",
+   "size_it": "Piccola",
+   "sizeDesc": "Gnomes are between 3 and 4 feet tall and average about 40 pounds. Your size is Small.",
+   "creatureType": "humanoid",
+   "abilityBonuses": [
+    {
+     "ability": "int",
+     "bonus": 2
+    }
+   ],
+   "abilityBonusChoice": null,
+   "age": "Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.",
+   "alignment": "Gnomes are most often good. Those who tend toward law are sages, engineers, researchers, scholars, investigators, or inventors. Those who tend toward chaos are minstrels, tricksters, wanderers, or fanciful jewelers. Gnomes are good-hearted, and even the tricksters among them are more playful than vicious.",
+   "languages": [
+    "common",
+    "gnomish"
+   ],
+   "languageDesc": "You can speak, read, and write Common and Gnomish. The Gnomish language, which uses the Dwarvish script, is renowned for its technical treatises and its catalogs of knowledge about the natural world.",
+   "languageChoice": null,
+   "traits": [
+    {
+     "id": "darkvision",
+     "name": "Darkvision",
+     "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray."
+    },
+    {
+     "id": "gnome-cunning",
+     "name": "Gnome Cunning",
+     "desc": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic."
+    }
+   ],
+   "subraces": [
+    "rock-gnome"
+   ]
+  },
+  {
+   "id": "half-elf",
+   "name": "Half-Elf",
+   "name_it": "Mezzelfo",
+   "source": "SRD 5.1",
+   "ruleset": "2014",
+   "speed": 30,
+   "size": "medium",
+   "size_it": "Media",
+   "sizeDesc": "Half-elves are about the same size as humans, ranging from 5 to 6 feet tall. Your size is Medium.",
+   "creatureType": "humanoid",
+   "abilityBonuses": [
+    {
+     "ability": "cha",
+     "bonus": 2
+    }
+   ],
+   "abilityBonusChoice": {
+    "choose": 2,
+    "from": [
+     {
+      "ability": "str",
+      "bonus": 1
+     },
+     {
+      "ability": "dex",
+      "bonus": 1
+     },
+     {
+      "ability": "con",
+      "bonus": 1
+     },
+     {
+      "ability": "int",
+      "bonus": 1
+     },
+     {
+      "ability": "wis",
+      "bonus": 1
+     }
+    ]
+   },
+   "age": "Half-elves mature at the same rate humans do and reach adulthood around the age of 20. They live much longer than humans, however, often exceeding 180 years.",
+   "alignment": "Half-elves share the chaotic bent of their elven heritage. They value both personal freedom and creative expression, demonstrating neither love of leaders nor desire for followers. They chafe at rules, resent others' demands, and sometimes prove unreliable, or at least unpredictable.",
+   "languages": [
+    "common",
+    "elvish"
+   ],
+   "languageDesc": "You can speak, read, and write Common, Elvish, and one extra language of your choice.",
+   "languageChoice": {
+    "choose": 1,
+    "type": "languages",
+    "from": [
+     {
+      "id": "dwarvish",
+      "name": "Dwarvish"
+     },
+     {
+      "id": "giant",
+      "name": "Giant"
+     },
+     {
+      "id": "gnomish",
+      "name": "Gnomish"
+     },
+     {
+      "id": "goblin",
+      "name": "Goblin"
+     },
+     {
+      "id": "halfling",
+      "name": "Halfling"
+     },
+     {
+      "id": "orc",
+      "name": "Orc"
+     },
+     {
+      "id": "abyssal",
+      "name": "Abyssal"
+     },
+     {
+      "id": "celestial",
+      "name": "Celestial"
+     },
+     {
+      "id": "draconic",
+      "name": "Draconic"
+     },
+     {
+      "id": "deep-speech",
+      "name": "Deep Speech"
+     },
+     {
+      "id": "infernal",
+      "name": "Infernal"
+     },
+     {
+      "id": "primordial",
+      "name": "Primordial"
+     },
+     {
+      "id": "sylvan",
+      "name": "Sylvan"
+     },
+     {
+      "id": "undercommon",
+      "name": "Undercommon"
+     }
+    ]
+   },
+   "traits": [
+    {
+     "id": "darkvision",
+     "name": "Darkvision",
+     "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray."
+    },
+    {
+     "id": "fey-ancestry",
+     "name": "Fey Ancestry",
+     "desc": "You have advantage on saving throws against being charmed, and magic cannot put you to sleep."
+    },
+    {
+     "id": "skill-versatility",
+     "name": "Skill Versatility",
+     "desc": "You gain proficiency in two skills of your choice.",
+     "proficiencyChoices": [
+      {
+       "choose": 2,
+       "type": "proficiencies",
+       "from": [
+        {
+         "id": "skill-acrobatics",
+         "name": "Skill: Acrobatics"
+        },
+        {
+         "id": "skill-animal-handling",
+         "name": "Skill: Animal Handling"
+        },
+        {
+         "id": "skill-arcana",
+         "name": "Skill: Arcana"
+        },
+        {
+         "id": "skill-athletics",
+         "name": "Skill: Athletics"
+        },
+        {
+         "id": "skill-deception",
+         "name": "Skill: Deception"
+        },
+        {
+         "id": "skill-history",
+         "name": "Skill: History"
+        },
+        {
+         "id": "skill-insight",
+         "name": "Skill: Insight"
+        },
+        {
+         "id": "skill-intimidation",
+         "name": "Skill: Intimidation"
+        },
+        {
+         "id": "skill-investigation",
+         "name": "Skill: Investigation"
+        },
+        {
+         "id": "skill-medicine",
+         "name": "Skill: Medicine"
+        },
+        {
+         "id": "skill-nature",
+         "name": "Skill: Nature"
+        },
+        {
+         "id": "skill-perception",
+         "name": "Skill: Perception"
+        },
+        {
+         "id": "skill-performance",
+         "name": "Skill: Performance"
+        },
+        {
+         "id": "skill-persuasion",
+         "name": "Skill: Persuasion"
+        },
+        {
+         "id": "skill-religion",
+         "name": "Skill: Religion"
+        },
+        {
+         "id": "skill-sleight-of-hand",
+         "name": "Skill: Sleight of Hand"
+        },
+        {
+         "id": "skill-stealth",
+         "name": "Skill: Stealth"
+        },
+        {
+         "id": "skill-survival",
+         "name": "Skill: Survival"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "subraces": []
+  },
+  {
+   "id": "half-orc",
+   "name": "Half-Orc",
+   "name_it": "Mezzorco",
+   "source": "SRD 5.1",
+   "ruleset": "2014",
+   "speed": 30,
+   "size": "medium",
+   "size_it": "Media",
+   "sizeDesc": "Half-orcs are somewhat larger and bulkier than humans, and they range from 5 to well over 6 feet tall. Your size is Medium.",
+   "creatureType": "humanoid",
+   "abilityBonuses": [
+    {
+     "ability": "str",
+     "bonus": 2
+    },
+    {
+     "ability": "con",
+     "bonus": 1
+    }
+   ],
+   "abilityBonusChoice": null,
+   "age": "Half-orcs mature a little faster than humans, reaching adulthood around age 14. They age noticeably faster and rarely live longer than 75 years.",
+   "alignment": "Half-orcs inherit a tendency toward chaos from their orc parents and are not strongly inclined toward good. Half-orcs raised among orcs and willing to live out their lives among them are usually evil.",
+   "languages": [
+    "common",
+    "orc"
+   ],
+   "languageDesc": "You can speak, read, and write Common and Orc. Orc is a harsh, grating language with hard consonants. It has no script of its own but is written in the Dwarvish script.",
+   "languageChoice": null,
+   "traits": [
+    {
+     "id": "darkvision",
+     "name": "Darkvision",
+     "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray."
+    },
+    {
+     "id": "savage-attacks",
+     "name": "Savage Attacks",
+     "desc": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit."
+    },
+    {
+     "id": "relentless-endurance",
+     "name": "Relentless Endurance",
+     "desc": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. you cannot use this feature again until you finish a long rest."
+    },
+    {
+     "id": "menacing",
+     "name": "Menacing",
+     "desc": "You gain proficiency in the Intimidation skill.",
+     "proficiencies": [
+      "Intimidation"
+     ]
+    }
+   ],
+   "subraces": []
+  },
+  {
+   "id": "tiefling",
+   "name": "Tiefling",
+   "name_it": "Tiefling",
+   "source": "SRD 5.1",
+   "ruleset": "2014",
+   "speed": 30,
+   "size": "medium",
+   "size_it": "Media",
+   "sizeDesc": "Tieflings are about the same size and build as humans. Your size is Medium.",
+   "creatureType": "humanoid",
+   "abilityBonuses": [
+    {
+     "ability": "int",
+     "bonus": 1
+    },
+    {
+     "ability": "cha",
+     "bonus": 2
+    }
+   ],
+   "abilityBonusChoice": null,
+   "age": "Tieflings mature at the same rate as humans but live a few years longer.",
+   "alignment": "Tieflings might not have an innate tendency toward evil, but many of them end up there. Evil or not, an independent nature inclines many tieflings toward a chaotic alignment.",
+   "languages": [
+    "common",
+    "infernal"
+   ],
+   "languageDesc": "You can speak, read, and write Common and Infernal.",
+   "languageChoice": null,
+   "traits": [
+    {
+     "id": "darkvision",
+     "name": "Darkvision",
+     "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray."
+    },
+    {
+     "id": "hellish-resistance",
+     "name": "Hellish Resistance",
+     "desc": "You have resistance to fire damage."
+    },
+    {
+     "id": "infernal-legacy",
+     "name": "Infernal Legacy",
+     "desc": "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+    }
+   ],
+   "subraces": []
+  },
+  {
+   "id": "dragonborn-2024",
+   "name": "Dragonborn",
+   "name_it": "Dragonide",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "speed": 30,
+   "size": "medium",
+   "size_it": "Media",
+   "sizeOptions": null,
+   "sizeDesc": "",
+   "creatureType": "humanoid",
+   "abilityBonuses": [],
+   "abilityBonusChoice": null,
+   "age": "",
+   "alignment": "",
+   "languages": [],
+   "languageDesc": "",
+   "languageChoice": null,
+   "traits": [
+    {
+     "id": "darkvision-60-2024",
+     "name": "Darkvision (60 ft.)",
+     "desc": "You have Darkvision with a range of 60 feet."
+    },
+    {
+     "id": "draconic-flight-2024",
+     "name": "Draconic Flight",
+     "desc": "When you reach character level 5, you can channel draconic magic to give yourself temporary flight. As a Bonus Action, you sprout spectral wings on your back that last for 10 minutes or until you retract the wings (no action required) or have the Incapacitated condition. During that time, you have a Fly Speed equal to your Speed. Your wings appear to be made of the same energy as your Breath Weapon. Once you use this trait, you can't use it again until you finish a Long Rest."
+    }
+   ],
+   "subraces": [
+    "draconic-ancestor-black-2024",
+    "draconic-ancestor-blue-2024",
+    "draconic-ancestor-brass-2024",
+    "draconic-ancestor-bronze-2024",
+    "draconic-ancestor-copper-2024",
+    "draconic-ancestor-gold-2024",
+    "draconic-ancestor-green-2024",
+    "draconic-ancestor-red-2024",
+    "draconic-ancestor-silver-2024",
+    "draconic-ancestor-white-2024"
+   ]
+  },
+  {
+   "id": "dwarf-2024",
+   "name": "Dwarf",
+   "name_it": "Nano",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "speed": 30,
+   "size": "medium",
+   "size_it": "Media",
+   "sizeOptions": null,
+   "sizeDesc": "",
+   "creatureType": "humanoid",
+   "abilityBonuses": [],
+   "abilityBonusChoice": null,
+   "age": "",
+   "alignment": "",
+   "languages": [],
+   "languageDesc": "",
+   "languageChoice": null,
+   "traits": [
+    {
+     "id": "darkvision-120-2024",
+     "name": "Darkvision (120 ft.)",
+     "desc": "You have Darkvision with a range of 120 feet."
+    },
+    {
+     "id": "dwarven-resilience-2024",
+     "name": "Dwarven Resilience",
+     "desc": "You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition."
+    },
+    {
+     "id": "dwarven-toughness-2024",
+     "name": "Dwarven Toughness",
+     "desc": "Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level."
+    },
+    {
+     "id": "stonecunning-2024",
+     "name": "Stonecunning",
+     "desc": "As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked.\n\nYou can use this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest."
+    }
+   ],
+   "subraces": []
+  },
+  {
+   "id": "elf-2024",
+   "name": "Elf",
+   "name_it": "Elfo",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "speed": 30,
+   "size": "medium",
+   "size_it": "Media",
+   "sizeOptions": null,
+   "sizeDesc": "",
+   "creatureType": "humanoid",
+   "abilityBonuses": [],
+   "abilityBonusChoice": null,
+   "age": "",
+   "alignment": "",
+   "languages": [],
+   "languageDesc": "",
+   "languageChoice": null,
+   "traits": [
+    {
+     "id": "darkvision-60-2024",
+     "name": "Darkvision (60 ft.)",
+     "desc": "You have Darkvision with a range of 60 feet."
+    },
+    {
+     "id": "elven-lineage-2024",
+     "name": "Elven Lineage",
+     "desc": "You are part of a lineage that grants you supernatural abilities. Choose a lineage from the Elven Lineages table. You gain the level 1 benefit of that lineage.\n\nWhen you reach character levels 3 and 5, you learn a higher-level spell, as shown on the table.\n\nYou always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level.\n\nElven Lineages\n\nDrow\n\nLevel 1. The range of your Darkvision increases to 120 feet. You also know the Dancing Lights cantrip.\n\nLevel 3. Faerie Fire\n\nLevel 5. Darkness\n\nHigh Elf\n\nLevel 1. You know the Prestidigitation cantrip. Whenever you finish a Long Rest, you can replace that cantrip with a different cantrip from the Wizard spell list.\n\nLevel 3. Detect Magic\n\nLevel 5. Misty Step\n\nWood Elf\n\nLevel 1. Your Speed increases to 35 feet. You also know the Druidcraft cantrip.\n\nLevel 3. Longstrider\n\nLevel 5. Pass without Trace\n\nIntelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage)."
+    },
+    {
+     "id": "fey-ancestry-2024",
+     "name": "Fey Ancestry",
+     "desc": "You have Advantage on saving throws you make to avoid or end the Charmed condition."
+    },
+    {
+     "id": "keen-senses-2024",
+     "name": "Keen Senses",
+     "desc": "You have proficiency in the Insight, Perception, or Survival skill.",
+     "proficiencyChoices": [
+      {
+       "choose": 1,
+       "desc": "Choose one of the following skills: Insight, Perception, or Survival.",
+       "type": "proficiencies",
+       "from": [
+        {
+         "id": "insight",
+         "name": "Insight"
+        },
+        {
+         "id": "perception",
+         "name": "Perception"
+        },
+        {
+         "id": "survival",
+         "name": "Survival"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "trance-2024",
+     "name": "Trance",
+     "desc": "You don't need to sleep, and magic can't put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness."
+    }
+   ],
+   "subraces": [
+    "elven-lineage-drow-2024",
+    "elven-lineage-high-elf-2024",
+    "elven-lineage-wood-elf-2024"
+   ]
+  },
+  {
+   "id": "gnome-2024",
+   "name": "Gnome",
+   "name_it": "Gnomo",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "speed": 30,
+   "size": "small",
+   "size_it": "Piccola",
+   "sizeOptions": null,
+   "sizeDesc": "",
+   "creatureType": "humanoid",
+   "abilityBonuses": [],
+   "abilityBonusChoice": null,
+   "age": "",
+   "alignment": "",
+   "languages": [],
+   "languageDesc": "",
+   "languageChoice": null,
+   "traits": [
+    {
+     "id": "darkvision-60-2024",
+     "name": "Darkvision (60 ft.)",
+     "desc": "You have Darkvision with a range of 60 feet."
+    },
+    {
+     "id": "gnomish-cunning-2024",
+     "name": "Gnomish Cunning",
+     "desc": "You have Advantage on Intelligence, Wisdom, and Charisma saving throws."
+    },
+    {
+     "id": "gnomish-lineage-2024",
+     "name": "Gnomish Lineage",
+     "desc": "You are part of a lineage that grants you supernatural abilities. Choose one of the following options; whichever one you choose, Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage):\n\nForest Gnome. You know the Minor Illusion cantrip. You also always have the Speak with Animals spell prepared. You can cast it without a spell slot a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest. You can also use any spell slots you have to cast the spell.\n\nRock Gnome. You know the Mending and Prestidigitation cantrips. In addition, you can spend 10 minutes casting Prestidigitation to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box. When you create the device, you determine its function by choosing one effect from Prestidigitation; the device produces that effect whenever you or another creature takes a Bonus Action to activate it with a touch. If the chosen effect has options within it, you choose one of those options for the device when you create it.\n\nFor example, if you choose the spell's ignite-extinguish effect, you determine whether the device ignites or extinguishes fire; the device doesn't do both. You can have three such devices in existence at a time, and each falls apart 8 hours after its creation or when you dismantle it with a touch as a Utilize action."
+    }
+   ],
+   "subraces": [
+    "gnomish-lineage-forest-gnome-2024",
+    "gnomish-lineage-rock-gnome-2024"
+   ]
+  },
+  {
+   "id": "goliath-2024",
+   "name": "Goliath",
+   "name_it": "Goliath",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "speed": 35,
+   "size": "medium",
+   "size_it": "Media",
+   "sizeOptions": null,
+   "sizeDesc": "",
+   "creatureType": "humanoid",
+   "abilityBonuses": [],
+   "abilityBonusChoice": null,
+   "age": "",
+   "alignment": "",
+   "languages": [],
+   "languageDesc": "",
+   "languageChoice": null,
+   "traits": [
+    {
+     "id": "giant-ancestry-2024",
+     "name": "Giant Ancestry",
+     "desc": "You are descended from Giants. Choose one of the following benefits-a supernatural boon from your ancestry; you can use the chosen benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest:\n\nCloud's Jaunt (Cloud Giant). As a Bonus Action, you magically teleport up to 30 feet to an unoccupied space you can see.\n\nFire's Burn (Fire Giant). When you hit a target with an attack roll and deal damage to it, you can also deal 1d10 Fire damage to that target.\n\nFrost's Chill (Frost Giant). When you hit a target with an attack roll and deal damage to it, you can also deal 1d6 Cold damage to that target and reduce its Speed by 10 feet until the start of your next turn.\n\nHill's Tumble (Hill Giant). When you hit a Large or smaller creature with an attack roll and deal damage to it, you can give that target the Prone condition.\n\nStone's Endurance (Stone Giant). When you take damage, you can take a Reaction to roll 1d12. Add your Constitution modifier to the number rolled and reduce the damage by that total.\n\n- Storm's Thunder (Storm Giant). When you take damage from a creature within 60 feet of you, you can take a Reaction to deal 1d8 Thunder damage to that creature."
+    },
+    {
+     "id": "large-form-2024",
+     "name": "Large Form",
+     "desc": "Starting at character level 5, you can change your size to Large as a Bonus Action if you're in a big enough space. This transformation lasts for 10 minutes or until you end it (no action required). For that duration, you have Advantage on Strength checks, and your Speed increases by 10 feet. Once you use this trait, you can't use it again until you finish a Long Rest."
+    },
+    {
+     "id": "powerful-build-2024",
+     "name": "Powerful Build",
+     "desc": "You have Advantage on any ability check you make to end the Grappled condition. You also count as one size larger when determining your carrying capacity."
+    }
+   ],
+   "subraces": [
+    "giant-ancestry-clouds-jaunt-2024",
+    "giant-ancestry-fires-burn-2024",
+    "giant-ancestry-frosts-chill-2024",
+    "giant-ancestry-hills-tumble-2024",
+    "giant-ancestry-stones-endurance-2024",
+    "giant-ancestry-storms-thunder-2024"
+   ]
+  },
+  {
+   "id": "halfling-2024",
+   "name": "Halfling",
+   "name_it": "Halfling",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "speed": 30,
+   "size": "small",
+   "size_it": "Piccola",
+   "sizeOptions": null,
+   "sizeDesc": "",
+   "creatureType": "humanoid",
+   "abilityBonuses": [],
+   "abilityBonusChoice": null,
+   "age": "",
+   "alignment": "",
+   "languages": [],
+   "languageDesc": "",
+   "languageChoice": null,
+   "traits": [
+    {
+     "id": "brave-2024",
+     "name": "Brave",
+     "desc": "You have Advantage on saving throws you make to avoid or end the Frightened condition."
+    },
+    {
+     "id": "halfling-nimbleness-2024",
+     "name": "Halfling Nimbleness",
+     "desc": "You can move through the space of any creature that is a size larger than you, but you can't stop in the same space."
+    },
+    {
+     "id": "luck-2024",
+     "name": "Luck",
+     "desc": "When you roll a 1 on the d20 of a D20 Test, you can reroll the die, and you must use the new roll."
+    },
+    {
+     "id": "naturally-stealthy-2024",
+     "name": "Naturally Stealthy",
+     "desc": "You can take the Hide action even when you are obscured only by a creature that is at least one size larger than you."
+    }
+   ],
+   "subraces": []
+  },
+  {
+   "id": "human-2024",
+   "name": "Human",
+   "name_it": "Umano",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "speed": 30,
+   "size": "medium",
+   "size_it": "Media",
+   "sizeOptions": null,
+   "sizeDesc": "",
+   "creatureType": "humanoid",
+   "abilityBonuses": [],
+   "abilityBonusChoice": null,
+   "age": "",
+   "alignment": "",
+   "languages": [],
+   "languageDesc": "",
+   "languageChoice": null,
+   "traits": [
+    {
+     "id": "resourceful-2024",
+     "name": "Resourceful",
+     "desc": "You gain Heroic Inspiration whenever you finish a Long Rest."
+    },
+    {
+     "id": "skillful-2024",
+     "name": "Skillful",
+     "desc": "You gain proficiency in one skill of your choice.",
+     "proficiencyChoices": [
+      {
+       "choose": 1,
+       "desc": "Choose any skill.",
+       "type": "proficiencies",
+       "from": [
+        {
+         "id": "acrobatics",
+         "name": "Acrobatics"
+        },
+        {
+         "id": "animal-handling",
+         "name": "Animal Handling"
+        },
+        {
+         "id": "arcana",
+         "name": "Arcana"
+        },
+        {
+         "id": "athletics",
+         "name": "Athletics"
+        },
+        {
+         "id": "deception",
+         "name": "Deception"
+        },
+        {
+         "id": "history",
+         "name": "History"
+        },
+        {
+         "id": "insight",
+         "name": "Insight"
+        },
+        {
+         "id": "intimidation",
+         "name": "Intimidation"
+        },
+        {
+         "id": "investigation",
+         "name": "Investigation"
+        },
+        {
+         "id": "medicine",
+         "name": "Medicine"
+        },
+        {
+         "id": "nature",
+         "name": "Nature"
+        },
+        {
+         "id": "perception",
+         "name": "Perception"
+        },
+        {
+         "id": "performance",
+         "name": "Performance"
+        },
+        {
+         "id": "persuasion",
+         "name": "Persuasion"
+        },
+        {
+         "id": "religion",
+         "name": "Religion"
+        },
+        {
+         "id": "sleight-of-hand",
+         "name": "Sleight of Hand"
+        },
+        {
+         "id": "stealth",
+         "name": "Stealth"
+        },
+        {
+         "id": "survival",
+         "name": "Survival"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "versatile-2024",
+     "name": "Versatile",
+     "desc": "You gain an Origin feat of your choice (see \"Feats\"). Skilled is recommended."
+    }
+   ],
+   "subraces": []
+  },
+  {
+   "id": "orc-2024",
+   "name": "Orc",
+   "name_it": "Orco",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "speed": 30,
+   "size": "medium",
+   "size_it": "Media",
+   "sizeOptions": null,
+   "sizeDesc": "",
+   "creatureType": "humanoid",
+   "abilityBonuses": [],
+   "abilityBonusChoice": null,
+   "age": "",
+   "alignment": "",
+   "languages": [],
+   "languageDesc": "",
+   "languageChoice": null,
+   "traits": [
+    {
+     "id": "adrenaline-rush-2024",
+     "name": "Adrenaline Rush",
+     "desc": "You can take the Dash action as a Bonus Action. When you do so, you gain a number of Temporary Hit Points equal to your Proficiency Bonus.\n\nYou can use this trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Short or Long Rest."
+    },
+    {
+     "id": "darkvision-120-2024",
+     "name": "Darkvision (120 ft.)",
+     "desc": "You have Darkvision with a range of 120 feet."
+    },
+    {
+     "id": "relentless-endurance-2024",
+     "name": "Relentless Endurance",
+     "desc": "When you are reduced to 0 Hit Points but not killed outright, you can drop to 1 Hit Point instead. Once you use this trait, you can't do so again until you finish a Long Rest."
+    }
+   ],
+   "subraces": []
+  },
+  {
+   "id": "tiefling-2024",
+   "name": "Tiefling",
+   "name_it": "Tiefling",
+   "source": "SRD 5.2",
+   "ruleset": "2024",
+   "speed": 30,
+   "size": null,
+   "size_it": null,
+   "sizeOptions": [
+    "small",
+    "medium"
+   ],
+   "sizeDesc": "",
+   "creatureType": "humanoid",
+   "abilityBonuses": [],
+   "abilityBonusChoice": null,
+   "age": "",
+   "alignment": "",
+   "languages": [],
+   "languageDesc": "",
+   "languageChoice": null,
+   "traits": [
+    {
+     "id": "darkvision-60-2024",
+     "name": "Darkvision (60 ft.)",
+     "desc": "You have Darkvision with a range of 60 feet."
+    },
+    {
+     "id": "fiendish-legacy-2024",
+     "name": "Fiendish Legacy",
+     "desc": "You are the recipient of a legacy that grants you supernatural abilities. Choose a legacy from the Fiendish Legacies table. You gain the level 1 benefit of the chosen legacy.\n\nWhen you reach character levels 3 and 5, you learn a higher-level spell, as shown on the table.\n\nYou always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level.\n\nIntelligence, Wisdom, or Charisma is your spell-casting ability for the spells you cast with this trait (choose the ability when you select the legacy).\n\nFiendish Legacies\n\nAbyssal.\n\nLevel 1. You have Resistance to Poison damage. You also know the Poison Spray cantrip.\n\nLevel 3. Ray of Sickness\n\nLevel 5. Hold Person\n\nChthonic.\n\nLevel 1. You have Resistance to Necrotic damage. You also know the Chill Touch cantrip.\n\nLevel 3. False Life\n\nLevel 5. Ray of Enfeeblement\n\nInfernal.\n\nLevel 1. You have Resistance to Fire damage. You also know the Fire Bolt cantrip.\n\nLevel 3. Hellish Rebuke\n\nLevel 5. Darkness"
+    },
+    {
+     "id": "otherworldly-presence-2024",
+     "name": "Otherworldly Presence",
+     "desc": "You know the Thaumaturgy cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait."
+    }
+   ],
+   "subraces": [
+    "fiendish-legacy-abyssal-2024",
+    "fiendish-legacy-chthonic-2024",
+    "fiendish-legacy-infernal-2024"
+   ]
+  }
+ ]
+}

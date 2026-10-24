@@ -1,0 +1,1886 @@
+{
+ "meta": {
+  "source": "SRD 5.1 + SRD 5.2.1 (Wizards of the Coast), via 5e-bits/5e-database",
+  "license": "CC-BY-4.0",
+  "attribution": "This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.\n\nThis work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+  "attributions": {
+   "SRD 5.1": "This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+   "SRD 5.2": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+   "SRD 5.2 (it)": "Quest'opera include materiale tratto dal System Reference Document 5.2.1 (\"SRD 5.2.1\") di Wizards of the Coast LLC, disponibile all'indirizzo https://www.dndbeyond.com/srd. Il SRD 5.2.1 è concesso in licenza ai sensi della licenza di attribuzione 4.0 Internazionale di Creative Commons, disponibile all'indirizzo https://creativecommons.org/licenses/by/4.0/legalcode."
+  },
+  "upstream": {
+   "repo": "https://github.com/5e-bits/5e-database",
+   "commit": "a6212beb4b278917c2cff41c2b04c4ef4f3e0d6f",
+   "license": "Dati SRD CC-BY-4.0 (codice del repo MIT, non usato)"
+  },
+  "dataset": "tables",
+  "generatedAt": "2026-10-24T12:04:59.469Z",
+  "counts": {
+   "SRD 5.1": 16,
+   "SRD 5.2": 2
+  }
+ },
+ "items": [
+  {
+   "id": "xp-levels",
+   "name": "Character Advancement",
+   "name_it": "Avanzamento del personaggio",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "columns": [
+    "level",
+    "xp",
+    "profBonus"
+   ],
+   "rows": [
+    {
+     "level": 1,
+     "xp": 0,
+     "profBonus": 2
+    },
+    {
+     "level": 2,
+     "xp": 300,
+     "profBonus": 2
+    },
+    {
+     "level": 3,
+     "xp": 900,
+     "profBonus": 2
+    },
+    {
+     "level": 4,
+     "xp": 2700,
+     "profBonus": 2
+    },
+    {
+     "level": 5,
+     "xp": 6500,
+     "profBonus": 3
+    },
+    {
+     "level": 6,
+     "xp": 14000,
+     "profBonus": 3
+    },
+    {
+     "level": 7,
+     "xp": 23000,
+     "profBonus": 3
+    },
+    {
+     "level": 8,
+     "xp": 34000,
+     "profBonus": 3
+    },
+    {
+     "level": 9,
+     "xp": 48000,
+     "profBonus": 4
+    },
+    {
+     "level": 10,
+     "xp": 64000,
+     "profBonus": 4
+    },
+    {
+     "level": 11,
+     "xp": 85000,
+     "profBonus": 4
+    },
+    {
+     "level": 12,
+     "xp": 100000,
+     "profBonus": 4
+    },
+    {
+     "level": 13,
+     "xp": 120000,
+     "profBonus": 5
+    },
+    {
+     "level": 14,
+     "xp": 140000,
+     "profBonus": 5
+    },
+    {
+     "level": 15,
+     "xp": 165000,
+     "profBonus": 5
+    },
+    {
+     "level": 16,
+     "xp": 195000,
+     "profBonus": 5
+    },
+    {
+     "level": 17,
+     "xp": 225000,
+     "profBonus": 6
+    },
+    {
+     "level": 18,
+     "xp": 265000,
+     "profBonus": 6
+    },
+    {
+     "level": 19,
+     "xp": 305000,
+     "profBonus": 6
+    },
+    {
+     "level": 20,
+     "xp": 355000,
+     "profBonus": 6
+    }
+   ]
+  },
+  {
+   "id": "proficiency-bonus",
+   "name": "Proficiency Bonus by Level",
+   "name_it": "Bonus di competenza per livello",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "columns": [
+    "level",
+    "profBonus"
+   ],
+   "rows": [
+    {
+     "level": 1,
+     "profBonus": 2
+    },
+    {
+     "level": 2,
+     "profBonus": 2
+    },
+    {
+     "level": 3,
+     "profBonus": 2
+    },
+    {
+     "level": 4,
+     "profBonus": 2
+    },
+    {
+     "level": 5,
+     "profBonus": 3
+    },
+    {
+     "level": 6,
+     "profBonus": 3
+    },
+    {
+     "level": 7,
+     "profBonus": 3
+    },
+    {
+     "level": 8,
+     "profBonus": 3
+    },
+    {
+     "level": 9,
+     "profBonus": 4
+    },
+    {
+     "level": 10,
+     "profBonus": 4
+    },
+    {
+     "level": 11,
+     "profBonus": 4
+    },
+    {
+     "level": 12,
+     "profBonus": 4
+    },
+    {
+     "level": 13,
+     "profBonus": 5
+    },
+    {
+     "level": 14,
+     "profBonus": 5
+    },
+    {
+     "level": 15,
+     "profBonus": 5
+    },
+    {
+     "level": 16,
+     "profBonus": 5
+    },
+    {
+     "level": 17,
+     "profBonus": 6
+    },
+    {
+     "level": 18,
+     "profBonus": 6
+    },
+    {
+     "level": 19,
+     "profBonus": 6
+    },
+    {
+     "level": 20,
+     "profBonus": 6
+    }
+   ]
+  },
+  {
+   "id": "multiclass-spell-slots",
+   "name": "Multiclass Spellcaster: Spell Slots per Spell Level",
+   "name_it": "Incantatore multiclasse: slot per livello",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "notes": "Livello incantatore = livelli di Bardo/Chierico/Druido/Stregone/Mago + metà dei livelli di Paladino/Ranger (2014 per difetto; 2024 per eccesso) + un terzo di Guerriero (Cavaliere mistico)/Ladro (Mistificatore arcano) per difetto. Warlock: magia del patto separata.",
+   "columns": [
+    "casterLevel",
+    "slots"
+   ],
+   "rows": [
+    {
+     "casterLevel": 1,
+     "slots": {
+      "1": 2,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+     }
+    },
+    {
+     "casterLevel": 2,
+     "slots": {
+      "1": 3,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+     }
+    },
+    {
+     "casterLevel": 3,
+     "slots": {
+      "1": 4,
+      "2": 2,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+     }
+    },
+    {
+     "casterLevel": 4,
+     "slots": {
+      "1": 4,
+      "2": 3,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+     }
+    },
+    {
+     "casterLevel": 5,
+     "slots": {
+      "1": 4,
+      "2": 3,
+      "3": 2,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+     }
+    },
+    {
+     "casterLevel": 6,
+     "slots": {
+      "1": 4,
+      "2": 3,
+      "3": 3,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+     }
+    },
+    {
+     "casterLevel": 7,
+     "slots": {
+      "1": 4,
+      "2": 3,
+      "3": 3,
+      "4": 1,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+     }
+    },
+    {
+     "casterLevel": 8,
+     "slots": {
+      "1": 4,
+      "2": 3,
+      "3": 3,
+      "4": 2,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+     }
+    },
+    {
+     "casterLevel": 9,
+     "slots": {
+      "1": 4,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 1,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+     }
+    },
+    {
+     "casterLevel": 10,
+     "slots": {
+      "1": 4,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 2,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+     }
+    },
+    {
+     "casterLevel": 11,
+     "slots": {
+      "1": 4,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 2,
+      "6": 1,
+      "7": 0,
+      "8": 0,
+      "9": 0
+     }
+    },
+    {
+     "casterLevel": 12,
+     "slots": {
+      "1": 4,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 2,
+      "6": 1,
+      "7": 0,
+      "8": 0,
+      "9": 0
+     }
+    },
+    {
+     "casterLevel": 13,
+     "slots": {
+      "1": 4,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 2,
+      "6": 1,
+      "7": 1,
+      "8": 0,
+      "9": 0
+     }
+    },
+    {
+     "casterLevel": 14,
+     "slots": {
+      "1": 4,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 2,
+      "6": 1,
+      "7": 1,
+      "8": 0,
+      "9": 0
+     }
+    },
+    {
+     "casterLevel": 15,
+     "slots": {
+      "1": 4,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 2,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 0
+     }
+    },
+    {
+     "casterLevel": 16,
+     "slots": {
+      "1": 4,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 2,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 0
+     }
+    },
+    {
+     "casterLevel": 17,
+     "slots": {
+      "1": 4,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 2,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 1
+     }
+    },
+    {
+     "casterLevel": 18,
+     "slots": {
+      "1": 4,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 1
+     }
+    },
+    {
+     "casterLevel": 19,
+     "slots": {
+      "1": 4,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 3,
+      "6": 2,
+      "7": 1,
+      "8": 1,
+      "9": 1
+     }
+    },
+    {
+     "casterLevel": 20,
+     "slots": {
+      "1": 4,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 3,
+      "6": 2,
+      "7": 2,
+      "8": 1,
+      "9": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "pact-magic",
+   "name": "Pact Magic (Warlock)",
+   "name_it": "Magia del patto (Warlock)",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "columns": [
+    "level",
+    "slots",
+    "slotLevel"
+   ],
+   "rows": [
+    {
+     "level": 1,
+     "slots": 1,
+     "slotLevel": 1
+    },
+    {
+     "level": 2,
+     "slots": 2,
+     "slotLevel": 1
+    },
+    {
+     "level": 3,
+     "slots": 2,
+     "slotLevel": 2
+    },
+    {
+     "level": 4,
+     "slots": 2,
+     "slotLevel": 2
+    },
+    {
+     "level": 5,
+     "slots": 2,
+     "slotLevel": 3
+    },
+    {
+     "level": 6,
+     "slots": 2,
+     "slotLevel": 3
+    },
+    {
+     "level": 7,
+     "slots": 2,
+     "slotLevel": 4
+    },
+    {
+     "level": 8,
+     "slots": 2,
+     "slotLevel": 4
+    },
+    {
+     "level": 9,
+     "slots": 2,
+     "slotLevel": 5
+    },
+    {
+     "level": 10,
+     "slots": 2,
+     "slotLevel": 5
+    },
+    {
+     "level": 11,
+     "slots": 3,
+     "slotLevel": 5
+    },
+    {
+     "level": 12,
+     "slots": 3,
+     "slotLevel": 5
+    },
+    {
+     "level": 13,
+     "slots": 3,
+     "slotLevel": 5
+    },
+    {
+     "level": 14,
+     "slots": 3,
+     "slotLevel": 5
+    },
+    {
+     "level": 15,
+     "slots": 3,
+     "slotLevel": 5
+    },
+    {
+     "level": 16,
+     "slots": 3,
+     "slotLevel": 5
+    },
+    {
+     "level": 17,
+     "slots": 4,
+     "slotLevel": 5
+    },
+    {
+     "level": 18,
+     "slots": 4,
+     "slotLevel": 5
+    },
+    {
+     "level": 19,
+     "slots": 4,
+     "slotLevel": 5
+    },
+    {
+     "level": 20,
+     "slots": 4,
+     "slotLevel": 5
+    }
+   ]
+  },
+  {
+   "id": "carrying-capacity",
+   "name": "Lifting and Carrying",
+   "name_it": "Sollevare e trasportare",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "data": {
+    "capacityPerStr": 15,
+    "pushDragLiftPerStr": 30,
+    "sizeMultipliers": {
+     "tiny": 0.5,
+     "small": 1,
+     "medium": 1,
+     "large": 2,
+     "huge": 4,
+     "gargantuan": 8
+    },
+    "variantEncumbrance": {
+     "encumberedPerStr": 5,
+     "encumberedSpeedPenaltyFt": 10,
+     "heavilyEncumberedPerStr": 10,
+     "heavilyEncumberedSpeedPenaltyFt": 20,
+     "heavilyEncumberedDisadvantage": "Svantaggio a prove, attacchi e TS basati su FOR, DES o COS"
+    },
+    "notes": "2024: se si supera la capacità di trasporto la velocità scende a 1,5 m (5 ft). La regola variante dell'ingombro è solo SRD 5.1."
+   }
+  },
+  {
+   "id": "cr-xp",
+   "name": "Experience Points by Challenge Rating",
+   "name_it": "PE e bonus di competenza per grado di sfida",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "columns": [
+    "cr",
+    "crValue",
+    "xp",
+    "profBonus"
+   ],
+   "rows": [
+    {
+     "cr": "0",
+     "crValue": 0,
+     "xp": 10,
+     "profBonus": 2
+    },
+    {
+     "cr": "1/8",
+     "crValue": 0.125,
+     "xp": 25,
+     "profBonus": 2
+    },
+    {
+     "cr": "1/4",
+     "crValue": 0.25,
+     "xp": 50,
+     "profBonus": 2
+    },
+    {
+     "cr": "1/2",
+     "crValue": 0.5,
+     "xp": 100,
+     "profBonus": 2
+    },
+    {
+     "cr": "1",
+     "crValue": 1,
+     "xp": 200,
+     "profBonus": 2
+    },
+    {
+     "cr": "2",
+     "crValue": 2,
+     "xp": 450,
+     "profBonus": 2
+    },
+    {
+     "cr": "3",
+     "crValue": 3,
+     "xp": 700,
+     "profBonus": 2
+    },
+    {
+     "cr": "4",
+     "crValue": 4,
+     "xp": 1100,
+     "profBonus": 2
+    },
+    {
+     "cr": "5",
+     "crValue": 5,
+     "xp": 1800,
+     "profBonus": 3
+    },
+    {
+     "cr": "6",
+     "crValue": 6,
+     "xp": 2300,
+     "profBonus": 3
+    },
+    {
+     "cr": "7",
+     "crValue": 7,
+     "xp": 2900,
+     "profBonus": 3
+    },
+    {
+     "cr": "8",
+     "crValue": 8,
+     "xp": 3900,
+     "profBonus": 3
+    },
+    {
+     "cr": "9",
+     "crValue": 9,
+     "xp": 5000,
+     "profBonus": 4
+    },
+    {
+     "cr": "10",
+     "crValue": 10,
+     "xp": 5900,
+     "profBonus": 4
+    },
+    {
+     "cr": "11",
+     "crValue": 11,
+     "xp": 7200,
+     "profBonus": 4
+    },
+    {
+     "cr": "12",
+     "crValue": 12,
+     "xp": 8400,
+     "profBonus": 4
+    },
+    {
+     "cr": "13",
+     "crValue": 13,
+     "xp": 10000,
+     "profBonus": 5
+    },
+    {
+     "cr": "14",
+     "crValue": 14,
+     "xp": 11500,
+     "profBonus": 5
+    },
+    {
+     "cr": "15",
+     "crValue": 15,
+     "xp": 13000,
+     "profBonus": 5
+    },
+    {
+     "cr": "16",
+     "crValue": 16,
+     "xp": 15000,
+     "profBonus": 5
+    },
+    {
+     "cr": "17",
+     "crValue": 17,
+     "xp": 18000,
+     "profBonus": 6
+    },
+    {
+     "cr": "18",
+     "crValue": 18,
+     "xp": 20000,
+     "profBonus": 6
+    },
+    {
+     "cr": "19",
+     "crValue": 19,
+     "xp": 22000,
+     "profBonus": 6
+    },
+    {
+     "cr": "20",
+     "crValue": 20,
+     "xp": 25000,
+     "profBonus": 6
+    },
+    {
+     "cr": "21",
+     "crValue": 21,
+     "xp": 33000,
+     "profBonus": 7
+    },
+    {
+     "cr": "22",
+     "crValue": 22,
+     "xp": 41000,
+     "profBonus": 7
+    },
+    {
+     "cr": "23",
+     "crValue": 23,
+     "xp": 50000,
+     "profBonus": 7
+    },
+    {
+     "cr": "24",
+     "crValue": 24,
+     "xp": 62000,
+     "profBonus": 7
+    },
+    {
+     "cr": "25",
+     "crValue": 25,
+     "xp": 75000,
+     "profBonus": 8
+    },
+    {
+     "cr": "26",
+     "crValue": 26,
+     "xp": 90000,
+     "profBonus": 8
+    },
+    {
+     "cr": "27",
+     "crValue": 27,
+     "xp": 105000,
+     "profBonus": 8
+    },
+    {
+     "cr": "28",
+     "crValue": 28,
+     "xp": 120000,
+     "profBonus": 8
+    },
+    {
+     "cr": "29",
+     "crValue": 29,
+     "xp": 135000,
+     "profBonus": 9
+    },
+    {
+     "cr": "30",
+     "crValue": 30,
+     "xp": 155000,
+     "profBonus": 9
+    }
+   ]
+  },
+  {
+   "id": "encounter-xp-budget-2024",
+   "name": "XP Budget per Character",
+   "name_it": "Budget PE per personaggio (difficoltà incontri)",
+   "source": "SRD 5.2",
+   "sources": [
+    "SRD 5.2"
+   ],
+   "ruleset": "2024",
+   "notes": "Somma il budget di ogni personaggio per la difficoltà scelta (Bassa/Moderata/Alta). Le soglie Facile/Media/Difficile/Mortale del 2014 non sono nell'SRD 5.1 (DMG).",
+   "columns": [
+    "level",
+    "low",
+    "moderate",
+    "high"
+   ],
+   "rows": [
+    {
+     "level": 1,
+     "low": 50,
+     "moderate": 75,
+     "high": 100
+    },
+    {
+     "level": 2,
+     "low": 100,
+     "moderate": 150,
+     "high": 200
+    },
+    {
+     "level": 3,
+     "low": 150,
+     "moderate": 225,
+     "high": 400
+    },
+    {
+     "level": 4,
+     "low": 250,
+     "moderate": 375,
+     "high": 500
+    },
+    {
+     "level": 5,
+     "low": 500,
+     "moderate": 750,
+     "high": 1100
+    },
+    {
+     "level": 6,
+     "low": 600,
+     "moderate": 1000,
+     "high": 1400
+    },
+    {
+     "level": 7,
+     "low": 750,
+     "moderate": 1300,
+     "high": 1700
+    },
+    {
+     "level": 8,
+     "low": 1000,
+     "moderate": 1700,
+     "high": 2100
+    },
+    {
+     "level": 9,
+     "low": 1300,
+     "moderate": 2000,
+     "high": 2600
+    },
+    {
+     "level": 10,
+     "low": 1600,
+     "moderate": 2300,
+     "high": 3100
+    },
+    {
+     "level": 11,
+     "low": 1900,
+     "moderate": 2900,
+     "high": 4100
+    },
+    {
+     "level": 12,
+     "low": 2200,
+     "moderate": 3700,
+     "high": 4700
+    },
+    {
+     "level": 13,
+     "low": 2600,
+     "moderate": 4200,
+     "high": 5400
+    },
+    {
+     "level": 14,
+     "low": 2900,
+     "moderate": 4900,
+     "high": 6200
+    },
+    {
+     "level": 15,
+     "low": 3300,
+     "moderate": 5400,
+     "high": 7800
+    },
+    {
+     "level": 16,
+     "low": 3800,
+     "moderate": 6100,
+     "high": 9800
+    },
+    {
+     "level": 17,
+     "low": 4500,
+     "moderate": 7200,
+     "high": 11700
+    },
+    {
+     "level": 18,
+     "low": 5000,
+     "moderate": 8700,
+     "high": 14200
+    },
+    {
+     "level": 19,
+     "low": 5500,
+     "moderate": 10700,
+     "high": 17200
+    },
+    {
+     "level": 20,
+     "low": 6400,
+     "moderate": 13200,
+     "high": 22000
+    }
+   ]
+  },
+  {
+   "id": "ability-modifiers",
+   "name": "Ability Scores and Modifiers",
+   "name_it": "Punteggi e modificatori di caratteristica",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "columns": [
+    "score",
+    "mod"
+   ],
+   "rows": [
+    {
+     "score": 1,
+     "mod": -5
+    },
+    {
+     "score": 2,
+     "mod": -4
+    },
+    {
+     "score": 3,
+     "mod": -4
+    },
+    {
+     "score": 4,
+     "mod": -3
+    },
+    {
+     "score": 5,
+     "mod": -3
+    },
+    {
+     "score": 6,
+     "mod": -2
+    },
+    {
+     "score": 7,
+     "mod": -2
+    },
+    {
+     "score": 8,
+     "mod": -1
+    },
+    {
+     "score": 9,
+     "mod": -1
+    },
+    {
+     "score": 10,
+     "mod": 0
+    },
+    {
+     "score": 11,
+     "mod": 0
+    },
+    {
+     "score": 12,
+     "mod": 1
+    },
+    {
+     "score": 13,
+     "mod": 1
+    },
+    {
+     "score": 14,
+     "mod": 2
+    },
+    {
+     "score": 15,
+     "mod": 2
+    },
+    {
+     "score": 16,
+     "mod": 3
+    },
+    {
+     "score": 17,
+     "mod": 3
+    },
+    {
+     "score": 18,
+     "mod": 4
+    },
+    {
+     "score": 19,
+     "mod": 4
+    },
+    {
+     "score": 20,
+     "mod": 5
+    },
+    {
+     "score": 21,
+     "mod": 5
+    },
+    {
+     "score": 22,
+     "mod": 6
+    },
+    {
+     "score": 23,
+     "mod": 6
+    },
+    {
+     "score": 24,
+     "mod": 7
+    },
+    {
+     "score": 25,
+     "mod": 7
+    },
+    {
+     "score": 26,
+     "mod": 8
+    },
+    {
+     "score": 27,
+     "mod": 8
+    },
+    {
+     "score": 28,
+     "mod": 9
+    },
+    {
+     "score": 29,
+     "mod": 9
+    },
+    {
+     "score": 30,
+     "mod": 10
+    }
+   ]
+  },
+  {
+   "id": "ability-score-generation-2024",
+   "name": "Standard Array and Point Costs",
+   "name_it": "Serie standard e costo a punti",
+   "source": "SRD 5.2",
+   "sources": [
+    "SRD 5.2"
+   ],
+   "ruleset": "2024",
+   "data": {
+    "standardArray": [
+     15,
+     14,
+     13,
+     12,
+     10,
+     8
+    ],
+    "pointBuyBudget": 27,
+    "pointCost": {
+     "8": 0,
+     "9": 1,
+     "10": 2,
+     "11": 3,
+     "12": 4,
+     "13": 5,
+     "14": 7,
+     "15": 9
+    },
+    "random": "4d6, scarta il dado più basso, sei volte"
+   }
+  },
+  {
+   "id": "magic-schools",
+   "name": "Schools of Magic",
+   "name_it": "Scuole di magia",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "rows": [
+    {
+     "id": "abjuration",
+     "name": "Abjuration",
+     "name_it": "Abiurazione",
+     "desc": "Abjuration spells are protective in nature, though some of them have aggressive uses. They create magical barriers, negate harmful effects, harm trespassers, or banish creatures to other planes of existence.",
+     "desc2024": "Prevents or reverses harmful effects"
+    },
+    {
+     "id": "conjuration",
+     "name": "Conjuration",
+     "name_it": "Evocazione",
+     "desc": "Conjuration spells involve the transportation of objects and creatures from one location to another. Some spells summon creatures or objects to the caster's side, whereas others allow the caster to teleport to another location. Some conjurations create objects or effects out of nothing.",
+     "desc2024": "Transports creatures or objects"
+    },
+    {
+     "id": "divination",
+     "name": "Divination",
+     "name_it": "Divinazione",
+     "desc": "Divination spells reveal information, whether in the form of secrets long forgotten, glimpses of the future, the locations of hidden things, the truth behind illusions, or visions of distant people or places.",
+     "desc2024": "Reveals information"
+    },
+    {
+     "id": "enchantment",
+     "name": "Enchantment",
+     "name_it": "Ammaliamento",
+     "desc": "Enchantment spells affect the minds of others, influencing or controlling their behavior. Such spells can make enemies see the caster as a friend, force creatures to take a course of action, or even control another creature like a puppet.",
+     "desc2024": "Influences minds"
+    },
+    {
+     "id": "evocation",
+     "name": "Evocation",
+     "name_it": "Invocazione",
+     "desc": "Evocation spells manipulate magical energy to produce a desired effect. Some call up blasts of fire or lightning. Others channel positive energy to heal wounds.",
+     "desc2024": "Channels energy to create effects that are often destructive"
+    },
+    {
+     "id": "illusion",
+     "name": "Illusion",
+     "name_it": "Illusione",
+     "desc": "Illusion spells deceive the senses or minds of others. They cause people to see things that are not there, to miss things that are there, to hear phantom noises, or to remember things that never happened. Some illusions create phantom images that any creature can see, but the most insidious illusions plant an image directly in the mind of a creature.",
+     "desc2024": "Deceives the mind or senses"
+    },
+    {
+     "id": "necromancy",
+     "name": "Necromancy",
+     "name_it": "Necromanzia",
+     "desc": "Necromancy spells manipulate the energies of life and death. Such spells can grant an extra reserve of life force, drain the life energy from another creature, create the undead, or even bring the dead back to life.",
+     "desc2024": "Manipulates life and death"
+    },
+    {
+     "id": "transmutation",
+     "name": "Transmutation",
+     "name_it": "Trasmutazione",
+     "desc": "Transmutation spells change the properties of a creature, object, or environment. They might turn an enemy into a harmless creature, bolster the strength of an ally, make an object move at the caster's command, or enhance a creature's innate healing abilities to rapidly recover from injury.",
+     "desc2024": "Transforms creatures or objects"
+    }
+   ]
+  },
+  {
+   "id": "alignments",
+   "name": "Alignments",
+   "name_it": "Allineamenti",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "rows": [
+    {
+     "id": "lawful-good",
+     "name": "Lawful Good",
+     "abbr": "LG",
+     "name_it": "Legale Buono",
+     "desc": "Lawful good (LG) creatures can be counted on to do the right thing as expected by society. Gold dragons, paladins, and most dwarves are lawful good.",
+     "desc2024": "Lawful Good creatures endeavor to do the right thing as expected by society. Someone who fights injustice and protects the innocent without hesitation is probably Lawful Good."
+    },
+    {
+     "id": "neutral-good",
+     "name": "Neutral Good",
+     "abbr": "NG",
+     "name_it": "Neutrale Buono",
+     "desc": "Neutral good (NG) folk do the best they can to help others according to their needs. Many celestials, some cloud giants, and most gnomes are neutral good.",
+     "desc2024": "Neutral Good creatures do the best they can, working within rules but not feeling bound by them. A kindly person who helps others according to their needs is probably Neutral Good."
+    },
+    {
+     "id": "chaotic-good",
+     "name": "Chaotic Good",
+     "abbr": "CG",
+     "name_it": "Caotico Buono",
+     "desc": "Chaotic good (CG) creatures act as their conscience directs, with little regard for what others expect. Copper dragons, many elves, and unicorns are chaotic good.",
+     "desc2024": "Chaotic Good creatures act as their conscience directs with little regard for what others expect. A rebel who waylays a cruel baron's tax collectors and uses the stolen money to help the poor is probably Chaotic Good."
+    },
+    {
+     "id": "lawful-neutral",
+     "name": "Lawful Neutral",
+     "abbr": "LN",
+     "name_it": "Legale Neutrale",
+     "desc": "Lawful neutral (LN) individuals act in accordance with law, tradition, or personal codes. Many monks and some wizards are lawful neutral.",
+     "desc2024": "Lawful Neutral individuals act in accordance with law, tradition, or personal codes. Someone who follows a disciplined rule of life—and isn't swayed either by the demands of those in need or by the temptations of evil—is probably Lawful Neutral."
+    },
+    {
+     "id": "neutral",
+     "name": "Neutral",
+     "abbr": "N",
+     "name_it": "Neutrale",
+     "desc": "Neutral (N) is the alignment of those who prefer to steer clear of moral questions and don't take sides, doing what seems best at the time. Lizardfolk, most druids, and many humans are neutral.",
+     "desc2024": "Neutral is the alignment of those who prefer to avoid moral questions and don't take sides, doing what seems best at the time. Someone who's bored by moral debate is probably Neutral."
+    },
+    {
+     "id": "chaotic-neutral",
+     "name": "Chaotic Neutral",
+     "abbr": "CN",
+     "name_it": "Caotico Neutrale",
+     "desc": "Chaotic neutral (CN) creatures follow their whims, holding their personal freedom above all else. Many barbarians and rogues, and some bards, are chaotic neutral.",
+     "desc2024": "Chaotic Neutral creatures follow their whims, valuing their personal freedom above all else. A scoundrel who wanders the land living by their wits is probably Chaotic Neutral."
+    },
+    {
+     "id": "lawful-evil",
+     "name": "Lawful Evil",
+     "abbr": "LE",
+     "name_it": "Legale Malvagio",
+     "desc": "Lawful evil (LE) creatures methodically take what they want, within the limits of a code of tradition, loyalty, or order. Devils, blue dragons, and hobgoblins are lawful evil.",
+     "desc2024": "Lawful Evil creatures methodically take what they want within the limits of a code of tradition, loyalty, or order. An aristocrat exploiting citizens while scheming for power is probably Lawful Evil."
+    },
+    {
+     "id": "neutral-evil",
+     "name": "Neutral Evil",
+     "abbr": "NE",
+     "name_it": "Neutrale Malvagio",
+     "desc": "Neutral evil (NE) is the alignment of those who do whatever they can get away with, without compassion or qualms. Many drow, some cloud giants, and goblins are neutral evil.",
+     "desc2024": "Neutral Evil is the alignment of those who are untroubled by the harm they cause as they pursue their desires. A criminal who robs and murders as they please is probably Neutral Evil."
+    },
+    {
+     "id": "chaotic-evil",
+     "name": "Chaotic Evil",
+     "abbr": "CE",
+     "name_it": "Caotico Malvagio",
+     "desc": "Chaotic evil (CE) creatures act with arbitrary violence, spurred by their greed, hatred, or bloodlust. Demons, red dragons, and orcs are chaotic evil.",
+     "desc2024": "Chaotic Evil creatures act with arbitrary violence, spurred by their hatred or bloodlust. A villain pursuing schemes of vengeance and havoc is probably Chaotic Evil."
+    },
+    {
+     "id": "unaligned",
+     "name": "Unaligned",
+     "abbr": "U",
+     "name_it": "Senza allineamento",
+     "desc": "",
+     "desc2024": "Most creatures that lack the capacity for rational thought don't have alignments; they are unaligned. Sharks are savage predators, for example, but they aren't evil; they are unaligned."
+    }
+   ]
+  },
+  {
+   "id": "sizes",
+   "name": "Size Categories",
+   "name_it": "Taglie",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "columns": [
+    "id",
+    "name",
+    "name_it",
+    "spaceFt",
+    "hitDie",
+    "carryMult"
+   ],
+   "rows": [
+    {
+     "id": "tiny",
+     "name": "Tiny",
+     "name_it": "Minuscola",
+     "spaceFt": 2.5,
+     "hitDie": "d4",
+     "carryMult": 0.5
+    },
+    {
+     "id": "small",
+     "name": "Small",
+     "name_it": "Piccola",
+     "spaceFt": 5,
+     "hitDie": "d6",
+     "carryMult": 1
+    },
+    {
+     "id": "medium",
+     "name": "Medium",
+     "name_it": "Media",
+     "spaceFt": 5,
+     "hitDie": "d8",
+     "carryMult": 1
+    },
+    {
+     "id": "large",
+     "name": "Large",
+     "name_it": "Grande",
+     "spaceFt": 10,
+     "hitDie": "d10",
+     "carryMult": 2
+    },
+    {
+     "id": "huge",
+     "name": "Huge",
+     "name_it": "Enorme",
+     "spaceFt": 15,
+     "hitDie": "d12",
+     "carryMult": 4
+    },
+    {
+     "id": "gargantuan",
+     "name": "Gargantuan",
+     "name_it": "Mastodontica",
+     "spaceFt": 20,
+     "hitDie": "d20",
+     "carryMult": 8
+    }
+   ]
+  },
+  {
+   "id": "creature-types",
+   "name": "Creature Types",
+   "name_it": "Tipi di creatura",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "rows": [
+    {
+     "id": "aberration",
+     "name": "Aberration",
+     "name_it": "Aberrazione"
+    },
+    {
+     "id": "beast",
+     "name": "Beast",
+     "name_it": "Bestia"
+    },
+    {
+     "id": "celestial",
+     "name": "Celestial",
+     "name_it": "Celestiale"
+    },
+    {
+     "id": "construct",
+     "name": "Construct",
+     "name_it": "Costrutto"
+    },
+    {
+     "id": "dragon",
+     "name": "Dragon",
+     "name_it": "Drago"
+    },
+    {
+     "id": "elemental",
+     "name": "Elemental",
+     "name_it": "Elementale"
+    },
+    {
+     "id": "fey",
+     "name": "Fey",
+     "name_it": "Folletto"
+    },
+    {
+     "id": "fiend",
+     "name": "Fiend",
+     "name_it": "Immondo"
+    },
+    {
+     "id": "giant",
+     "name": "Giant",
+     "name_it": "Gigante"
+    },
+    {
+     "id": "humanoid",
+     "name": "Humanoid",
+     "name_it": "Umanoide"
+    },
+    {
+     "id": "monstrosity",
+     "name": "Monstrosity",
+     "name_it": "Mostruosità"
+    },
+    {
+     "id": "ooze",
+     "name": "Ooze",
+     "name_it": "Melma"
+    },
+    {
+     "id": "plant",
+     "name": "Plant",
+     "name_it": "Vegetale"
+    },
+    {
+     "id": "undead",
+     "name": "Undead",
+     "name_it": "Non morto"
+    },
+    {
+     "id": "swarm",
+     "name": "Swarm",
+     "name_it": "Sciame"
+    }
+   ]
+  },
+  {
+   "id": "coins",
+   "name": "Standard Exchange Rates",
+   "name_it": "Tassi di cambio",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "notes": "50 monete pesano 1 lb (≈0,5 kg).",
+   "rows": [
+    {
+     "id": "cp",
+     "name": "Copper",
+     "name_it": "Rame",
+     "abbr_it": "mr",
+     "gp": 0.01
+    },
+    {
+     "id": "sp",
+     "name": "Silver",
+     "name_it": "Argento",
+     "abbr_it": "ma",
+     "gp": 0.1
+    },
+    {
+     "id": "ep",
+     "name": "Electrum",
+     "name_it": "Electrum",
+     "abbr_it": "me",
+     "gp": 0.5
+    },
+    {
+     "id": "gp",
+     "name": "Gold",
+     "name_it": "Oro",
+     "abbr_it": "mo",
+     "gp": 1
+    },
+    {
+     "id": "pp",
+     "name": "Platinum",
+     "name_it": "Platino",
+     "abbr_it": "mp",
+     "gp": 10
+    }
+   ]
+  },
+  {
+   "id": "travel-pace",
+   "name": "Travel Pace",
+   "name_it": "Andatura di viaggio",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "columns": [
+    "pace",
+    "perMinuteFt",
+    "perHourMiles",
+    "perDayMiles",
+    "effect"
+   ],
+   "rows": [
+    {
+     "pace": "fast",
+     "pace_it": "Veloce",
+     "perMinuteFt": 400,
+     "perHourMiles": 4,
+     "perDayMiles": 30,
+     "effect": "2014: −5 alla Saggezza (Percezione) passiva. 2024: svantaggio a Saggezza (Percezione/Sopravvivenza)."
+    },
+    {
+     "pace": "normal",
+     "pace_it": "Normale",
+     "perMinuteFt": 300,
+     "perHourMiles": 3,
+     "perDayMiles": 24,
+     "effect": "2024: svantaggio a Destrezza (Furtività)."
+    },
+    {
+     "pace": "slow",
+     "pace_it": "Lenta",
+     "perMinuteFt": 200,
+     "perHourMiles": 2,
+     "perDayMiles": 18,
+     "effect": "2014: può usare la Furtività. 2024: vantaggio a Saggezza (Percezione/Sopravvivenza)."
+    }
+   ]
+  },
+  {
+   "id": "equipment-categories",
+   "name": "Equipment Categories",
+   "name_it": "Categorie di equipaggiamento",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "rows": [
+    {
+     "id": "weapon",
+     "level": "category",
+     "name_it": "Arma"
+    },
+    {
+     "id": "armor",
+     "level": "category",
+     "name_it": "Armatura"
+    },
+    {
+     "id": "gear",
+     "level": "category",
+     "name_it": "Equipaggiamento d'avventura"
+    },
+    {
+     "id": "tool",
+     "level": "category",
+     "name_it": "Strumento"
+    },
+    {
+     "id": "mount",
+     "level": "category",
+     "name_it": "Cavalcatura"
+    },
+    {
+     "id": "vehicle",
+     "level": "category",
+     "name_it": "Veicolo"
+    },
+    {
+     "id": "poison",
+     "level": "category",
+     "name_it": "Veleno"
+    },
+    {
+     "id": "standard-gear",
+     "level": "subcategory",
+     "name_it": "Equipaggiamento standard"
+    },
+    {
+     "id": "ammunition",
+     "level": "subcategory",
+     "name_it": "Munizioni"
+    },
+    {
+     "id": "holy-symbols",
+     "level": "subcategory",
+     "name_it": "Simboli sacri"
+    },
+    {
+     "id": "arcane-foci",
+     "level": "subcategory",
+     "name_it": "Focus arcani"
+    },
+    {
+     "id": "druidic-foci",
+     "level": "subcategory",
+     "name_it": "Focus druidici"
+    },
+    {
+     "id": "kits",
+     "level": "subcategory",
+     "name_it": "Kit"
+    },
+    {
+     "id": "equipment-packs",
+     "level": "subcategory",
+     "name_it": "Dotazioni"
+    },
+    {
+     "id": "artisans-tools",
+     "level": "subcategory",
+     "name_it": "Strumenti da artigiano"
+    },
+    {
+     "id": "gaming-sets",
+     "level": "subcategory",
+     "name_it": "Giochi"
+    },
+    {
+     "id": "musical-instruments",
+     "level": "subcategory",
+     "name_it": "Strumenti musicali"
+    },
+    {
+     "id": "other-tools",
+     "level": "subcategory",
+     "name_it": "Altri strumenti"
+    },
+    {
+     "id": "mounts-and-other-animals",
+     "level": "subcategory",
+     "name_it": "Cavalcature e altri animali"
+    },
+    {
+     "id": "tack-harness-and-drawn-vehicles",
+     "level": "subcategory",
+     "name_it": "Finimenti e veicoli trainati"
+    },
+    {
+     "id": "waterborne-vehicles",
+     "level": "subcategory",
+     "name_it": "Veicoli acquatici"
+    },
+    {
+     "id": "simple-melee",
+     "level": "subcategory",
+     "name_it": "Arma semplice da mischia"
+    },
+    {
+     "id": "simple-ranged",
+     "level": "subcategory",
+     "name_it": "Arma semplice a distanza"
+    },
+    {
+     "id": "martial-melee",
+     "level": "subcategory",
+     "name_it": "Arma da guerra da mischia"
+    },
+    {
+     "id": "martial-ranged",
+     "level": "subcategory",
+     "name_it": "Arma da guerra a distanza"
+    },
+    {
+     "id": "ingested",
+     "level": "subcategory",
+     "name_it": "Ingerito"
+    },
+    {
+     "id": "inhaled",
+     "level": "subcategory",
+     "name_it": "Inalato"
+    },
+    {
+     "id": "contact",
+     "level": "subcategory",
+     "name_it": "Contatto"
+    },
+    {
+     "id": "injury",
+     "level": "subcategory",
+     "name_it": "Ferita"
+    },
+    {
+     "id": "light",
+     "level": "subcategory",
+     "name_it": "Leggera"
+    },
+    {
+     "id": "medium",
+     "level": "subcategory",
+     "name_it": "Media"
+    },
+    {
+     "id": "heavy",
+     "level": "subcategory",
+     "name_it": "Pesante"
+    },
+    {
+     "id": "shield",
+     "level": "subcategory",
+     "name_it": "Scudo"
+    }
+   ]
+  },
+  {
+   "id": "magic-item-rarity",
+   "name": "Magic Item Rarity",
+   "name_it": "Rarità degli oggetti magici",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "rows": [
+    {
+     "id": "common",
+     "name_it": "Comune"
+    },
+    {
+     "id": "uncommon",
+     "name_it": "Non comune"
+    },
+    {
+     "id": "rare",
+     "name_it": "Raro"
+    },
+    {
+     "id": "very-rare",
+     "name_it": "Molto raro"
+    },
+    {
+     "id": "legendary",
+     "name_it": "Leggendario"
+    },
+    {
+     "id": "artifact",
+     "name_it": "Artefatto"
+    },
+    {
+     "id": "varies",
+     "name_it": "Varia"
+    }
+   ]
+  },
+  {
+   "id": "magic-item-types",
+   "name": "Magic Item Categories",
+   "name_it": "Categorie di oggetti magici",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "rows": [
+    {
+     "id": "armor",
+     "name_it": "Armatura"
+    },
+    {
+     "id": "weapon",
+     "name_it": "Arma"
+    },
+    {
+     "id": "ammunition",
+     "name_it": "Munizioni"
+    },
+    {
+     "id": "potion",
+     "name_it": "Pozione"
+    },
+    {
+     "id": "ring",
+     "name_it": "Anello"
+    },
+    {
+     "id": "rod",
+     "name_it": "Verga"
+    },
+    {
+     "id": "scroll",
+     "name_it": "Pergamena"
+    },
+    {
+     "id": "staff",
+     "name_it": "Bastone"
+    },
+    {
+     "id": "wand",
+     "name_it": "Bacchetta"
+    },
+    {
+     "id": "wondrous-item",
+     "name_it": "Oggetto meraviglioso"
+    }
+   ]
+  }
+ ]
+}

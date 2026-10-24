@@ -1,0 +1,180 @@
+{
+ "meta": {
+  "source": "SRD 5.1 + SRD 5.2.1 (Wizards of the Coast), via 5e-bits/5e-database",
+  "license": "CC-BY-4.0",
+  "attribution": "This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.\n\nThis work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+  "attributions": {
+   "SRD 5.1": "This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+   "SRD 5.2": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+   "SRD 5.2 (it)": "Quest'opera include materiale tratto dal System Reference Document 5.2.1 (\"SRD 5.2.1\") di Wizards of the Coast LLC, disponibile all'indirizzo https://www.dndbeyond.com/srd. Il SRD 5.2.1 è concesso in licenza ai sensi della licenza di attribuzione 4.0 Internazionale di Creative Commons, disponibile all'indirizzo https://creativecommons.org/licenses/by/4.0/legalcode."
+  },
+  "upstream": {
+   "repo": "https://github.com/5e-bits/5e-database",
+   "commit": "a6212beb4b278917c2cff41c2b04c4ef4f3e0d6f",
+   "license": "Dati SRD CC-BY-4.0 (codice del repo MIT, non usato)"
+  },
+  "dataset": "damageTypes",
+  "generatedAt": "2026-10-24T12:04:59.469Z",
+  "counts": {
+   "SRD 5.1": 13
+  }
+ },
+ "items": [
+  {
+   "id": "acid",
+   "name": "Acid",
+   "name_it": "Acido",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "The corrosive spray of a black dragon's breath and the dissolving enzymes secreted by a black pudding deal acid damage.",
+   "desc2024": "Corrosive liquids, digestive enzymes"
+  },
+  {
+   "id": "bludgeoning",
+   "name": "Bludgeoning",
+   "name_it": "Contundente",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "Blunt force attacks, falling, constriction, and the like deal bludgeoning damage.",
+   "desc2024": "Blunt objects, constriction, falling"
+  },
+  {
+   "id": "cold",
+   "name": "Cold",
+   "name_it": "Freddo",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "The infernal chill radiating from an ice devil's spear and the frigid blast of a white dragon's breath deal cold damage.",
+   "desc2024": "Freezing water, icy blasts"
+  },
+  {
+   "id": "fire",
+   "name": "Fire",
+   "name_it": "Fuoco",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "Red dragons breathe fire, and many spells conjure flames to deal fire damage.",
+   "desc2024": "Flames, unbearable heat"
+  },
+  {
+   "id": "force",
+   "name": "Force",
+   "name_it": "Forza",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "Force is pure magical energy focused into a damaging form. Most effects that deal force damage are spells, including magic missile and spiritual weapon.",
+   "desc2024": "Pure magical energy"
+  },
+  {
+   "id": "lightning",
+   "name": "Lightning",
+   "name_it": "Fulmine",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "A lightning bolt spell and a blue dragon's breath deal lightning damage.",
+   "desc2024": "Electricity"
+  },
+  {
+   "id": "necrotic",
+   "name": "Necrotic",
+   "name_it": "Necrotico",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "Necrotic damage, dealt by certain undead and a spell such as chill touch, withers matter and even the soul.",
+   "desc2024": "Life-draining energy"
+  },
+  {
+   "id": "piercing",
+   "name": "Piercing",
+   "name_it": "Perforante",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "Puncturing and impaling attacks, including spears and monsters' bites, deal piercing damage.",
+   "desc2024": "Fangs, puncturing objects"
+  },
+  {
+   "id": "poison",
+   "name": "Poison",
+   "name_it": "Veleno",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "Venomous stings and the toxic gas of a green dragon's breath deal poison damage.",
+   "desc2024": "Toxic gas, venom"
+  },
+  {
+   "id": "psychic",
+   "name": "Psychic",
+   "name_it": "Psichico",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "Mental abilities such as a psionic blast deal psychic damage.",
+   "desc2024": "Mind-rending energy"
+  },
+  {
+   "id": "radiant",
+   "name": "Radiant",
+   "name_it": "Radioso",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "Radiant damage, dealt by a cleric's flame strike spell or an angel's smiting weapon, sears the flesh like fire and overloads the spirit with power.",
+   "desc2024": "Holy energy, searing radiation"
+  },
+  {
+   "id": "slashing",
+   "name": "Slashing",
+   "name_it": "Tagliente",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "Swords, axes, and monsters' claws deal slashing damage.",
+   "desc2024": "Claws, cutting objects"
+  },
+  {
+   "id": "thunder",
+   "name": "Thunder",
+   "name_it": "Tuono",
+   "source": "SRD 5.1",
+   "sources": [
+    "SRD 5.1",
+    "SRD 5.2"
+   ],
+   "desc": "A concussive burst of sound, such as the effect of the thunderwave spell, deals thunder damage.",
+   "desc2024": "Concussive sound"
+  }
+ ]
+}
