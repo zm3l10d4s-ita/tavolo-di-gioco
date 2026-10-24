@@ -1,0 +1,53 @@
+/* Compendio + componenti "Incolla testo" e catalogo da completare */
+.cmp-layout { display: grid; grid-template-columns: minmax(300px, 380px) 1fr; gap: 16px; align-items: start; }
+.cmp-side { display: flex; flex-direction: column; max-height: calc(100vh - 190px); position: sticky; top: 12px; }
+.cmp-filters { padding: 12px; display: flex; flex-direction: column; gap: 8px; border-bottom: 1px solid var(--line); }
+.cmp-filters .search { max-width: none; }
+.cmp-filters .row > * { flex: 1; min-width: 0; }
+.cmp-count { font-size: 12px; }
+.cmp-list { overflow: auto; padding: 4px; }
+.cmp-row { display: flex; align-items: center; gap: 8px; width: 100%; text-align: left; background: none; border: 0; border-radius: var(--radius); padding: 7px 10px; color: var(--text); cursor: pointer; font: inherit; }
+.cmp-row:hover { background: var(--bg-3); }
+.cmp-row.selected { background: var(--bg-4); box-shadow: inset 3px 0 0 var(--accent); }
+.cmp-row.is-stub .cmp-row-name { color: var(--text-2); }
+.cmp-row-main { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+.cmp-row-name { font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cmp-row-sub { font-size: 12px; color: var(--text-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cmp-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: none; }
+.cmp-detail { padding: 20px 24px; min-height: 420px; }
+.cmp-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.cmp-head h2 { font-size: 28px; }
+.cmp-props { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px 18px; margin: 14px 0; padding: 12px 14px; background: var(--bg-3); border-radius: var(--radius-lg); border: 1px solid var(--line); }
+.cmp-props dt { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--text-3); font-weight: 600; }
+.cmp-props dd { margin: 2px 0 0; }
+.cmp-desc { margin: 10px 0 16px; }
+.cmp-features { display: flex; flex-direction: column; gap: 14px; margin-top: 10px; }
+.cmp-feature h4 { color: var(--accent-2); margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+.cmp-hb-actions { margin: 8px 0; }
+.cmp-attrib { margin-top: 22px; font-size: 12px; }
+
+/* tag fonte per manuali */
+.tag.book { color: var(--text-2); border-color: var(--line-strong); }
+.tag.stub { color: var(--accent-2); border-color: rgba(224,145,58,.35); background: transparent; border-style: dashed; }
+
+/* riquadro voce da completare */
+.stub-banner { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: var(--radius-lg); margin: 10px 0 14px; flex-wrap: wrap; }
+.stub-banner.todo { background: rgba(224,145,58,.08); border: 1px dashed rgba(224,145,58,.45); }
+.stub-banner.done { background: var(--bg-3); border: 1px solid var(--line); }
+.stub-banner .stub-text { flex: 1; min-width: 220px; line-height: 1.45; }
+
+/* modale incolla testo */
+.pi-help { margin: 0 0 12px; }
+.pi-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 16px; }
+.pi-text textarea { font: 13px/1.5 var(--font-mono); min-height: 360px; }
+.pi-preview { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.pi-empty { padding: 30px 12px; border: 1px dashed var(--line-strong); border-radius: var(--radius-lg); text-align: center; }
+.pi-summary { display: grid; grid-template-columns: 1fr; gap: 6px; margin: 0; padding: 10px 12px; background: var(--bg-3); border: 1px solid var(--line); border-radius: var(--radius); }
+.pi-summary > div { display: grid; grid-template-columns: 130px 1fr; gap: 8px; }
+.pi-summary dt { font-size: 12px; color: var(--text-3); }
+.pi-summary dd { margin: 0; font-size: 13px; word-break: break-word; }
+.pi-warn { margin: 0; padding: 8px 12px 8px 28px; border-radius: var(--radius); background: rgba(226,194,90,.08); border: 1px solid rgba(226,194,90,.35); color: var(--warn); font-size: 13px; }
+.pi-desc p { margin: 4px 0 0; font-size: 13px; color: var(--text-2); white-space: pre-line; }
+.pi-actions { margin-top: 14px; }
+
+@media (max-width: 1200px) { .cmp-layout { grid-template-columns: 300px 1fr; } .pi-grid { grid-template-columns: 1fr; } .pi-text textarea { min-height: 220px; } }

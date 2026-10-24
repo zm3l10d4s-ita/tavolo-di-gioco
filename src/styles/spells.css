@@ -1,0 +1,64 @@
+/* Incantesimi. Solo token di app.css. */
+.sp-view { height: 100vh; display: flex; flex-direction: column; max-width: none; padding-bottom: 18px; }
+.sp-view .view-head { margin-bottom: 14px; }
+.sp-view .view-head h1 { margin-right: 0; }
+.sp-view .view-head > .faint { margin-right: auto; }
+.sp-layout { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(340px, 430px) minmax(0, 1fr); gap: 20px; }
+.sp-side { display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
+.sp-filters { padding: 12px 12px 8px; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 10px; }
+.sp-fgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.sp-frow { gap: 6px; }
+.sp-frow .field-label { margin-right: 4px; }
+.sp-sort { width: auto; }
+.sp-count { font-size: 13px; }
+.comp-chip { width: 32px; height: 28px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--bg-3); color: var(--text-3); font: 700 13px var(--font-ui); cursor: pointer; }
+.comp-chip.s1 { border-color: var(--magic); color: var(--magic); background: rgba(127,176,214,.12); }
+.comp-chip.s-1 { border-color: var(--bad); color: var(--bad); text-decoration: line-through; background: rgba(224,106,85,.08); }
+
+.sp-list { flex: 1; min-height: 0; overflow-y: auto; outline: none; padding: 4px; }
+.sp-list .empty { margin: 10px; }
+.sp-row { display: grid; grid-template-columns: 34px minmax(0, 1fr) auto auto; align-items: center; gap: 10px; width: 100%; padding: 7px 8px;
+  border: 0; border-radius: var(--radius); background: none; color: var(--text); text-align: left; cursor: pointer; font: inherit; }
+.sp-row:hover { background: var(--bg-3); }
+.sp-row.selected { background: var(--bg-4); box-shadow: inset 3px 0 0 var(--magic); }
+.sp-lvl { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font: 700 13px var(--font-ui); color: var(--magic);
+  border: 1px solid rgba(127,176,214,.45); background: rgba(127,176,214,.08); }
+.sp-lvl.cantrip { color: var(--text-2); border-color: var(--line-strong); background: var(--bg-3); }
+.sp-row-main { display: flex; flex-direction: column; min-width: 0; }
+.sp-row-name { font: 600 16px/1.2 var(--font-display); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sp-row-name small { font: 400 12px var(--font-ui); color: var(--text-3); }
+.sp-row-sub { font-size: 12px; color: var(--text-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sp-flags { display: flex; gap: 3px; }
+.flag { width: 18px; height: 18px; border-radius: 4px; display: grid; place-items: center; font: 700 10.5px var(--font-ui); color: var(--magic); border: 1px solid rgba(127,176,214,.4); }
+
+.sp-detail { min-height: 0; overflow-y: auto; padding: 0 8px 20px 2px; }
+.sp-detail-card { max-width: 780px; background: var(--bg-2); border: 1px solid var(--line); border-top: 3px solid var(--magic); border-radius: var(--radius-lg);
+  padding: 18px 24px 16px; box-shadow: 0 6px 22px rgba(0,0,0,.28); }
+.sp-dhead { display: flex; align-items: flex-start; gap: 12px; }
+.sp-dhead h2 { font-size: 30px; color: var(--magic); font-variant: small-caps; letter-spacing: .015em; line-height: 1.1; }
+.sp-sub { font: italic 16px var(--font-display); color: var(--text-2); margin-top: 2px; }
+.sp-actions { display: flex; gap: 8px; align-items: center; margin: 14px 0 12px; }
+.sp-props { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; margin: 0; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.sp-props > div { background: var(--bg-3); padding: 8px 12px; }
+.sp-props dt { font-size: 10.5px; text-transform: uppercase; letter-spacing: .08em; color: var(--text-3); font-weight: 700; }
+.sp-props dd { margin: 2px 0 0; font-size: 14.5px; }
+.sp-props small { display: block; font-size: 12px; margin-top: 2px; }
+.sp-classes { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin: 12px 0 0; }
+.sp-classes .field-label { margin-right: 4px; }
+.sp-body { margin-top: 14px; font: 16.5px/1.6 var(--font-display); }
+.sp-body .prose { line-height: 1.55; }
+.sp-higher h4 { color: var(--magic); font-size: 17px; margin: 8px 0 4px; font-style: italic; }
+.sp-attrib { font-size: 12px; margin: 14px 0 0; }
+
+/* editor homebrew */
+.sp-editor { display: flex; flex-direction: column; gap: 12px; }
+.sp-ed-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.sp-ed-grid .span2 { grid-column: span 2; }
+.sp-ed-grid .num-wrap .input { width: 100%; }
+.sp-ed-checks { gap: 14px; }
+
+@media (max-width: 1280px) {
+  .sp-layout { grid-template-columns: minmax(300px, 360px) minmax(0, 1fr); gap: 14px; }
+  .sp-fgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sp-props { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

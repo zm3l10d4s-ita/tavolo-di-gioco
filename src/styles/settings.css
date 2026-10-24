@@ -1,0 +1,65 @@
+/* Sezione "Dati e backup" (Agente 2). Solo token di app.css. */
+.set-view { max-width: 1400px; }
+.set-layout { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(320px, 1fr); gap: 16px; align-items: start; }
+.set-main, .set-side { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.set-full { grid-column: 1 / -1; }
+@media (max-width: 1180px) { .set-layout { grid-template-columns: minmax(0, 1fr); } }
+
+.set-note { margin: 8px 0 0; font-size: 12.5px; line-height: 1.5; }
+.set-note a { color: var(--accent-2); }
+.set-k { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--text-3); font-weight: 600; margin-bottom: 4px; }
+.set-kv { margin-bottom: 12px; }
+.set-path-row { display: flex; gap: 8px; align-items: center; min-width: 0; }
+.set-path { flex: 1; min-width: 0; font: 12px var(--font-mono); background: var(--bg-3); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 5px 8px; color: var(--text-2); overflow-wrap: anywhere; }
+.set-status { display: inline-flex; align-items: center; gap: 7px; }
+.set-error { color: var(--bad); font-size: 12.5px; margin: 0 0 8px; }
+
+.set-events { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 10px; }
+.set-events ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; font-size: 12.5px; max-height: 160px; overflow: auto; }
+.set-events li { padding-left: 9px; border-left: 2px solid var(--line-strong); }
+.set-events li.lvl-warn { border-left-color: var(--warn); }
+.set-events li.lvl-error { border-left-color: var(--bad); color: var(--bad); }
+
+/* backup */
+.set-create { display: flex; gap: 10px; align-items: flex-end; }
+.set-create .field { flex: 1; }
+.set-summary { font-size: 12px; margin: 14px 0 6px; }
+.set-table-wrap { max-height: 560px; overflow: auto; border: 1px solid var(--line); border-radius: var(--radius); }
+.set-table td { vertical-align: middle; }
+.set-table th.r, .set-table td.r { text-align: right; white-space: nowrap; }
+.set-when { min-width: 0; }
+.set-date { font-variant-numeric: tabular-nums; }
+.set-label { font: 600 16px/1.25 var(--font-display); color: var(--accent-2); margin-bottom: 1px; overflow-wrap: anywhere; }
+.set-counts { font-size: 12px; margin-top: 1px; }
+.set-actions { white-space: nowrap; text-align: right; }
+.set-actions > span + span { margin-left: 4px; }
+.set-table tbody tr:hover td { background: var(--bg-3); }
+.set-backups .empty { margin-top: 14px; padding: 24px; }
+
+/* preferenze */
+.set-prefs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+/* licenze */
+.set-licenses .panel-body { display: block; }
+.set-attr { margin: 14px 0 0; }
+.set-attr figcaption { font: 600 15px var(--font-display); color: var(--text); margin-bottom: 4px; }
+.set-attr blockquote { margin: 0; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--bg-3);
+  border-radius: 0 var(--radius) var(--radius) 0; font-size: 12.5px; color: var(--text-2); line-height: 1.55; overflow-wrap: anywhere; }
+.set-ofl { margin-top: 8px; }
+.set-ofl summary { cursor: pointer; color: var(--text-2); font-size: 12.5px; }
+.set-ofl pre { max-height: 300px; overflow: auto; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 10px 12px; font: 11.5px/1.5 var(--font-mono); color: var(--text-2); white-space: pre-wrap; }
+
+/* sincronizzazione */
+.set-main { display: flex; flex-direction: column; gap: 16px; }
+.sync-status { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px 14px; margin: 10px 0 14px; padding: 12px; background: var(--bg-3); border: 1px solid var(--line); border-radius: var(--radius-lg); align-items: end; }
+.sync-status > div { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.sync-status b { font-weight: 600; }
+.sync-pending { color: var(--accent-2); }
+.sync-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.sync-help { margin-top: 12px; color: var(--text-2); }
+.sync-help summary { cursor: pointer; color: var(--text); }
+.sync-help ol { padding-left: 20px; line-height: 1.6; }
+.sync-lines { line-height: 1.7; }
+@media (max-width: 1180px) { .sync-status { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
