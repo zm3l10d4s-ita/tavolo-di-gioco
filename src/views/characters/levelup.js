@@ -2,11 +2,45 @@
 import { html, useState, useEffect } from '../../vendor/preact-htm.js';
 import { Modal, Button, Select, toast } from '../../components/ui.js';
 import * as R from '../../lib/rules.js';
-import { roll, signed } from '../../lib/util.js';
-import { levelUp, featuresAtLevel, subclassLevel, hpGainForLevel, applySuggestedResources, syncSlots, effectiveSlots } from './logic.js';
+import { roll, signed, uid } from '../../lib/util.js';
+import { levelUp, featuresAtLevel, subclassLevel, hpGainForLevel, applySuggestedResources, syncSlots, effectiveSlots, levelUpReminders } from './logic.js';
 import { Inline } from './widgets.js';
 
 const NEW = '__new';
+const AB_OPTS = R.ABILITIES.map((a) => ({ value: a, label: R.ABILITY_LABELS_IT[a].name }));
+const FEAT_TYPES = { asi: null, boon: 'epic-boon', style: 'fighting-style' };
+
+/** Scelta di aumento dei punteggi / talento / dono epico / stile di combattimento direttamente nel passaggio di livello. */
+function Chooser({ r, value = {}, onChange, c, data, totalLevel }) {
+  const v = { mode: 'later', ...value };
+  const set = (p) => onChange({ ...v, ...p });
+  const type = FEAT_TYPES[r.chooser];
+  const feats = (data.feats || []).filter((f) => (f._homebrew || R.matchesRuleset(f, c.ruleset))
+      && (type ? f.type === type || (r.chooser === 'boon' && f.type === 'general') : !['epic-boon', 'fighting-style', 'origin'].includes(f.type))
+      && !(f.prerequisites || []).some((p) => p.minLevel && p.minLevel > totalLevel))
+    .sort((a, b) => (b.type === type) - (a.type === type) || a.name.localeCompare(b.name));
+  const modes = r.chooser === 'asi'
+    ? [{ value: 'later', label: 'Scelgo più tardi' }, { value: 'plus2', label: '+2 a una caratteristica' }, { value: 'plus11', label: '+1 a due caratteristiche' }, { value: 'feat', label: 'Un talento' }]
+    : [{ value: 'later', label: 'Scelgo più tardi' }, { value: 'feat', label: r.chooser === 'style' ? 'Scegli lo stile' : 'Scegli il talento' }];
+  const sc = (a) => c.abilities?.[a]?.score || 10;
+  return html`<div class="cs-lu-chooser" data-testid=${'lu-chooser-' + r.chooser}>
+    <${Select} value=${v.mode} options=${modes} onChange=${(m) => set({ mode: m })} data-testid=${'lu-mode-' + r.chooser} />
+    ${(v.mode === 'plus2' || v.mode === 'plus11') && html`<${Select} value=${v.a1 || ''} onChange=${(a) => set({ a1: a })} data-testid="lu-a1"
+      options=${[{ value: '', label: v.mode === 'plus2' ? '+2 a…' : '+1 a…' }, ...AB_OPTS.map((o) => ({ ...o, label: `${o.label} (${sc(o.value)})` }))]} />`}
+    ${v.mode === 'plus11' && html`<${Select} value=${v.a2 || ''} onChange=${(a) => set({ a2: a })} data-testid="lu-a2"
+      options=${[{ value: '', label: '+1 a…' }, ...AB_OPTS.filter((o) => o.value !== v.a1).map((o) => ({ ...o, label: `${o.label} (${sc(o.value)})` }))]} />`}
+    ${v.mode === 'feat' && html`<${Select} value=${v.featId || ''} onChange=${(id) => set({ featId: id })} data-testid="lu-feat"
+      options=${[{ value: '', label: `— ${feats.length} disponibili —` }, ...feats.map((f) => ({ value: f.id, label: `${f.name}${R.versionTag(f, c.ruleset)}${f._catalog ? ` (${f.sourceKey})` : ''}${f.prerequisiteText ? ' · ' + f.prerequisiteText : ''}` }))]} />`}
+    ${(v.mode === 'plus2' && v.a1 && sc(v.a1) + 2 > 20) || (v.mode === 'plus11' && [v.a1, v.a2].some((a) => a && sc(a) + 1 > 20)) ? html`<span class="tag bad">Massimo 20</span>` : ''}
+  </div>`;
+}
+const choiceDone = (r, v) => {
+  if (!r.chooser || !v || v.mode === 'later') return false;
+  if (v.mode === 'plus2') return !!v.a1;
+  if (v.mode === 'plus11') return !!v.a1 && !!v.a2 && v.a1 !== v.a2;
+  if (v.mode === 'feat') return !!v.featId;
+  return false;
+};
 
 export function LevelUpModal({ open, onClose, c, mutate, data }) {
   const [sel, setSel] = useState('0');
@@ -16,7 +50,8 @@ export function LevelUpModal({ open, onClose, c, mutate, data }) {
   const [rolled, setRolled] = useState(null);
   const [subId, setSubId] = useState('');
   const [skip, setSkip] = useState({});
-  useEffect(() => { if (open) { setSel(c.classes.length ? '0' : NEW); setMethod('avg'); setRolled(null); setSubId(''); setSkip({}); } }, [open]);
+  const [choices, setChoices] = useState({});
+  useEffect(() => { if (open) { setSel(c.classes.length ? '0' : NEW); setMethod('avg'); setRolled(null); setSubId(''); setSkip({}); setChoices({}); } }, [open]);
   if (!open) return null;
 
   const isNew = sel === NEW;
@@ -41,7 +76,9 @@ export function LevelUpModal({ open, onClose, c, mutate, data }) {
   const gainPreview = firstEver ? Math.max(1, (Number(entry?.hitDie) || 8) + R.abilityModOf(c, 'con'))
     : method === 'roll' && rolled != null ? hpGainForLevel(c, entry?.hitDie, 'roll', rolled).gain : avgGain;
   const lvlRow = data.levels.find((l) => l.id === `${entry?.classId}-${newLevel}`);
-  const asi = feats.some((f) => /ability score improvement/i.test(f.name));
+  const reminders = entry ? levelUpReminders(c, { classId: entry.classId, subclassId: chosenSub, newLevel, isNew, newSubclassChosen: !!subId }, data) : [];
+  if (needSub && !subId) reminders.unshift({ id: 'subclass', kind: 'choice', title: 'Sottoclasse', text: `Al ${subLvl}° livello scegli la sottoclasse.` });
+  const totalAfter = R.totalLevel(c) + 1;
 
   const confirm = () => {
     let res, resInfo, slotsBefore = effectiveSlots(c, data.classes), slotsAfter;
@@ -56,11 +93,25 @@ export function LevelUpModal({ open, onClose, c, mutate, data }) {
       resInfo = applySuggestedResources(x, data.levels);
       x = syncSlots(resInfo.character, data.classes);
       slotsAfter = effectiveSlots(x, data.classes);
+      // scelte fatte qui (aumento dei punteggi, talento, stile, dono epico)
+      for (const r of reminders) {
+        const v = choices[r.id];
+        if (!choiceDone(r, v)) continue;
+        if (v.mode === 'plus2') x.abilities[v.a1] = { ...x.abilities[v.a1], score: Math.min(20, (x.abilities[v.a1]?.score || 10) + 2) };
+        if (v.mode === 'plus11') for (const a of [v.a1, v.a2]) x.abilities[a] = { ...x.abilities[a], score: Math.min(20, (x.abilities[a]?.score || 10) + 1) };
+        if (v.mode === 'feat') { const f = (data.feats || []).find((q) => q.id === v.featId); if (f) x.feats = [...(x.feats || []), { id: uid(), featId: f.id, name: f.name, text: f.desc || '' }]; }
+      }
+      // promemoria che restano sulla scheda finché non li segni come fatti
+      const label = `${entry.name} ${res.newLevel}`;
+      const todo = reminders.filter((r) => r.kind !== 'info' && !choiceDone(r, choices[r.id]) && !(r.id === 'subclass' && subId))
+        .map((r) => ({ id: uid(), key: r.id, level: label, kind: r.kind, title: r.title, text: r.text, createdAt: new Date().toISOString() }));
+      x.todo = [...(x.todo || []), ...todo];
       return x;
     });
     const newSlots = [];
     for (let i = 1; i <= 9; i++) if (slotsAfter.slots[i].max > slotsBefore.slots[i].max) newSlots.push(`${i}°: ${slotsBefore.slots[i].max}→${slotsAfter.slots[i].max}`);
-    toast(`${entry.name} ${res.newLevel}: +${res.hpGain} PF${newSlots.length ? ` · slot ${newSlots.join(', ')}` : ''}${resInfo.added.length || resInfo.updated.length ? ` · risorse: ${[...resInfo.added, ...resInfo.updated].join(', ')}` : ''}`, 'good');
+    const left = reminders.filter((r) => r.kind !== 'info' && !choiceDone(r, choices[r.id]) && !(r.id === 'subclass' && subId)).length;
+    toast(`${entry.name} ${res.newLevel}: +${res.hpGain} PF${left ? ` · ${left} ${left === 1 ? 'cosa' : 'cose'} da fare (in cima alla scheda)` : ''}${newSlots.length ? ` · slot ${newSlots.join(', ')}` : ''}${resInfo.added.length || resInfo.updated.length ? ` · risorse: ${[...resInfo.added, ...resInfo.updated].join(', ')}` : ''}`, 'good');
     onClose();
   };
 
@@ -106,8 +157,17 @@ export function LevelUpModal({ open, onClose, c, mutate, data }) {
             <input type="checkbox" checked=${!skip[f.id]} onChange=${() => setSkip({ ...skip, [f.id]: !skip[f.id] })} />
             <span><b>${f.name}</b> <span class="tag">${f.origin}</span><br /><span class="muted cs-small">${String(f.text).slice(0, 260)}${String(f.text).length > 260 ? '…' : ''}</span></span></label>`)
           : html`<p class="faint cs-small">${entry?.classId ? 'Nessun nuovo privilegio SRD a questo livello.' : 'Classe senza dati SRD: aggiungi i privilegi a mano.'}</p>`}
-        ${asi && html`<p class="cs-small"><span class="tag accent">Aumento dei punteggi</span> Ricorda di aggiornare le caratteristiche (o di scegliere un talento) nella scheda.</p>`}
       </div>
+
+      ${reminders.length > 0 && html`<div class="cs-lu-todo" data-testid="levelup-reminders">
+        <span class="field-label">Da fare a questo livello</span>
+        <ul>${reminders.map((r) => html`<li class=${'lu-r ' + r.kind + (choiceDone(r, choices[r.id]) ? ' done' : '')} data-testid=${'lu-r-' + r.id}>
+          <span class="lu-r-ico">${r.kind === 'warn' ? '⚠' : r.kind === 'info' ? 'ℹ' : choiceDone(r, choices[r.id]) ? '✓' : '☐'}</span>
+          <div><b>${r.title}</b> <span class="muted cs-small">${r.text}</span>
+            ${r.chooser && html`<${Chooser} r=${r} value=${choices[r.id]} onChange=${(v) => setChoices({ ...choices, [r.id]: v })} c=${c} data=${data} totalLevel=${totalAfter} />`}</div>
+        </li>`)}</ul>
+        <p class="faint cs-small">Quello che non scegli qui resta come promemoria in cima alla scheda, finché non lo segni come fatto.</p>
+      </div>`}
 
       <footer class="row"><span class="spacer"></span>
         <${Button} variant="ghost" onClick=${onClose}>Annulla</${Button}>

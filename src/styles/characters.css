@@ -370,3 +370,20 @@
 .cs-mastery-add select { flex: 1; min-width: 0; }
 .cs-mastery-tag { margin-right: 4px; }
 .cs-hc-dice { flex-wrap: wrap; gap: 6px; margin: 6px 0 10px; }
+/* passaggio di livello: promemoria e scelte */
+.cs-lu-todo ul { list-style: none; margin: 6px 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.lu-r { display: flex; gap: 8px; align-items: flex-start; padding: 8px 10px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-3); }
+.lu-r.choice { border-color: rgba(224,145,58,.45); }
+.lu-r.warn { border-color: var(--warn); }
+.lu-r.done { opacity: .7; border-color: var(--good); }
+.lu-r-ico { width: 18px; flex: none; text-align: center; }
+.cs-lu-chooser { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.cs-lu-chooser > * { flex: 1 1 160px; min-width: 0; }
+/* promemoria sulla scheda */
+.cs-todo { margin: 10px 0 0; border: 1px solid rgba(224,145,58,.5); border-radius: var(--radius-lg); background: rgba(224,145,58,.08); }
+.cs-todo-head { display: flex; align-items: center; gap: 8px; width: 100%; background: none; border: 0; color: var(--text); padding: 8px 12px; cursor: pointer; font: inherit; text-align: left; }
+.cs-todo-ico { color: var(--accent); }
+.cs-todo-list { list-style: none; margin: 0; padding: 0 12px 8px; display: flex; flex-direction: column; gap: 6px; }
+.cs-todo-list li { display: flex; gap: 10px; align-items: center; justify-content: space-between; padding: 8px 10px; border-radius: var(--radius); background: var(--bg-2); }
+.cs-todo-list li.warn { border-left: 3px solid var(--warn); }
+.cs-todo .row { padding: 0 12px 10px; }

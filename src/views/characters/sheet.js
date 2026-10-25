@@ -142,6 +142,24 @@ function Header({ c, mutate, data, units, onBack, onLevelUp, onShort, onLong }) 
   </header>`;
 }
 
+/** Promemoria lasciati dal passaggio di livello (scelte ancora da fare). */
+function TodoBanner({ c, mutate }) {
+  const [open, setOpen] = useState(false);
+  const list = c.todo || [];
+  if (!list.length) return null;
+  const done = (id) => mutate((d) => { d.todo = (d.todo || []).filter((t) => t.id !== id); });
+  return html`<div class="cs-todo ${open ? 'open' : ''}" data-testid="todo-banner">
+    <button class="cs-todo-head" onClick=${() => setOpen(!open)} data-testid="todo-toggle">
+      <span class="cs-todo-ico">☐</span><b>${list.length} ${list.length === 1 ? 'cosa da fare' : 'cose da fare'}</b>
+      <span class="muted cs-small">dal passaggio di livello</span><span class="spacer"></span><span class="muted">${open ? '▲' : '▼'}</span></button>
+    ${open && html`<ul class="cs-todo-list">${list.map((t) => html`<li class=${t.kind} data-testid="todo-item">
+        <div><b>${t.title}</b> <span class="tag">${t.level}</span><br /><span class="muted cs-small">${t.text}</span></div>
+        <button class="btn sm" onClick=${() => done(t.id)} data-testid="todo-done">Fatto</button></li>`)}
+      </ul>
+      <div class="row"><span class="spacer"></span><button class="btn ghost sm" onClick=${() => mutate((d) => { d.todo = []; })}>Segna tutto come fatto</button></div>`}
+  </div>`;
+}
+
 export function CharacterSheet({ id, navigate }) {
   const [c, mutate] = useCharacter(id);
   const data = useData();
@@ -169,6 +187,7 @@ export function CharacterSheet({ id, navigate }) {
         onLevelUp=${() => setModal('level')} onShort=${() => setModal('short')} onLong=${() => setModal('long')} />
       <div class="cs-tabs" data-testid="sheet-tabs"><${Tabs} tabs=${TABS} active=${tab} onChange=${setTab} /></div>
     </div>
+    <${TodoBanner} c=${c} mutate=${mutate} />
     <div class="cs-body" data-tab=${tab}><${body} ...${ctx} /></div>
     <${LevelUpModal} open=${modal === 'level'} onClose=${() => setModal(null)} ...${ctx} />
     <${ShortRestModal} open=${modal === 'short'} onClose=${() => setModal(null)} ...${ctx} />

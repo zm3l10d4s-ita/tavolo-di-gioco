@@ -240,3 +240,7 @@
   .cs-wz-skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cs-wz-foot { flex-wrap: wrap; }
 }
+@media (max-width: 760px) {
+  .cs-todo { margin: 10px 12px 0; }
+  .cs-todo-list li { flex-direction: column; align-items: stretch; }
+}

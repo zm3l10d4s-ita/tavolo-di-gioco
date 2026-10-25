@@ -621,6 +621,135 @@ export function levelUp(character, { classIndex = 0, newClass = null, hpMethod =
 }
 
 // ---------------------------------------------------------------------------
+// Promemoria del passaggio di livello: cosa scegliere o aggiornare a mano.
+// Ritorna [{ id, kind: 'choice' | 'info' | 'warn', title, text, chooser? }]. chooser: 'asi' | 'boon' | 'style'.
+// ---------------------------------------------------------------------------
+const maxSlotLevel = (row) => {
+  if (!row) return 0;
+  let m = 0;
+  for (const [k, v] of Object.entries(row.spellSlots || {})) if (n(v, 0) > 0) m = Math.max(m, n(k, 0));
+  if (row.pactMagic?.slotLevel) m = Math.max(m, n(row.pactMagic.slotLevel, 0));
+  return m;
+};
+const ORD = (k) => `${k}°`;
+// privilegi che richiedono una scelta del giocatore (nome in inglese come nei dati SRD → promemoria)
+const CHOICE_FEATURES = [
+  [/^expertise$/i, 'Maestria', 'Scegli 2 abilità in cui sei competente: ottieni Maestria (doppio bonus). Nella scheda, abilità → ★★.'],
+  [/^scholar$/i, 'Studioso', 'Scegli un\'abilità tra Arcano, Storia, Indagare, Medicina, Natura e Religione in cui sei competente: ottieni Maestria.'],
+  [/^deft explorer$/i, 'Esploratore abile', 'Scegli un\'abilità per la Maestria e due lingue.'],
+  [/^favored enemy/i, 'Nemico prescelto', 'Scegli un tipo di nemico prescelto (e una lingua associata, regole 2014).'],
+  [/^natural explorer/i, 'Esploratore nato', 'Scegli un terreno prescelto.'],
+  [/^pact boon$/i, 'Dono del patto', 'Scegli il dono del patto (Catena, Lama, Tomo…).'],
+  [/^magical secrets$/i, 'Segreti magici', 'Puoi imparare incantesimi anche dalle liste di altre classi.'],
+  [/^divine order$/i, 'Ordine divino', 'Scegli Protettore o Taumaturgo.'],
+  [/^primal order$/i, 'Ordine primordiale', 'Scegli Guardiano o Mago.'],
+  [/^primal knowledge$/i, 'Conoscenza primordiale', 'Ottieni competenza in un\'altra abilità della lista del Barbaro.'],
+  [/^signature spells?$/i, 'Incantesimi distintivi', 'Scegli due incantesimi di 3° livello come incantesimi distintivi.'],
+  [/^spell mastery$/i, 'Padronanza degli incantesimi', 'Scegli un incantesimo di 1° e uno di 2° livello da lanciare a volontà.'],
+  [/^memorize spell$/i, 'Memorizzare incantesimo', 'Dopo un riposo breve puoi sostituire un incantesimo preparato.'],
+  [/^bardic inspiration$/i, null, null],
+];
+
+export function levelUpReminders(character, { classId, subclassId = '', newLevel, isNew = false, newSubclassChosen = false } = {}, data = {}) {
+  const c = normalizeCharacter(character);
+  const out = [];
+  const add = (id, kind, title, text, extra = {}) => out.push({ id, kind, title, text, ...extra });
+  const classes = data.classes || [], subclasses = data.subclasses || [], levels = data.levels || [];
+  const cd = classes.find((x) => x.id === classId) || null;
+  const base = R.baseKey(classId);
+  const rs = cd ? R.itemRuleset(cd) : R.classRuleset(c, classId);
+  const totalBefore = R.totalLevel(c);
+  const row = levels.find((l) => l.id === `${classId}-${newLevel}`) || null;
+  const prev = newLevel > 1 ? levels.find((l) => l.id === `${classId}-${newLevel - 1}`) || null : null;
+  const feats = classId ? featuresAtLevel(classId, subclassId, newLevel, classes, subclasses) : [];
+  const names = [...feats.map((f) => f.name), ...(row?.features || []).map((f) => (typeof f === 'string' ? f : f.name))];
+  const has = (re) => names.some((x) => re.test(x));
+
+  // classe o sottoclasse dei manuali (senza privilegi nei dati)
+  if (!cd) add('custom-class', 'warn', 'Classe senza dati', 'Aggiungi a mano i privilegi di questo livello (tab Privilegi).');
+  else if (cd.stub || cd._catalog) add('catalog-class', 'warn', `${cd.name}: privilegi da aggiungere`, 'È una classe dei manuali: aggiungi a mano i privilegi di questo livello (tab Privilegi) o completala con «Incolla testo» nel Compendio.');
+  const sd = subclassId ? subclasses.find((x) => x.id === subclassId) : null;
+  if (sd && (sd.stub || sd._catalog)) {
+    const sibling = subclasses.find((x) => !x.stub && !x._catalog && R.baseKey(x.classId) === base && (x.features || []).length);
+    const lvls = new Set((sibling?.features || []).map((f) => n(f.level)));
+    if (lvls.has(newLevel) || newSubclassChosen || has(/(path|college|domain|circle|archetype|tradition|oath|origin|patron) feature/i))
+      add('catalog-subclass', 'warn', `${sd.name}: privilegio di sottoclasse`, 'A questo livello la tua sottoclasse (da manuale) ottiene un privilegio: aggiungilo a mano nel tab Privilegi.');
+  }
+
+  // aumento dei punteggi / talento, dono epico, stile di combattimento
+  if (has(/ability score improvement/i)) add('asi', 'choice', 'Aumento dei punteggi o talento', '+2 a una caratteristica, +1 a due, oppure un talento.', { chooser: 'asi' });
+  if (has(/^epic boon$/i)) add('boon', 'choice', 'Dono epico', 'Scegli un talento Dono epico (o un aumento dei punteggi).', { chooser: 'boon' });
+  if (has(/^fighting style$/i)) {
+    if (rs === '2024') add('style', 'choice', 'Stile di combattimento', 'Scegli un talento Stile di combattimento.', { chooser: 'style' });
+    else add('style', 'choice', 'Stile di combattimento', 'Scegli uno stile: Tiro, Difesa, Duello, Combattere con armi possenti, Protezione o Combattere con due armi.');
+  }
+
+  // incantesimi
+  const dv = (k) => (row && row[k] != null ? n(row[k], 0) - n(prev?.[k], 0) : 0);
+  const cantrips = dv('cantripsKnown');
+  if (cantrips > 0) add('cantrips', 'choice', `${cantrips} ${cantrips === 1 ? 'nuovo trucchetto' : 'nuovi trucchetti'}`, `Scegli ${cantrips === 1 ? 'un trucchetto' : cantrips + ' trucchetti'} dalla lista della classe (tab Incantesimi).`);
+  const maxNow = maxSlotLevel(row), maxBefore = maxSlotLevel(prev);
+  const known = dv('spellsKnown');
+  if (known > 0) add('spells-known', 'choice', `${known} ${known === 1 ? 'nuovo incantesimo' : 'nuovi incantesimi'} conosciuti`,
+    `Scegli ${known === 1 ? 'un incantesimo' : known + ' incantesimi'} fino al ${ORD(maxNow || 1)} livello.${newLevel > 1 ? ' Puoi anche sostituirne uno che conosci.' : ''}`);
+  const prep = dv('preparedSpells');
+  if (prep > 0) add('prepared', 'choice', `+${prep} ${prep === 1 ? 'incantesimo preparato' : 'incantesimi preparati'}`, `Ora ne prepari ${n(row.preparedSpells)}: aggiungili nel tab Incantesimi.`);
+  else if (rs === '2014' && cd?.spellcasting && cd.spellcasting.preparation !== 'known' && !known) {
+    const after = { ...c, classes: c.classes.map((e) => (e.classId === classId ? { ...e, level: newLevel } : e)) };
+    if (isNew) after.classes = [...c.classes, { classId, level: 1 }];
+    const pa = preparedMax(c, classes, levels), pb = preparedMax(after, classes, levels);
+    if (pb != null && pb > (pa || 0)) add('prepared', 'info', 'Incantesimi preparati', `Ne puoi preparare ${pb}${pa != null ? ` (prima ${pa})` : ''}.`);
+  }
+  if (base === 'wizard' && newLevel > 1) add('spellbook', 'choice', 'Libro degli incantesimi', `Aggiungi 2 incantesimi da mago al libro, fino al ${ORD(maxNow || 1)} livello.`);
+  if (maxNow > maxBefore && newLevel > 1) add('slot-level', 'info', `Incantesimi di ${ORD(maxNow)} livello`, `Ora hai slot di ${ORD(maxNow)} livello: gli slot vengono aggiornati in automatico.`);
+  const arc = names.find((x) => /mystic arcanum/i.test(x));
+  if (arc) add('arcanum', 'choice', 'Arcanum mistico', `Scegli un incantesimo da warlock di ${ORD(({ 11: 6, 13: 7, 15: 8, 17: 9 })[newLevel] || '?')} livello da lanciare una volta per riposo lungo.`);
+
+  // suppliche, metamagia, padronanze
+  const cs = (k) => n(row?.classSpecific?.[k], 0) - n(prev?.classSpecific?.[k], 0);
+  const inv = Math.max(cs('invocationsKnown'), cs('eldritchInvocations'));
+  if (inv > 0) add('invocations', 'choice', `${inv} ${inv === 1 ? 'nuova supplica occulta' : 'nuove suppliche occulte'}`, 'Scegli nel tab Privilegi (le suppliche dei manuali sono nel Compendio → Opzioni di classe). Puoi anche sostituirne una.');
+  let meta = cs('metamagicKnown');
+  if (!meta && rs === '2024' && base === 'sorcerer' && has(/^metamagic$/i)) meta = 2;
+  if (meta > 0) add('metamagic', 'choice', `${meta} ${meta === 1 ? 'opzione' : 'opzioni'} di Metamagia`, 'Scegli nel tab Privilegi (Compendio → Opzioni di classe).');
+  const mBefore = weaponMasteryMax(c, levels);
+  const mAfter = weaponMasteryMax({ ...c, classes: isNew ? [...c.classes, { classId, level: newLevel }] : c.classes.map((e) => (e.classId === classId ? { ...e, level: newLevel } : e)) }, levels);
+  if (mAfter > mBefore) add('mastery', 'choice', `Padronanze nelle armi: ${mBefore} → ${mAfter}`, `Scegli ${mAfter - mBefore === 1 ? 'un\'altra arma' : (mAfter - mBefore) + ' armi'} nel tab Combattimento.`);
+
+  // altri privilegi con una scelta
+  for (const [re, title, text] of CHOICE_FEATURES) if (title && has(re)) add('feat-' + title, 'choice', title, text);
+
+  // bonus di competenza
+  if (R.profBonusForLevel(totalBefore + 1) > R.profBonusForLevel(Math.max(1, totalBefore)) && totalBefore > 0)
+    add('prof', 'info', `Bonus di competenza ${signed(R.profBonusForLevel(totalBefore + 1))}`, 'Aggiornato in automatico in tutta la scheda.');
+
+  // tratti razziali che si sbloccano al livello del personaggio (es. incantesimi di specie al 3° e 5°)
+  const L = totalBefore + 1;
+  const race = (data.races || []).find((x) => x.id === c.race?.id), sub = (data.subraces || []).find((x) => x.id === c.subrace?.id);
+  const reL = new RegExp(`(\\b${L}(st|nd|rd|th) level|level ${L}\\b|${L}° livello|livello ${L}\\b)`, 'i');
+  for (const t of [...(race?.traits || []), ...(sub?.traits || [])]) if (reL.test(t.desc || '')) add('race-' + t.name, 'info', `Tratto di specie: ${t.name}`, `Al ${ORD(L)} livello del personaggio questo tratto ottiene qualcosa di nuovo: controllalo.`);
+
+  // multiclasse
+  if (isNew && cd && c.classes.some((e) => n(e.level, 0) > 0)) {
+    const score = (a) => n(c.abilities?.[a]?.score, 10);
+    const ab = (p) => `${R.ABILITY_LABELS_IT[p.ability]?.abbr} ${p.min}`;
+    const fails = [cd, ...c.classes.map((e) => classes.find((x) => x.id === e.classId)).filter(Boolean)].flatMap((d) => {
+      const mc = d?.multiclassing || {};
+      const out2 = (mc.prerequisites || []).filter((p) => score(p.ability) < p.min).map((p) => `${d.name_it || d.name}: ${ab(p)}`);
+      const any = mc.prerequisitesAnyOf || [];
+      if (any.length && !any.some((p) => score(p.ability) >= p.min)) out2.push(`${d.name_it || d.name}: ${any.map(ab).join(' o ')}`);
+      return out2;
+    });
+    if (fails.length) add('mc-prereq', 'warn', 'Prerequisiti di multiclasse non soddisfatti', fails.join(' · '));
+    const pr = cd.multiclassing?.proficiencies || {};
+    const list = [...(pr.armor || []), ...(pr.weapons || []), ...(pr.tools || []), ...(pr.skills || [])];
+    const choice = (cd.multiclassing?.proficiencyChoices || []).length;
+    if (list.length || choice) add('mc-prof', 'choice', 'Competenze da multiclasse', `${list.length ? 'Ottieni: ' + list.join(', ') + '. ' : ''}${choice ? 'Più una scelta di competenze. ' : ''}Aggiungile nel tab Principale → Competenze.`);
+  }
+  return out;
+}
+
+// ---------------------------------------------------------------------------
 // Creazione guidata
 // ---------------------------------------------------------------------------
 
