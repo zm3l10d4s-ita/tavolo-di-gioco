@@ -1,6 +1,7 @@
 // Logica pura della scheda personaggio (nessun DOM, nessuno store): testabile con node.
 // Usa i calcoli di src/lib/rules.js; qui solo trasformazioni del documento personaggio.
 import * as R from '../../lib/rules.js';
+import { wildShapeLimits, crLabel } from '../../lib/companions.js';
 import { uid, roll, norm, signed } from '../../lib/util.js';
 
 export const ABILITIES = R.ABILITIES;
@@ -715,6 +716,14 @@ export function levelUpReminders(character, { classId, subclassId = '', newLevel
   const mBefore = weaponMasteryMax(c, levels);
   const mAfter = weaponMasteryMax({ ...c, classes: isNew ? [...c.classes, { classId, level: newLevel }] : c.classes.map((e) => (e.classId === classId ? { ...e, level: newLevel } : e)) }, levels);
   if (mAfter > mBefore) add('mastery', 'choice', `Padronanze nelle armi: ${mBefore} → ${mAfter}`, `Scegli ${mAfter - mBefore === 1 ? 'un\'altra arma' : (mAfter - mBefore) + ' armi'} nel tab Combattimento.`);
+
+  // Forma selvatica: nuove forme o limiti più alti
+  if (base === 'druid') {
+    const lvAfter = (list) => (isNew ? [...list, { classId, level: newLevel, subclassId }] : list.map((e) => (e.classId === classId ? { ...e, level: newLevel, subclassId: subclassId || e.subclassId } : e)));
+    const before = wildShapeLimits(c, levels), after = wildShapeLimits({ ...c, classes: lvAfter(c.classes) }, levels);
+    if (after && (!before || after.maxCr > before.maxCr || (after.known || 0) > (before.known || 0) || after.fly !== before.fly || after.swim !== before.swim))
+      add('wildshape', 'choice', 'Forma selvatica', `Ora: GS massimo ${crLabel(after.maxCr)}${after.fly ? ', volo' : ''}${after.swim ? ', nuoto' : ''}${after.known ? `, fino a ${after.known} forme conosciute` : ''}. Scegli le forme nel tab Compagni.`);
+  }
 
   // altri privilegi con una scelta
   for (const [re, title, text] of CHOICE_FEATURES) if (title && has(re)) add('feat-' + title, 'choice', title, text);

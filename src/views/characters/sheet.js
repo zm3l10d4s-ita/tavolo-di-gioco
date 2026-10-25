@@ -12,24 +12,55 @@ import { SpellsTab } from './tab-spells.js';
 import { InventoryTab } from './tab-inventory.js';
 import { FeaturesTab } from './tab-features.js';
 import { StoryTab, NotesTab } from './tab-story.js';
+import { CompanionsTab, ActiveFormBanner } from './tab-companions.js';
 import { LevelUpModal } from './levelup.js';
 import { ShortRestModal, LongRestModal } from './rest.js';
 
 const TABS = [
   { id: 'main', label: 'Principale' }, { id: 'combat', label: 'Combattimento' }, { id: 'spells', label: 'Incantesimi' },
-  { id: 'inventory', label: 'Inventario' }, { id: 'features', label: 'Privilegi' }, { id: 'story', label: 'Personalità & Storia' }, { id: 'notes', label: 'Note' },
+  { id: 'inventory', label: 'Inventario' }, { id: 'features', label: 'Privilegi' }, { id: 'companions', label: 'Compagni' }, { id: 'story', label: 'Personalità & Storia' }, { id: 'notes', label: 'Note' },
 ];
 const tabMemo = {}; // tab attiva per personaggio (durante la sessione dell'app)
 
 function useData() {
   const d = {};
-  for (const k of ['classes', 'subclasses', 'levels', 'equipment', 'magicItems', 'spells', 'races', 'subraces', 'backgrounds', 'feats', 'conditions', 'skills', 'rules', 'languages', 'weaponProperties'])
+  for (const k of ['classes', 'subclasses', 'levels', 'equipment', 'magicItems', 'spells', 'races', 'subraces', 'backgrounds', 'feats', 'conditions', 'skills', 'rules', 'languages', 'weaponProperties', 'monsters'])
     d[k] = useSrd(k).items;
   return d;
 }
 
+/** Modifica rapida dei PF massimi (dal riquadro PF, sempre visibile). Vuoto o uguale al calcolato = automatico. */
+function MaxHpEditor({ c, mutate, onClose }) {
+  const calc = R.maxHp({ ...c, hp: { ...c.hp, maxOverride: null } });
+  const [val, setVal] = useState(String(R.maxHp(c)));
+  const save = (v) => {
+    const num = Math.max(1, Math.floor(Number(v)));
+    mutate((d) => {
+      d.hp.maxOverride = !Number.isFinite(num) || num === calc ? null : num;
+      const max = d.hp.maxOverride ?? calc;
+      if (Number(d.hp.current) > max) d.hp.current = max;
+    });
+    onClose();
+  };
+  return html`<form class="cs-hp-maxedit" data-testid="hp-max-editor" onSubmit=${(e) => { e.preventDefault(); save(val); }}>
+    <label class="field"><span class="field-label">PF massimi</span>
+      <span class="row" style="flex-wrap:nowrap;gap:6px">
+        <button type="button" class="btn sm" onClick=${() => setVal(String(Math.max(1, (Number(val) || 0) - 1)))}>−</button>
+        <input class="input cs-num" type="number" min="1" inputmode="numeric" value=${val} onInput=${(e) => setVal(e.currentTarget.value)} data-testid="hp-max-input" />
+        <button type="button" class="btn sm" onClick=${() => setVal(String((Number(val) || 0) + 1))}>+</button>
+      </span></label>
+    <div class="row" style="gap:6px;flex-wrap:wrap">
+      <button type="submit" class="btn sm primary" data-testid="hp-max-save">Salva</button>
+      <button type="button" class="btn sm" onClick=${() => save(calc)} title="Torna al valore calcolato da livelli, dadi vita e COS" data-testid="hp-max-auto">Calcolato (${calc})</button>
+      <button type="button" class="btn ghost sm" onClick=${onClose}>Annulla</button>
+    </div>
+    <p class="faint cs-small">${c.hp.maxOverride != null ? 'Ora è un valore manuale. ' : ''}Con un valore manuale, ai passaggi di livello i PF guadagnati vengono aggiunti a questo numero.</p>
+  </form>`;
+}
+
 function HpBlock({ c, mutate }) {
   const [amt, setAmt] = useState('');
+  const [editMax, setEditMax] = useState(false);
   const max = R.maxHp(c);
   const cur = Number(c.hp.current ?? max);
   const temp = Number(c.hp.temp) || 0;
@@ -48,9 +79,11 @@ function HpBlock({ c, mutate }) {
   return html`<div class="cs-hp ${cur <= 0 ? 'down' : ''}" data-testid="hp-block">
     <div class="cs-hp-top">
       <span class="cs-label">Punti ferita</span>
-      <span class="cs-hp-val"><b data-testid="hp-current">${cur}</b><span class="faint"> / </span><span data-testid="hp-max">${max}</span></span>
+      <span class="cs-hp-val"><b data-testid="hp-current">${cur}</b><span class="faint"> / </span><button type="button" class="cs-hp-maxbtn ${c.hp.maxOverride != null ? 'manual' : ''}" onClick=${() => setEditMax(!editMax)}
+        title="Modifica i PF massimi" data-testid="hp-max">${max}</button></span>
       ${temp > 0 && html`<span class="tag magic" data-testid="hp-temp-tag">+${temp} temp</span>`}
     </div>
+    ${editMax && html`<${MaxHpEditor} c=${c} mutate=${mutate} onClose=${() => setEditMax(false)} />`}
     <div class="cs-hpbar"><i style=${`width:${pct}%`} class=${pct <= 25 ? 'low' : pct <= 50 ? 'mid' : ''}></i>${temp > 0 && html`<em style=${`width:${Math.min(100, (temp / Math.max(1, max)) * 100)}%`}></em>`}</div>
     <div class="cs-hp-ctl">
       <input class="input cs-inline cs-hp-amt" type="text" inputmode="numeric" placeholder="PF" value=${amt} data-testid="hp-amount"
@@ -179,7 +212,7 @@ export function CharacterSheet({ id, navigate }) {
   }
   const ctx = { c, mutate, data, units, navigate };
   const body = {
-    main: MainTab, combat: CombatTab, spells: SpellsTab, inventory: InventoryTab, features: FeaturesTab, story: StoryTab, notes: NotesTab,
+    main: MainTab, combat: CombatTab, spells: SpellsTab, inventory: InventoryTab, features: FeaturesTab, companions: CompanionsTab, story: StoryTab, notes: NotesTab,
   }[tab];
   return html`<div class="cs-sheet" data-testid="character-sheet" data-id=${c.id}>
     <div class="cs-sticky">
@@ -187,6 +220,7 @@ export function CharacterSheet({ id, navigate }) {
         onLevelUp=${() => setModal('level')} onShort=${() => setModal('short')} onLong=${() => setModal('long')} />
       <div class="cs-tabs" data-testid="sheet-tabs"><${Tabs} tabs=${TABS} active=${tab} onChange=${setTab} /></div>
     </div>
+    <${ActiveFormBanner} c=${c} mutate=${mutate} data=${data} />
     <${TodoBanner} c=${c} mutate=${mutate} />
     <div class="cs-body" data-tab=${tab}><${body} ...${ctx} /></div>
     <${LevelUpModal} open=${modal === 'level'} onClose=${() => setModal(null)} ...${ctx} />

@@ -76,3 +76,19 @@ export function addMonsterToActiveCombat(monster, count = 1) {
     return { ...s, combat, log };
   });
 }
+
+/** Aggiunge un compagno (famiglio, cavalcatura, evocazione…) al combattimento attivo come PNG alleato. */
+export function addCompanionToActiveCombat({ name, ownerName = '', monster = null, hp, maxHp, ac, initBonus = null }) {
+  const session = ensureActiveSession();
+  return store.update('sessions', session.id, (s) => {
+    const combat = { ...emptyCombat(), ...(s.combat || {}) };
+    const full = ownerName ? `${name} (${ownerName})` : name;
+    const c = {
+      id: uid(), kind: 'npc', refId: monster?.id || null, name: full, initiative: null,
+      initBonus: initBonus ?? abilityMod(monster?.abilities?.dex), hp: Number(hp) || 1, maxHp: Number(maxHp) || Number(hp) || 1, tempHp: 0,
+      ac: Number(ac) || Number(monster?.ac) || 10, conditions: [], notes: 'Compagno', hidden: false, ally: true,
+    };
+    const log = [...(s.log || []), { id: uid(), t: nowIso(), type: 'combat', text: `Entra in combattimento: ${full} (alleato).` }];
+    return { ...s, combat: { ...combat, combatants: [...(combat.combatants || []), c] }, log };
+  });
+}
